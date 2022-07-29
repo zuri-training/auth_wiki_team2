@@ -8,32 +8,19 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 class UserRegisterForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=True)
-    last_name = forms.CharField(max_length=30, required=True)
     email = forms.EmailField(max_length=254)
+    username = forms.CharField(max_length=30, required=True)
+        
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email', 'password1')
+        fields = ('email', 'username', 'password1', 'password2')
 
-
-
-
-
-class UserRegistrationForm(UserCreationForm):
-    #form for new user registration
-    email = forms.EmailField(max_length=254, help_text = 'Required. Add a valid email address')
-    first_name = forms.CharField(max_length=30, help_text = 'Input your Firstname')
-    last_name = forms.CharField(max_length=30, help_text = 'Input your Lastname')
-
-    class Meta:
-        model = User
-        fields = ('email', 'first_name', 'last_name', 'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
         
-        super(UserRegistrationForm, self).__init__(*args, **kwargs)
-        for field in (self.fields['email'],self.fields['first_name'],self.fields['last_name'],self.fields['password1'],self.fields['password2']):
+        super(UserRegisterForm, self).__init__(*args, **kwargs)
+        for field in (self.fields['email'],self.fields['username'],self.fields['password1'],self.fields['password2']):
             field.widget.attrs.update({'class': 'form-control '})
 
     def clean_email(self):
@@ -83,21 +70,21 @@ class UserUpdateForm(forms.ModelForm):
     #form for updating User Info
     class Meta:
         model  = User
-        fields = ('email', 'password', 'first_name', 'last_name')
+        fields = ('email', 'username', 'password')
         widgets = {
                    'email':forms.TextInput(attrs={'class':'form-control'}),
+                   'username':forms.TextInput(attrs={'class':'form-control'}),
                    'password':forms.TextInput(attrs={'class':'form-control'}),
-                   'first_name':forms.TextInput(attrs={'class':'form-control'}),
-                   'last_name':forms.TextInput(attrs={'class':'form-control'}),
         }
 
     def __init__(self, *args, **kwargs):
 
         super(UserUpdateForm, self).__init__(*args, **kwargs)
-        for field in (self.fields['email'],self.fields['password'],self.fields['first_name'],self.fields['last_name']):
+        for field in (self.fields['email'],self.fields['username'],self.fields['password']):
             field.widget.attrs.update({'class': 'form-control '})
 
     def clean_email(self):
+        #check that email isn't already registered
         if self.is_valid():
             email = self.cleaned_data['email']
             try:
