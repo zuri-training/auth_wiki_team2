@@ -1,6 +1,11 @@
 # team2_authwiki
 ## Description 
  An authentication library where you can download authentication code. Some of the feautures are
+ * Login page
+ * signin page
+ * code snippet
+ * OTP Login
+ e.t.c
  
 # How to clone the project 
 * Create a new folder in you machine
@@ -10,7 +15,7 @@
 Note: After cloning the project then to work on the project you have to create a new branch
 
 ## To create a new branch
-in the command prompt
+in the command prompt and make sure you are in the project folder - cd folder name
 type: git checkout -b branch_name
 Note: the branch name should be the name of the feature you are working on
 Then after that, you start working
