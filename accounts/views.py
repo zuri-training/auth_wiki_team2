@@ -13,7 +13,7 @@ def signup_view(request):
             return redirect('/')
     else:
         form = UserRegisterForm()
-    return render(request, 'signup.html', {'form': form})
+        return render(request, 'accounts/signup.html', {'form': form})
 
 def logout_view(request):
     if request.method == 'POST':

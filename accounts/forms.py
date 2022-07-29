@@ -32,7 +32,7 @@ class UserRegistrationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         
-        super(RegistrationForm, self).__init__(*args, **kwargs)
+        super(UserRegistrationForm, self).__init__(*args, **kwargs)
         for field in (self.fields['email'],self.fields['first_name'],self.fields['last_name'],self.fields['password1'],self.fields['password2']):
             field.widget.attrs.update({'class': 'form-control '})
 
