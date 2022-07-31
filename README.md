@@ -15,7 +15,7 @@ This is a webapp that hosts several authentication codes for various programming
 - For more information, please click [here](https://docs.google.com/document/d/1yPG9bqNuddG00Du0-APeh92CwtxtiZn0-qrY121pl5o/view) to view the project specifications.
 
 ## Documentation
-[Here's a link to the project's documentation](https://linktodocumentation)
+[Here's a link to the project's documentation](https://docs.google.com/document/d/1d7SEvISZjYUVefaguIHaotEQ63qpjr4bmvgePI8_xnk/edit?usp=sharing)
 
 ## Tech Stack
 
