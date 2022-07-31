@@ -51,7 +51,8 @@ ul{
     width: 300px;
 }
 .card-text-2{
-    width: 500px;
+    min-width: 350px;
+    max-width: 500px;
 }
 
 .card-text-2 > h3{
@@ -72,3 +73,8 @@ ul{
 .btn-parent{
     margin-left: 30px!important;
 }
+
+.btn-parent>.btn-2:hover{
+    background: #017A9F;
+}
+
