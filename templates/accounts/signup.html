@@ -1,14 +1,21 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} 
+{% load static %} 
+{% load socialaccount %} 
 
 
 {% block content %}
 
     <h1>Signup</h1>
     <form class="site-form" action="{% url 'accounts:signup' %}" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Signup">
+    {% csrf_token %} {{ form }}
+    <div>
+        <input type="submit" value="Signup" />
+        or
+        <a href="{% provider_login_url 'google' method = 'oauth2' %}">
+        <img src="{% static 'google.png' %}" height="32" width="32" />
+        Sign Up with Google
+        </a>
+    </div>
     </form>
 
 {% endblock content %}
-
