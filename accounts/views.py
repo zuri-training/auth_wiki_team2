@@ -10,8 +10,8 @@ def signup_view(request):
         if form.is_valid():
             user = form.save() 
             email    = form.cleaned_data.get('email')
-            raw_pass = form.cleaned_data.get('password1')
-            account = authenticate(email=email, password = raw_pass)     
+            username = form.cleaned_data.get('username')
+            form.save()
             # log the user in
             login(request, user)
             return redirect('/')
