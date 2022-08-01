@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    {%block head%}  {% endblock%}
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -24,7 +23,7 @@
             <img src="{%static 'images/Auth Wiki Logo.png' %}" alt="logo" />
           </a>
         </div>
-        <button
+        <button  
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -53,7 +52,7 @@
               <a class="nav-link" href="#">Company</a>
             </li>
           </ul>
-          <div class="d-flex gap-5 p-4">
+          <div class=           "d-flex gap-5 p-4">
             <div class="mx-auto">
               <button class="btn btn-1 text-white" type="submit">
                 <a href="{%url 'accounts:signup'%}">Sign Up</a>
@@ -71,6 +70,7 @@
   </header>
       {% block content %}
       {% endblock%}
+
   
   
        <!-- JavaScript Bundle with Popper -->
