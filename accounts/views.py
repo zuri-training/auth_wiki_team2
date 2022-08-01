@@ -14,10 +14,11 @@ def signup_view(request):
             form.save()
             # log the user in
             login(request, user)
-            return redirect('/')
+            # return redirect('/')
+        return render(request, 'accounts/signup.html', {'form':form})
     else:
         form = UserRegisterForm()
-        return render(request, 'accounts/signup.html', {'form': form})
+        return render(request, 'accounts/signup.html')
 
 def logout_view(request):
     if request.method == 'POST':

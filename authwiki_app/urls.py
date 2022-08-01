@@ -4,6 +4,8 @@ from authwiki_app import views
 
 urlpatterns = [
     path('', views.index, name="index"), 
+    path('service/', views.service, name="service"),
+
 ]
 
 
