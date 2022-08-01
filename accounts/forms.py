@@ -4,16 +4,13 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
+from accounts.models import MyUser
 
 User = get_user_model()
 
 class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField(max_length=254)
-    username = forms.CharField(max_length=30, required=True)
-        
-
     class Meta:
-        model = User
+        model = MyUser
         fields = ('email', 'username', 'password1', 'password2')
 
 
