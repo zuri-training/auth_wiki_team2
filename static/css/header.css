@@ -17,6 +17,11 @@ ul{
     border: 1px solid #017A9F;
 
 }
+
+.btn-1:hover{
+    background: #017A9F;
+}
+
 .btn-2{
     color: #017A9F;
     background-color: #fff;
@@ -26,4 +31,9 @@ ul{
     padding: 16px 48px;
     gap: 10px;
 
+}
+
+
+.btn-parent{
+    margin-left: 30px!important;
 }
