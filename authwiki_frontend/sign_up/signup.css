@@ -109,7 +109,7 @@
     position: absolute;
     margin: 10px 0px 0px -30px;
   }
-  #hide1 {
+  #hide1, #hide3 {
     display: none;
   }
 
@@ -361,7 +361,7 @@
     position: absolute;
     margin: 10px 0px 0px -30px;
   }
-  #hide1 {
+  #hide1, #hide3 {
     display: none;
   }
 
