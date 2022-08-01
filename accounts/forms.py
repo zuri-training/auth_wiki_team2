@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
 from accounts.models import MyUser
 
-User = get_user_model()
+# User = get_user_model()
 
 class UserRegisterForm(UserCreationForm):
     class Meta:
@@ -23,7 +23,7 @@ class UserRegisterForm(UserCreationForm):
     def clean_email(self):
         #verifying that the email hasn't been previously registered
         email = self.cleaned_data.get('email')
-        qs = User.objects.filter(email=email)
+        qs = MyUser.objects.filter(email=email)
         if qs.exists():
             raise forms.ValidationError("Email is already in use")
         return email

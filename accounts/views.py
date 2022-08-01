@@ -14,7 +14,7 @@ def signup_view(request):
             form.save()
             # log the user in
             login(request, user)
-            # return redirect('/')
+            return redirect('/')
         return render(request, 'accounts/signup.html', {'form':form})
     else:
         form = UserRegisterForm()
