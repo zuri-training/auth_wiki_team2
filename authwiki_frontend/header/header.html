@@ -15,45 +15,55 @@
 </head>
 <body>
     
-     <header>
-      <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid d-flex justify-content-between m-4">
-          <!-- <div class=""> -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
           <div class="">
-              <a class="navbar-brand text-black  fw-bolder" href="#">
-                <img src="../services/images/Auth Wiki Logo.png" alt="logo">
-              </a>
-        </div>
-           
-          <div class="  text-black "  id="navbarSupportedContent">
-            <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+            <a class="navbar-brand text-black fw-bolder" href="#">
+              <img src="./images/Auth Wiki Logo.png" alt="logo" />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse text-black" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-auto">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item mx-auto">
                 <a class="nav-link" href="#">Solutions</a>
               </li>
-              <li class="nav-item ">
-                <a
-                  class="nav-link "
-                  href="#"
-                >
+              <li class="nav-item mx-auto">
+                <a class="nav-link" href="#" aria-expanded="false">
                   Devs and Docs
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link ">Company</a>
+              <li class="nav-item mx-auto">
+                <a class="nav-link" href="#">Company</a>
               </li>
             </ul>
-          </div>
-          <div>
-              
-              <button class="btn btn-1 text-white" type="submit">
-                Sign up
-              </button>
-              <button class="btn btn-2 bg-white login-btn" type="submit">
-                Login
-              </button>
+            <div class="d-flex gap-5 p-4">
+              <div class="mx-auto">
+                <button class="btn btn-1 text-white" type="submit">
+                  Sign up
+                </button>
+              </div>
+              <div class="mx-auto">
+                <button class="btn btn-2 bg-white login-btn" type="submit">
+                  Login
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
