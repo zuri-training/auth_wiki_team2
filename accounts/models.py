@@ -1,6 +1,7 @@
 from pickle import FALSE
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from datetime import datetime
 
 class MyUserManager(BaseUserManager):
 	def create_user(self, email, username, password=None):
@@ -53,3 +54,11 @@ class MyUser(AbstractBaseUser):
 
 	def has_module_perms(self, app_label):
 		return True
+
+class Profile(models.Model):
+    user = models.OneToOneField(MyUser, on_delete=models.CASCADE)
+    otp = models.CharField(max_length=6)
+    email = models.CharField(max_length=20)
+    created_at = models.DateField( default = datetime.now, blank = True)
+    updated_at = models.DateField(default= datetime.now, blank = True)
+
