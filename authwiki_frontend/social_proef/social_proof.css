@@ -7,3 +7,72 @@
 body{
     overflow-x: hidden;
 }
+
+ul{
+    color: #000 !important;
+}
+
+.btn-1{
+    background-color: #017A9F;
+    border-radius: 8px;
+    align-items: center;
+    padding: 16px 48px;
+    gap: 10px;
+    border: 1px solid #017A9F;
+
+}
+
+.btn-1:hover{
+    background: #017A9F;
+}
+
+.btn-2{
+    color: #017A9F;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #017A9F;
+    align-items: center;
+    padding: 16px 48px;
+    gap: 10px;
+
+}
+
+.btn-2{
+    background: #0198C6;
+}
+
+.btn-1{
+    color: #0198C6;
+}
+
+.auth{
+    color: #0198C6;
+}
+
+.sec{
+    border-bottom: 3px solid #D4008B;
+}
+
+.auth1{
+background: #F4FBFE;
+border-radius: 8px;
+/* padding: 10px; */
+}
+
+.bot{
+    top: -20px !important;
+    right: -200px !important;
+}
+
+.vect{
+    background: #003D4F;
+    margin: 0;
+}
+
+.sub{
+    color: #0199C6;
+}
+
+.login-btn{
+    background: #0199c6;
+}
