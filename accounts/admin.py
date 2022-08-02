@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .forms import UserRegisterForm, UserAuthenticationForm, UserUpdateForm
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import MyUser
+from .models import MyUser, Profile
     
 # Register your models here.
 class MyUserAdmin(BaseUserAdmin):
@@ -23,4 +23,5 @@ class MyUserAdmin(BaseUserAdmin):
 	ordering = ('email',)
 
 admin.site.register(MyUser, MyUserAdmin)
+admin.site.register(Profile)
  
