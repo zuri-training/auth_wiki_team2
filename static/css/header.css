@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    color: #000 !important;
+}
+
+.btn-1{
+    background-color: #017A9F;
+    border-radius: 8px;
+    align-items: center;
+    padding: 16px 48px;
+    gap: 10px;
+    border: 1px solid #017A9F;
+
+}
+
+.btn-1:hover{
+    background: #017A9F;
+}
+
+.btn-2{
+    color: #017A9F;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #017A9F;
+    align-items: center;
+    padding: 16px 48px;
+    gap: 10px;
+
+}
+
+
+.btn-parent{
+    margin-left: 30px!important;
+}
