@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
 {% block content %}
+
+<div class="container" style= "margin : 10px auto; width: 80%; ">
     <form>
         {{form }}
-        <input type="submit" value="go">
+        <div>
+        <input type="submit" value="Login">
+        or 
+        <a href="{% provider_login_url 'google' method = 'oauth2' %}">
+            <button class="googlesignUp"> 
+                <img src="{%static 'images/icons8-google.svg' %}" alt="Google logo"> Login using Google
+            </button>
+        </a>
+        </div>
     </form>
+   
+</div>
+
 {% endblock %}

@@ -1,4 +1,6 @@
 {% load static %}
+{% load socialaccount %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,7 @@
         <a href="#"><img class="logoimg" src="{% static 'images/IMG_1543.jpg' %}" alt="logo icon"></a>
        <a href=""><img class="lang" src="{% static 'images/icons8-geography-50.png' %}" alt="language icon"></a>
         <div>
-            <a href="">Sign in</a>
+            <a href="{% url 'accounts:login'%}">Sign in</a>
         </div>
     </header>
     <main>
@@ -79,7 +81,11 @@
                     </label>
                 </div>
                 <p class="orsignupwith">or sign up with:</p>
-                <button class="googlesignUp"> <img src="{%static 'images/icons8-google.svg' %}" alt="Google logo"> Sign Up using Google</button>
+                <a href="{% provider_login_url 'google' method = 'oauth2' %}">
+                    <button class="googlesignUp"> 
+                        <img src="{%static 'images/icons8-google.svg' %}" alt="Google logo"> Sign Up using Google
+                    </button>
+                </a>
                 <button class="applesignUP"> <img src="{%static 'images/icons8-github.svg' %}" alt="Apple logo"> Sign Up using GitHub</button>
                 <div class="alreadylogindiv">
             </form>

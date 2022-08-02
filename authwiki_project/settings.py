@@ -40,8 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authwiki_app',
     'accounts',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 
 ]
+
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,6 +91,11 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+]
 
 
 # Password validation
@@ -128,3 +141,18 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.MyUser'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '################'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '#############'
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+
+        'APP': {
+            'client_id': '262700605775-a43f26e0pdk833f19vl4r8se5hnm7l5i.apps.googleusercontent.com',
+            'secret': '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',
+            'key': ''
+        }
+    }
+}
