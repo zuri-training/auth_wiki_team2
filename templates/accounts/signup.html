@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <script src="https://use.fontawesome.com/45ba5e599a.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <a href="#"><img class="logoimg" src="{% static 'images/IMG_1543.jpg' %}" alt="logo icon"></a>
+       <a href=""><img class="lang" src="{% static 'images/icons8-geography-50.png' %}" alt="language icon"></a>
+        <div>
+            <a href="">Sign in</a>
+        </div>
+    </header>
+    <main>
+        <div>
+            <form action=" {% url 'accounts:signup' %}" method="POST">
+                {% csrf_token %}
+                <div class="h2div">
+                    <h2>Get started today</h2>
+                </div>
+                <div class="usernamediv">
+                    <p class="namep">Username</p>
+                    <input type="text"  name="username" id="" placeholder="John Doe" >
+                    {%for err in form.username.errors %}
+                        <p style='color:red'><small>{{err}}</small><p>
+                    {% endfor %}
+                </div>
+                <div class="emaildiv">
+                    <p class="emailp">Work Email</p>
+                    <input type="email"  name="email" id="" placeholder="johndoe@authwiki.com">
+                    {%for err in form.email.errors %}
+                        <p style='color:red'><small>{{err}}</small><p>
+                    {% endfor %}
+                </div>
+                <div class="passdiv">
+                    <p class="passp">Password</p>
+                    <input type="password"  name="password1" id="myInput" placeholder="Enter password">
+                    <span class="eye" onclick="myFunction()">
+                    <i id="hide1" class="fa fa-eye"></i>
+                    <i id="hide2" class="fa fa-eye-slash"></i>
+                    </span>
+                    {%for err in form.password1.errors %}
+                        <p style='color:red';><small>{{err}}</small></p>
+                    {% endfor %}
+                </div>
+                <div class="passdiv">
+                    <p class="passp">Confirm Password</p>
+                    <input type="password"  name="password2" id="myInput1" placeholder="Enter password">
+                    <span class="eye" onclick="myFunction()">
+                    <i id="hide3" class="fa fa-eye"></i>
+                    <i id="hide4" class="fa fa-eye-slash"></i>
+                    </span>
+                    {%for err in form.password2.errors %}
+                        <p style='color:red';><small>{{err}}</small></p>
+                    {% endfor %}
+                </div>
+                <div>
+                    <button type="submit" class="getbutton">Get started now</button>
+                </div>
+                <div class="firstcheckbox">
+                    <label for="myCheckboxId" class="checkbox">
+                        <input class="checkbox__input" type="checkbox" value='check1' name="myCheckboxName" id="myCheckboxId">
+                        <div class="checkbox__box"></div>
+                        I agree to Auth Wiki Terms and Privacy Policy.
+                    </label>
+                </div><br>
+                <div class="secondcheckbox">
+                    <label for="myCheckboxId2" class="checkbox2">
+                        <input class="checkbox__input2" value="check2" type="checkbox" name="myCheckboxName2" id="myCheckboxId2">
+                        <div class="checkbox__box2"></div>
+                        I agree to receive Auth Wiki news and updates.
+                    </label>
+                </div>
+                <p class="orsignupwith">or sign up with:</p>
+                <button class="googlesignUp"> <img src="{%static 'images/icons8-google.svg' %}" alt="Google logo"> Sign Up using Google</button>
+                <button class="applesignUP"> <img src="{%static 'images/icons8-github.svg' %}" alt="Apple logo"> Sign Up using GitHub</button>
+                <div class="alreadylogindiv">
+            </form>
+        </div>
+    </main>
+</div>
+    <script src="{%static 'js/script.js' %}"></script>
+</body>
+</html>
