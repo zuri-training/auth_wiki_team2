@@ -1,6 +1,12 @@
+
 from django.shortcuts import render, redirect
 from .forms import UserRegisterForm, UserAuthenticationForm
 from django.contrib.auth import login, logout, authenticate
+from .models import Profile, MyUser
+import random, time
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -8,13 +14,23 @@ def signup_view(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
+            email = request.POST.get('email')
+            otp = str(random.randint(1000, 9000))
+            check_user = MyUser.objects.filter(email = email).first()
+            check_profile = Profile.objects.filter(email = email).first()
+            if check_user or check_profile:
+                 messages.error(request, 'user already exist')
+                 return HttpResponseRedirect(request.path_info)
             user = form.save() 
             email    = form.cleaned_data.get('email')
             username = form.cleaned_data.get('username')
+            profile = Profile(user = user, otp = otp, email = email)
+            profile.save()
             form.save()
-            # log the user in
-            login(request, user)
-            return redirect('/')
+            # send the user otp
+            send_otp(email, otp)
+            request.session['email'] = email
+            return redirect('otp/')
         return render(request, 'accounts/signup.html', {'form':form})
     else:
         form = UserRegisterForm()
@@ -34,9 +50,41 @@ def login_view(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         user =  authenticate(email=email, password=password)
+        check_profile = Profile.objects.filter(check_otp = False).first()
+        if check_profile:
+            request.session['email'] = email
+            messages.error(request, 'account not verified..')
+            return HttpResponseRedirect(request.path_info)
         if user:
             login(request, user)
             return redirect('/')
     else:
         form = UserAuthenticationForm()
         return render(request, 'accounts/login.html', {'form': form})
+
+def send_otp(email, otp):
+    sub = '<p> Welcome to authwiki auth-wiki, we are thrilled to have you, to make sure your account is protected, please use the attached otp to verify your account. <p>Thank you</p></p>' + otp
+    msg = 'Account verification'
+    send_mail(
+        subject= msg,
+        message= "Otp Verification",
+        from_email = "AuthWiki <authwiki29@gmail.com>",
+        recipient_list = [email],
+        html_message= sub
+    )
+    return None
+
+def otp(request):
+    email = request.session['email']
+    context = {'email' : email}
+    if request.method == "POST":
+        otp = request.POST.get('otp')
+        profile = Profile.objects.filter(email = email).first()
+        if otp == profile.otp:
+            Profile.objects.filter(email = email).delete()
+            return redirect('/accounts/login')
+        else:
+            print('oops')
+            messages.error(request, 'incorrect otp')
+            return HttpResponseRedirect(request.path_info)
+    return render(request, 'accounts/otp.html', context)
