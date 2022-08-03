@@ -31,15 +31,14 @@ def signup_view(request):
             send_otp(email, otp)
             request.session['email'] = email
             return redirect('otp/')
-        return render(request, 'accounts/signup.html', {'form':form})
+        return render(request, 'accounts/signup.html')
     else:
         form = UserRegisterForm()
         return render(request, 'accounts/signup.html')
 
 def logout_view(request):
-    if request.method == 'POST':
-        logout(request)
-        return redirect('/')
+    logout(request)
+    return redirect('/')
 
 def login_view(request):
     user = request.user
@@ -50,20 +49,22 @@ def login_view(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         user =  authenticate(email=email, password=password)
-        check_profile = Profile.objects.filter(check_otp = False).first()
-        if check_profile:
-            request.session['email'] = email
-            messages.error(request, 'account not verified..')
-            return HttpResponseRedirect(request.path_info)
+        # check_profile = Profile.objects.filter(check_otp = False).first()
+        # if check_profile:
+        #     request.session['email'] = email
+
+        #     return HttpResponseRedirect(request.path_info)
         if user:
             login(request, user)
             return redirect('/')
+        messages.info(request, 'Invalid information. please try again')        
+        return render(request, 'accounts/sign_in.html')
     else:
         form = UserAuthenticationForm()
-        return render(request, 'accounts/login.html', {'form': form})
+        return render(request, 'accounts/sign_in.html')
 
 def send_otp(email, otp):
-    sub = '<p> Welcome to authwiki auth-wiki, we are thrilled to have you, to make sure your account is protected, please use the attached otp to verify your account. <p>Thank you</p></p>' + otp
+    sub = '<p> Welcome to authwiki, we are thrilled to have you, to make sure your account is protected, please use the attached otp to verify your account. <p>Thank you</p></p>' + otp
     msg = 'Account verification'
     send_mail(
         subject= msg,
