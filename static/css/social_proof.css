@@ -37,31 +37,6 @@ ul{
 
 }
 
-.our-service{
-    color: #017A9F ;
-}
-
-.card-text > h3{
-    color: #017A9F
-}
-.card-text > p{
-    color: #3F3F3F;
-}
-.card-text{
-    width: 300px;
-}
-.card-text-2{
-    min-width: 350px;
-    max-width: 500px;
-}
-
-.card-text-2 > h3{
-    color: #017A9F
-}
-.card-text-2 > p{
-    color: #3F3F3F;
-}
-
 .btn-2{
     background: #0198C6;
 }
@@ -70,11 +45,34 @@ ul{
     color: #0198C6;
 }
 
-.btn-parent{
-    margin-left: 30px!important;
+.auth{
+    color: #0198C6;
 }
 
-.btn-parent>.btn-2:hover{
-    background: #017A9F;
+.sec{
+    border-bottom: 3px solid #D4008B;
 }
 
+.auth1{
+background: #F4FBFE;
+border-radius: 8px;
+/* padding: 10px; */
+}
+
+.bot{
+    top: -20px !important;
+    right: -200px !important;
+}
+
+.vect{
+    background: #003D4F;
+    margin: 0;
+}
+
+.sub{
+    color: #0199C6;
+}
+
+.login-btn{
+    background: #0199c6;
+}
