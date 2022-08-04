@@ -1,4 +1,5 @@
 
+from asyncio.windows_events import NULL
 from django.shortcuts import render, redirect
 from .forms import UserRegisterForm, UserAuthenticationForm
 from django.contrib.auth import login, logout, authenticate
@@ -15,6 +16,7 @@ def signup_view(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             email = request.POST.get('email')
+            password = request.POST.get('password')
             otp = str(random.randint(1000, 9000))
             check_user = MyUser.objects.filter(email = email).first()
             check_profile = Profile.objects.filter(email = email).first()
@@ -30,6 +32,7 @@ def signup_view(request):
             # send the user otp
             send_otp(email, otp)
             request.session['email'] = email
+            request.session['password'] = password
             return redirect('otp/')
         return render(request, 'accounts/signup.html', {'form':form})
     else:
@@ -76,15 +79,22 @@ def send_otp(email, otp):
 
 def otp(request):
     email = request.session['email']
+    password = request.session['password']
     context = {'email' : email}
+    user =  authenticate(email=email, password=password)
     if request.method == "POST":
         otp = request.POST.get('otp')
         profile = Profile.objects.filter(email = email).first()
-        if otp == profile.otp:
-            Profile.objects.filter(email = email).delete()
-            return redirect('/accounts/login')
+        if profile:        
+            if otp == profile.otp:
+                MyUser.objects.update(otp_check = True)
+                Profile.objects.filter(email = email).delete()
+                login(request, user)
+                return redirect('/')
+            else:
+                 messages.error(request, 'incorrect otp')
+                 return HttpResponseRedirect(request.path_info)
         else:
-            print('oops')
-            messages.error(request, 'incorrect otp')
+            messages.error(request, 'otp not found, try requesting again')
             return HttpResponseRedirect(request.path_info)
     return render(request, 'accounts/otp.html', context)
