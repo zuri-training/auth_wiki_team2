@@ -8,3 +8,6 @@ def index(request):
 def service(request):
     return render(request, 'authwiki_app/service.html')
 
+def social_proof(request):
+    return render(request, 'authwiki_app/social_proof.html')
+

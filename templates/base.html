@@ -52,18 +52,28 @@
               <a class="nav-link" href="#">Company</a>
             </li>
           </ul>
-          <div class=           "d-flex gap-5 p-4">
-            <div class="mx-auto">
-              <button class="btn btn-1 text-white" type="submit">
-                <a href="{%url 'accounts:signup'%}">Sign Up</a>
-              </button>
+          {% if user.is_authenticated%}
+            <div class="d-flex gap-5 p-4">
+              <div class="mx-auto">
+                <button class="btn btn-2 bg-white login-btn" type="submit">
+                  <a href="{%url 'accounts:logout'%}">Logout</a>
+                </button>
+              </div>
             </div>
-            <div class="mx-auto">
-              <button class="btn btn-2 bg-white login-btn" type="submit">
-                <a href="{%url 'accounts:login'%}">LogIn</a>
-              </button>
+          {% else %}
+            <div class="d-flex gap-5 p-4">
+              <div class="mx-auto">
+                <button class="btn btn-1 text-white" type="submit">
+                  <a href="{%url 'accounts:signup'%}">Sign Up</a>
+                </button>
+              </div>
+              <div class="mx-auto">
+                <button class="btn btn-2 bg-white login-btn" type="submit">
+                  <a href="{%url 'accounts:login'%}">LogIn</a>
+                </button>
+              </div>
             </div>
-          </div>
+          {% endif %}
         </div>
       </div>
     </nav>

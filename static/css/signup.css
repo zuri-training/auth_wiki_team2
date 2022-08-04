@@ -5,6 +5,7 @@
   text-decoration: none;
 }
 
+/* Desktop styling starts */
 @media only screen and (min-width: 550px) {
   /* Header styling starts here */
   header div {
@@ -79,7 +80,7 @@
   }
   .emailp {
     display: block;
-    margin: 10px 297px 0px 0px;
+    margin: 10px 304px 0px 0px;
     font-size: 14px;
     font-family: "Poppins";
     font-style: normal;
@@ -96,7 +97,24 @@
   }
   .passp {
     display: block;
-    margin: 10px 307px -0px 0px;
+    margin: 10px 314px -0px 0px;
+    font-size: 14px;
+    font-family: "Poppins";
+    font-style: normal;
+    padding: 5px;
+    line-height: 150%;
+  }
+  .comfirmpassdiv input {
+    outline: 0;
+    border: 1px solid rgb(183, 192, 196);
+    width: 370px;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+  .comfirmpassp {
+    display: block;
+    margin: 10px 260px -0px 0px;
     font-size: 14px;
     font-family: "Poppins";
     font-style: normal;
@@ -109,7 +127,8 @@
     position: absolute;
     margin: 10px 0px 0px -30px;
   }
-  #hide1 {
+  #hide1,
+  #comfirmhide1 {
     display: none;
   }
 
@@ -198,6 +217,9 @@
     background: #0199c6;
     border-color: #0199c6;
   }
+  .sign_up_with {
+    text-align: center;
+  }
   .orsignupwith {
     margin-top: 20px;
     font-family: "Poppins";
@@ -229,58 +251,48 @@
     color: #0199c6;
     width: 370px;
     height: 33px;
-    border: 1.8px solid #0199c6;
+    border: 0px;
     border-radius: 5px;
-    margin-left: -370px;
-    margin-top: 65px;
-    position: absolute;
+    position: relative;
+    margin-top: 20px;
     cursor: pointer;
     font-family: "Poppins";
     font-style: normal;
     font-size: 14px;
     line-height: 150%;
+    background-color: #fff;
   }
   .applesignUP img {
     width: 18px;
     margin: 0px 0px 0px -30px;
     position: absolute;
+    padding-bottom: 50px;
+  }
+  .already_hv_acct {
+    display: none;
   }
 }
 
 /* Mobile view design */
 @media screen and (max-width: 550px) {
-    .wrapper {
-        width: 375px;
-        margin: 0 auto;
-      }
+  .wrapper {
+    width: 375px;
+    margin: 0 auto;
+  }
   /* Header styling starts here */
   header div {
     margin-top: 15px;
   }
+
   .logoimg {
-    width: 150px;
-    margin: 15px 0px 0px 5px;
+    width: 220px;
+    margin: 15px 0px 0px 75px;
   }
   .lang {
-    float: right;
-    width: 20px;
-    margin-top: 25px;
-    margin-right: 105px;
-    filter: invert(48%) sepia(76%) saturate(4855%) hue-rotate(168deg)
-      brightness(99%) contrast(99%);
+    display: none;
   }
   header div a {
-    margin-top: -50px;
-    margin-right: 10px;
-    float: right;
-    padding: 5px 15px 5px 15px;
-    border: 1px solid #0199c6;
-    border-radius: 5px;
-    color: #0199c6;
-    font-size: 17px;
-    font-family: "Poppins";
-    font-style: normal;
-    line-height: 150%;
+    display: none;
   }
 
   /* Main styling starts here */
@@ -288,15 +300,16 @@
     text-align: center;
     margin-top: -70px;
     width: 360px;
-    margin-left: 5px
+    margin-left: 5px;
   }
   .h2div {
     margin: 100px 0px 0px 0px;
     font-family: "Poppins";
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 150%;
-    font-size: 16px;
+    font-size: 20px;
+    color: #151515;
   }
   .usernamediv {
     padding: 0;
@@ -347,7 +360,25 @@
   }
   .passp {
     display: block;
-    margin: 10px 276px -0px 0px;
+    margin: 10px 280px -0px 0px;
+    font-size: 14px;
+    font-family: "Poppins";
+    font-style: normal;
+    padding: 5px;
+    line-height: 150%;
+    font-weight: 430;
+  }
+  .comfirmpassdiv input {
+    outline: 0;
+    border: 1px solid rgb(183, 192, 196);
+    width: 340px;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+  .comfirmpassp {
+    display: block;
+    margin: 10px 0px 0px -226px;
     font-size: 14px;
     font-family: "Poppins";
     font-style: normal;
@@ -361,13 +392,14 @@
     position: absolute;
     margin: 10px 0px 0px -30px;
   }
-  #hide1 {
+  #hide1,
+  #comfirmhide1 {
     display: none;
   }
 
   .getbutton {
-    width: 315px;
-    height: 35px;
+    width: 235px;
+    height: 45px;
     margin-top: 20px;
     border-radius: 3px;
     border: 0;
@@ -376,7 +408,7 @@
     cursor: pointer;
     font-family: "Poppins";
     font-style: normal;
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 150%;
   }
@@ -386,12 +418,15 @@
   .checkbox {
     display: inline-flex;
     cursor: pointer;
+    color: #151515;
     height: 20px;
+    width: 197px;
+    height: 12px;
     font-family: "Poppins";
     font-style: normal;
-    font-size: 14px;
+    font-weight: 800;
+    font-size: 8px;
     line-height: 150%;
-    font-weight: 430;
   }
   .checkbox__input {
     display: none;
@@ -416,17 +451,20 @@
     border-color: #0199c6;
   }
   .secondcheckbox {
-    margin-top: 12px;
+    margin-top: 0px;
   }
   .checkbox2 {
     display: inline-flex;
     cursor: pointer;
+    color: #151515;
     height: 20px;
+    width: 197px;
+    height: 12px;
     font-family: "Poppins";
     font-style: normal;
-    font-size: 13.7px;
+    font-weight: 800;
+    font-size: 8px;
     line-height: 150%;
-    font-weight: 430;
   }
   .checkbox__input2 {
     display: none;
@@ -451,6 +489,7 @@
     border-color: #0199c6;
   }
   .orsignupwith {
+    text-align: center;
     margin-top: 20px;
     font-family: "Poppins";
     font-style: normal;
@@ -460,13 +499,13 @@
   }
 
   .googlesignUp {
-    color: #0199c6;
+    color: #0198c6;
     width: 300px;
     height: 33px;
-    border: 1.8px solid #0199c6;
+    border: 1.8px solid #0198c6;
     border-radius: 5px;
     position: relative;
-    margin-top: 20px;
+    margin: 20px 0px 0px 30px;
     padding-left: 20px;
     cursor: pointer;
     font-family: "Poppins";
@@ -483,21 +522,60 @@
     color: #0199c6;
     width: 300px;
     height: 33px;
-    border: 1.8px solid #0199c6;
+    border: 0px;
     border-radius: 5px;
-    margin-left: -300px;
-    margin-top: 65px;
+    position: relative;
+    margin: 20px 0px 0px 30px;
     padding-left: 20px;
-    position: absolute;
     cursor: pointer;
     font-family: "Poppins";
     font-style: normal;
     font-size: 14px;
     line-height: 150%;
+    background-color: #fff;
   }
   .applesignUP img {
     width: 18px;
     margin: 0px 0px 0px -25px;
     position: absolute;
+  }
+  .already_hv_acct {
+    position: absolute;
+    margin: 10px 0px 0px 100px;
+    color: #0198c6;
+    font-family: "Poppins";
+    font-style: normal;
+  }
+  .icon-arrow {
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #0198c6;
+    position: relative;
+    top: -10px;
+    left: 190px;
+    font-size: 0px;
+  }
+  .icon-arrow:after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 2px;
+    background-color: #0198c6;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0px;
+    bottom: 3px;
+  }
+  .icon-arrow:before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 2px;
+    background-color: #0198c6;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 0px;
+    bottom: -3px;
   }
 }
