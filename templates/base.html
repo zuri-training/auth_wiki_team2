@@ -51,6 +51,11 @@
             <li class="nav-item mx-auto">
               <a class="nav-link" href="#">Company</a>
             </li>
+            {% if user.is_authenticated%}
+            <li class="nav-item mx-auto">
+              <a class="nav-link" href="{% url 'users:profile' %}">Profile</a>
+            </li>
+            {% endif %}
           </ul>
           {% if user.is_authenticated%}
             <div class="d-flex gap-5 p-4">
