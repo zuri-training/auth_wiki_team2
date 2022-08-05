@@ -1,62 +1,100 @@
 {% load static %}
+{% load socialaccount %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/sign_in.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/sign_in.css' %}" />
     <script src="https://use.fontawesome.com/45ba5e599a.js"></script>
-    <title>Welcome to AuthWiki || Login </title>
-</head>
-<body>
+    <title>Welcome to AuthWiki || Login</title>
+  </head>
+  <body>
     <div class="wrapper">
-    <header>
-        <a class="logo-link" href="#"><img class="logoimg" src="{% static 'images/logo.png' %}" alt="logo icon"> </a>
-       <a href=""><img class="lang" src="{% static 'images/world.png' %}" alt="language icon"> </a>
+      <header>
+        <a class="logo-link" href="#"
+          ><img
+            class="logoimg"
+            src="{% static 'images/logo.png' %}"
+            alt="logo icon"
+          />
+        </a>
+        <a href=""
+          ><img
+            class="lang"
+            src="{% static 'images/world.png' %}"
+            alt="language icon"
+          />
+        </a>
         <div class="sign-up">
-            <a href="{%url 'accounts:signup'%}">Sign up</a>
+          <a href="{%url 'accounts:signup'%}">Sign up</a>
         </div>
-    </header>
-    <main>
+      </header>
+      <main>
         <div>
-            <form action=" " method="POST">
-                {%csrf_token%}
-                <div class="h2div">
-                    <h2>Sign in</h2>
-                </div>
-                {%for err in messages %}
-                    <br>
-                    <h5 style='color:red';>{{err}}</h5>
-                {% endfor %}
-                <div class="emaildiv">
-                    <p class="emailp">Email</p>
-                    <input type="email" name="email" id="" placeholder="example@authwiki.com">
-                </div>
-                <div class="passdiv">
-                    <p class="passp">Password</p>
-                    <input type="password" name="password" id="myInput" placeholder="Enter password">
-                    <span class="eye" onclick="myFunction()">
-                    <i id="hide1" class="fa fa-eye"></i>
-                    <i id="hide2" class="fa fa-eye-slash"></i>
-                    </span>
-                </div>
-                <div>
-                    <button type="submit" class="getbutton">Sign in</button>
-                </div>
-                <div class="forgotpass">
-                    <a href="#">Forgot your password?</a>
-                </div>
-            </form>
+          <form action=" " method="POST">
+            {%csrf_token%}
+            <div class="h2div">
+              <h2>Sign in</h2>
+            </div>
+            {%for err in messages %}
+            <br />
+            <h5 style="color: red" ;>{{err}}</h5>
+            {% endfor %}
+            <div class="emaildiv">
+              <p class="emailp">Email</p>
+              <input
+                type="email"
+                name="email"
+                id=""
+                placeholder="example@authwiki.com"
+              />
+            </div>
+            <div class="passdiv">
+              <p class="passp">Password</p>
+              <input
+                type="password"
+                name="password"
+                id="myInput"
+                placeholder="Enter password"
+              />
+              <span class="eye" onclick="myFunction()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+              </span>
+            </div>
+            <div>
+              <button type="submit" class="getbutton">Sign in</button>
+            </div>
+            <div class="forgotpass">
+              <a href="#">Forgot your password?</a>
+            </div>
+          </form>
         </div>
-        <div class="logusingdiv"> 
-            <p class="orsignupwith">or sign in with:</p>
-        <button class="googlesignUp"> <img class="googlelogo" src="{%static 'images/google.svg' %}" alt="Google logo"> Sign in using Google</button><br>
-            <button class="applesignUP"> <img src="{%static 'images/github.svg' %}" alt="Apple logo"> Sign in using GitHub</button>
+        <div class="logusingdiv">
+          <p class="orsignupwith">or sign in with:</p>
+          <a href="{% provider_login_url 'google' method = 'oauth2' %}">
+            <button class="googlesignUp">
+              <img
+                src="{%static 'images/icons8-google.svg' %}"
+                alt="Google logo"
+              />
+              Login using Google
+            </button> </a
+          >
+          <br />
+          <button class="applesignUP">
+            <img src="{%static 'images/github.svg' %}" alt="Apple logo" /> Sign
+            in using GitHub
+          </button>
         </div>
-        <a href="" class="m-login" >Don't have an account yet ?  <i class="fa fa-arrow-right"></i>  </a>
-    </main>
-</div>
-     <script src="{% static 'js/script.js' %}"></script>
-</body>
+        <a href="" class="m-login"
+          >Don't have an account yet ? <i class="fa fa-arrow-right"></i>
+        </a>
+      </main>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
 </html>
