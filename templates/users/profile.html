@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+  <div>
+    <img src="{{ user.userprofile.cover.url }}"></a>
+    <a href="{{ user.userprofile.image.url }}"><img src="{{ user.userprofile.image.url }}"></a>
+    <h1>{{ user.first_name }} {{ user.middle_name }} {{ user.last_name }}<h1>
+    <p>{{ user.userprofile.position }}</p>
+    <p>----Portfolio needs a little research to implement----</p>
+    <h3>Bio</h3>
+    <p>{{ user.userprofile.bio }}</p>
+    <h1><a href="{% url 'users:update' %}">Edit Profile</a></h1>
+    <p><a href="{{ user.userprofile.website }}"> {{ user.userprofile.website }} </a></p>
+    <p><a href="{{ user.userprofile.facebook }}"> {{ user.userprofile.facebook }} </a></p>
+    <p><a href="{{ user.userprofile.twitter }}"> {{ user.userprofile.twitter }} </a></p>
+    <p><a href="{{ user.userprofile.instagram }}"> {{ user.userprofile.instagram }} </a></p>
+    <p><a href="{{ user.userprofile.github }}"> {{ user.userprofile.github }} </a></p>
+
+    <p>{{ user.userprofile.city }}, {{ user.userprofile.city }}</p>
+
+    {% if user.is_user%}
+    <a href="#"><img src="REPORT"></a>
+    
+    {% else %}
+    <div class="d-flex gap-5 p-4">
+      <div class="mx-auto">
+        <button class="btn btn-2 bg-white login-btn" type="submit">
+          <a href="{%url 'accounts:logout'%}">LOG OUT</a>
+        </button>
+      </div>
+    </div>
+    {% endif %}
+    
+  
+
+  
+
+
+
+{% endblock content %}
