@@ -127,3 +127,26 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+media/cover_pics/*
+media/profile_pics/*
+
+accounts/migrations/*
+!accounts/migrations/__pycache__
+accounts/migrations/__pycache__/*
+accounts/__pycache__/*
+
+
+authwiki_app/migrations/*
+!authwiki_app/migrations/__pycache__
+authwiki_app/migrations/__pycache__/*
+authwiki_app/__pycache__/*
+
+authwiki_project/__pycache__/*
+
+users/migrations/*
+!users/migrations/__pycache__
+!users/migrations/__init__.py
+users/migrations/__pycache__/*
+users/__pycache__/*
+
