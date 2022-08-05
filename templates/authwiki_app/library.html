@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %} 
+{%for library in auth_library %}
+    <p>{{library.name}}</p>
+    </p>{{library.description}}</P>
+    <img src="{{library.images}}" alt="{{library.name}} image">
+    <p>{{library.upload_at}}</P>
+    <hr>
+{% endfor %}
+{% endblock content %}
