@@ -1,4 +1,3 @@
-from pickle import FALSE
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from datetime import datetime

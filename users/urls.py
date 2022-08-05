@@ -1,9 +1,9 @@
-from django.conf.urls import url
+from django.urls import re_path, include
 from . import views
 
 app_name = 'users'
 
 urlpatterns = [
-    url('profile', views.profile, name='profile'),
-    url('update', views.update, name='update'),
+    re_path('profile', views.profile, name='profile'),
+    re_path('update', views.update, name='update'),
 ]
