@@ -40,8 +40,21 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authwiki_app',
     'accounts',
+    'users',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+
+
 
 ]
+
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,7 +133,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -133,4 +150,19 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'authwiki29@gmail.com'
 EMAIL_HOST_PASSWORD = 'ibwmbsaboyhbnstx'
 EMAIL_PORT = 465
-EMAIL_USE_SSL= True
+EMAIL_USE_SSL = True
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '################'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '#############'
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+
+        'APP': {
+            'client_id': '262700605775-a43f26e0pdk833f19vl4r8se5hnm7l5i.apps.googleusercontent.com',
+            'secret': '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',
+            'key': ''
+        }
+    }
+}
