@@ -7,6 +7,10 @@
 }
 
 .faq-section{
+<<<<<<< HEAD
+=======
+    /* background-color: red; */
+>>>>>>> 4b08b4c7d1f46578ad96991880cc87776e1093bf
     padding: 30px;
 }
 
@@ -14,6 +18,10 @@
     width: 20%;
     padding: 30px;
     margin: 0 auto;
+<<<<<<< HEAD
+=======
+    /* background-color: green; */
+>>>>>>> 4b08b4c7d1f46578ad96991880cc87776e1093bf
 }
 
 .faq-logo-wrapper > img{
@@ -23,6 +31,10 @@
 }
 
 .faq-wrapper{
+<<<<<<< HEAD
+=======
+    /* background-color: blue; */
+>>>>>>> 4b08b4c7d1f46578ad96991880cc87776e1093bf
     width: 100%;
 }
 
