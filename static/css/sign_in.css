@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -381,3 +382,388 @@
     position: absolute;
   }
 }
+=======
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* font-size: 30px; */
+  }
+  .m-login{
+    display: none;
+  }
+  
+  @media only screen and (min-width: 550px) {
+    /* Header styling starts here */
+    header div {
+      margin-top: 15px;
+    }
+    .logoimg {
+      width: 150px;
+      margin: 25px 0px 0px 30px;
+    }
+    .lang {
+      float: right;
+      width: 20px;
+      margin-top: 20px;
+      margin-right: 150px;
+      filter: invert(48%) sepia(76%) saturate(4855%) hue-rotate(168deg)
+        brightness(99%) contrast(99%);
+    }
+    header div a {
+      margin-top: -60px;
+      margin-right: 40px;
+      float: right;
+      padding: 3px 17px 3px 17px;
+      border: 1px solid #0199c6;
+      border-radius: 5px;
+      color: #0199c6;
+      font-size: 17px;
+      font-family: "Poppins";
+      font-style: normal;
+      line-height: 150%;
+      background-color: #0199c6;
+      color: #fff;
+    }
+  
+    /* Main styling starts here */
+    form {
+      text-align: center;
+      margin-top: -70px;
+    }
+    .h2div {
+      margin: 100px 0px 0px 0px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      font-size: 16px;
+    }
+    .usernamediv {
+      padding: 0;
+    }
+    .emailp {
+      display: block;
+      margin: 10px 325px -0px 0px;
+      font-size: 16px;
+      font-family: "Poppins";
+      font-style: normal;
+      padding: 5px;
+      line-height: 150%;
+    }
+    .emaildiv input {
+      outline: 0;
+      border: 1px solid rgb(183, 192, 196);
+      width: 370px;
+      height: 35px;
+      border-radius: 3px;
+      padding-left: 10px;
+    }
+  
+    .passdiv input {
+      outline: 0;
+      border: 1px solid rgb(183, 192, 196);
+      width: 370px;
+      height: 35px;
+      border-radius: 5px;
+      padding-left: 10px;
+    }
+    .passp {
+      display: block;
+      margin: 10px 307px -0px 0px;
+      font-size: 14px;
+      font-family: "Poppins";
+      font-style: normal;
+      padding: 5px;
+      line-height: 150%;
+    }
+  
+    /* Password eye styling */
+    .eye {
+      position: absolute;
+      margin: 10px 0px 0px -30px;
+    }
+    #hide1 {
+      display: none;
+    }
+    .getbutton {
+      width: 370px;
+      height: 35px;
+      margin-top: 20px;
+      border-radius: 3px;
+      border: 0;
+      color: #fff;
+      background-color: #0199c6;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+    .forgotpass {
+      margin: 20px 0px 0px 220px;
+    }
+    .forgotpass a {
+      font-family: "Poppins";
+      font-style: normal;
+      color: rgb(18, 31, 18);
+    }
+    .logusingdiv {
+      text-align: center;
+    }
+    .orsignupwith {
+      margin-top: 20px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  
+    .googlesignUp {
+      color: #0199c6;
+      width: 370px;
+      height: 33px;
+      border: 1.8px solid #0199c6;
+      border-radius: 5px;
+      position: relative;
+      margin-top: 20px;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .googlesignUp img {
+      width: 15px;
+      margin: 4px 0px 0px -30px;
+      position: absolute;
+    }
+    .applesignUP {
+      color: #0199c6;
+      width: 370px;
+      height: 33px;
+      background-color: #fff;
+      border: none;
+      /* border-radius: 5px; */
+      position: relative;
+      margin-top: 20px;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .applesignUP img {
+      width: 18px;
+      margin: 2px 0px 0px -30px;
+      position: absolute;
+    }
+    
+  }
+  
+  /* Mobile view design */
+  
+  @media screen and (max-width: 550px){
+    .sign-up{
+      display: none;
+    }
+    .lang{
+      display: none;
+    }
+    .logo-link{
+      display: block;
+      text-align: center;
+    }
+    .logoimg{
+      width: 900px;
+      /* height: 300px; */
+    }
+    .m-login{
+      display: block;
+      text-align: end;
+      color: #0199c6;
+      /* padding: 1rem 0 1rem 0; */
+      padding-top: 1.5rem;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .wrapper {
+      width: 375px;
+      margin: 0 auto;
+    }
+  
+    /* Header styling starts here */
+    header div {
+      margin-top: 15px;
+    }
+    .logoimg {
+      width: 300px;
+      margin: 15px 0px 0px 5px;
+    }
+    .lang {
+      float: right;
+      width: 20px;
+      margin-top: 25px;
+      margin-right: 115px;
+      filter: invert(48%) sepia(76%) saturate(4855%) hue-rotate(168deg)
+        brightness(99%) contrast(99%);
+    }
+    header div a {
+      margin-top: -50px;
+      margin-right: 10px;
+      float: right;
+      padding: 5px 15px 5px 15px;
+      border: 1px solid #0199c6;
+      border-radius: 5px;
+      color: #0199c6;
+      font-size: 17px;
+      font-family: "Poppins";
+      font-style: normal;
+      line-height: 150%;
+    }
+  
+    /* Main styling starts here */
+    form {
+      text-align: center;
+      margin-top: -70px;
+      width: 360px;
+      margin-left: 5px;
+    }
+    .h2div {
+      margin: 100px 0px 0px 0px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      font-size: 16px;
+    }
+    .usernamediv {
+      padding: 0;
+    }
+    .emailp {
+      display: block;
+      margin: 10px 268px -0px -30px;
+      font-size: 15px;
+      font-family: "Poppins";
+      font-style: normal;
+      padding: 5px;
+      line-height: 150%;
+      font-weight: 430;
+    }
+    .emaildiv input {
+      outline: 0;
+      border: 1px solid rgb(183, 192, 196);
+      width: 340px;
+      height: 35px;
+      border-radius: 3px;
+      padding-left: 10px;
+    }
+    .passdiv input {
+      outline: 0;
+      border: 1px solid rgb(183, 192, 196);
+      width: 340px;
+      height: 35px;
+      border-radius: 5px;
+      padding-left: 10px;
+    }
+    .passp {
+      display: block;
+      margin: 10px 276px -0px -5px;
+      font-size: 14px;
+      font-family: "Poppins";
+      font-style: normal;
+      padding: 5px;
+      line-height: 150%;
+      font-weight: 430;
+    }
+  
+    /* Password eye styling */
+    .eye {
+      position: absolute;
+      margin: 10px 0px 0px -30px;
+    }
+    #hide1 {
+      display: none;
+    }
+  
+    .getbutton {
+      width: 315px;
+      height: 35px;
+      margin-top: 20px;
+      border-radius: 3px;
+      border: 0;
+      color: #fff;
+      background-color: #0199c6;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+    .forgotpass {
+      margin: 20px 0px 0px 160px;
+    }
+    .forgotpass a {
+      font-family: "Poppins";
+      font-style: normal;
+      color: rgb(18, 31, 18);
+    }
+    .logusingdiv {
+      text-align: center;
+    }
+    .orsignupwith {
+      margin-top: 20px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 15px;
+      line-height: 150%;
+      font-weight: 300;
+    }
+    .googlesignUp {
+      color: #0199c6;
+      width: 300px;
+      height: 33px;
+      border: 1.8px solid #0199c6;
+      border-radius: 5px;
+      position: relative;
+      margin-top: 10px;
+      padding-left: 20px;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .googlesignUp img {
+      width: 15px;
+      margin: 4px 0px 0px -28px;
+      position: absolute;
+    }
+    .applesignUP {
+      color: #0199c6;
+      width: 300px;
+      height: 33px;
+      /* border: 1.8px solid #0199c6; */
+      border-radius: 5px;
+      position: relative;
+      margin-top: 20px;
+      padding-left: 20px;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 14px;
+      line-height: 150%;
+      background-color: #fff;
+    }
+    .applesignUP img {
+      width: 18px;
+      margin: 2px 0px 0px -28px;
+      position: absolute;
+    }
+  }
+  
+>>>>>>> 4b08b4c7d1f46578ad96991880cc87776e1093bf
