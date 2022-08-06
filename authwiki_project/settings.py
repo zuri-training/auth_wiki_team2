@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'authwiki_app',
     'accounts',
     'users',
+<<<<<<< Updated upstream
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -48,6 +49,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
 
+=======
+    'library',
+>>>>>>> Stashed changes
 
 ]
 
