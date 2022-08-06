@@ -7,7 +7,6 @@
 }
 
 .faq-section{
-    /* background-color: red; */
     padding: 30px;
 }
 
@@ -15,7 +14,6 @@
     width: 20%;
     padding: 30px;
     margin: 0 auto;
-    /* background-color: green; */
 }
 
 .faq-logo-wrapper > img{
@@ -25,7 +23,6 @@
 }
 
 .faq-wrapper{
-    /* background-color: blue; */
     width: 100%;
 }
 
