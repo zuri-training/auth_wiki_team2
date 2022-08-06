@@ -160,16 +160,7 @@ li {
   }
   .footer {
     font-size: 1rem;
-    /* display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center; */
   }
-
-  /* .footer__menu--list {
-      justify-content: center;
-      align-items: center;
-    } */
 
   .footer__menu--list-items {
     flex-basis: 1rem;
