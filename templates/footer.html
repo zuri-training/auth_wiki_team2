@@ -1,18 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
+   <link
+       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet" 
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../static/css/footer.css" />
+    <link rel="stylesheet" href="{%static 'css/footer.css' %}" />
     <title>Authwiki</title>
   </head>
 
@@ -21,7 +22,7 @@
       <div class="footer__logo-box">
         <img
           class="footer__logo"
-          src="../static/images/footer-logo.svg"
+          src="{%static 'images/footer-logo.svg' %}"
           alt="footer logo"
         />
       </div>
@@ -35,26 +36,26 @@
           </div>
           <div class="footer__menu--list-items footer__menu--list-3">
             <h4 class="footer__menu--header">Dev and Docs</h4>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Documentation</a></li>
-            <li><a href="">Get Support</a></li>
-            <li><a href="">FAQS</a></li>
+            <li><a href="{%url 'blog' %}" class='anch'>Blog</a></li>
+            <li><a href="" class='anch'>Documentation</a></li>
+            <li><a href="" class='anch'>Get Support</a></li>
+            <li><a href="{%url 'faq'%}" class='anch'>FAQS</a></li>
           </div>
           <div class="footer__menu--list-items footer__menu--list-4">
             <h4 class="footer__menu--header">Company</h4>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Teams</a></li>
-            <li><a href="">Our Services</a></li>
-            <li><a href="">Customers</a></li>
-            <li><a href="">Careers</a></li>
+            <li><a href="" class='anch'>About Us</a></li>
+            <li><a href="" class='anch'>Teams</a></li>
+            <li><a href="{%url 'service' %}" class='anch'>Our Services</a></li>
+            <li><a href="" class='anch'>Customers</a></li>
+            <li><a href="" class='anch'>Careers</a></li>
           </div>
           <div class="footer__menu--list-items footer__menu--list-5">
             <h4 class="footer__menu--header">Industries</h4>
-            <li><a href="">Financial Services</a></li>
-            <li><a href="">Healthcare</a></li>
-            <li><a href="">Social Media</a></li>
-            <li><a href="">Retail</a></li>
-            <li><a href="">Public Sector</a></li>
+            <li><a href="" class='anch'>Financial Services</a></li>
+            <li><a href="" class='anch'>Healthcare</a></li>
+            <li><a href="" class='anch'>Social Media</a></li>
+            <li><a href="" class='anch'>Retail</a></li>
+            <li><a href="" class='anch'>Public Sector</a></li>
           </div>
           <div class="footer__menu--list-items footer__menu--list-6">
             <h4 class="footer__menu--header">Our Socials</h4>
@@ -84,11 +85,11 @@
       <div class="footer__horizontal"></div>
       <div class="footer__menu2">
         <ul class="footer__menu--list2">
-          <li><a href="">Terms of Service</a></li>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Cookie Policy</a></li>
-          <li><a href="">Copyright Policy</a></li>
-          <li><a href="">Code of Conduct</a></li>
+          <li><a href="" class='anch'>Terms of Service</a></li>
+          <li><a href="" class='anch'>Privacy Policy</a></li>
+          <li><a href="" class='anch'>Cookie Policy</a></li>
+          <li><a href="" class='anch'>Copyright Policy</a></li>
+          <li><a href="" class='anch'>Code of Conduct</a></li>
         </ul>
         <div class="footer__copyright">
           <p>&copy; 2020 Authwiki. All rights reserved.</p>

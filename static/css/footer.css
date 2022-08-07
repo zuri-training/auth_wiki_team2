@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
-html {
-  font-size: 62.5%; /*  1rem == 10px */
-}
+ html {
+  font-size: 62.5%;   /*1rem == 10px */
+} 
+
 
 a {
   text-decoration: none;
@@ -20,7 +22,7 @@ li {
 
 .footer {
   background-color: #002530;
-  padding: 5.6rem 11.4rem;
+  padding: 5.6rem 0.4rem;
   color: #ffff;
   font-size: 1.6rem;
   font-family: "poppins", sans-serif;
