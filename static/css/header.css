@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: 62.5%; /* 1rem ==10px */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
 
 ul{
     color: #000 !important;
@@ -17,13 +26,16 @@ ul{
     border: 1px solid #017A9F;
 
 }
+.text1{
+    font-size: 17px;
+}
 
 .btn-1:hover{
     background: #017A9F;
 }
 
 .btn-2{
-    color: #017A9F;
+    color: #017A9F !important;
     background-color: #fff;
     border-radius: 8px;
     border: 1px solid #017A9F;
