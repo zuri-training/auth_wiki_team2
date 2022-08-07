@@ -1,13 +1,17 @@
-
+from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm
 from django.shortcuts import render, redirect
-from .forms import UserRegisterForm, UserAuthenticationForm
-from django.contrib.auth import login, logout, authenticate
+from .forms import UserRegisterForm, UserAuthenticationForm, UserUpdateForm
+from django.contrib.auth import login, logout, authenticate, update_session_auth_hash
 from .models import Profile, MyUser
 import random, time
-from django.core.mail import send_mail
+from django.core.mail import send_mail, BadHeaderError
 from django.contrib import messages
-from django.http import HttpResponseRedirect
-
+from django.http import HttpResponseRedirect, HttpResponse
+from django.template.loader import render_to_string
+from django.db.models.query_utils import Q
+from django.utils.http import urlsafe_base64_encode
+from django.contrib.auth.tokens import default_token_generator
+from django.utils.encoding import force_bytes
 # Create your views here.
 
 def signup_view(request):
@@ -89,3 +93,19 @@ def otp(request):
             messages.error(request, 'incorrect otp')
             return HttpResponseRedirect(request.path_info)
     return render(request, 'accounts/otp.html', context)
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('change_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'accounts/change_password.html', {
+        'form': form
+    })
