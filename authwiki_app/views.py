@@ -12,6 +12,3 @@ def service(request):
 
 def Faq(request):
     return render(request, 'authwiki_app/faq.html')
-
-def blog(request):
-    return render(request, 'authwiki_app/blog.html')

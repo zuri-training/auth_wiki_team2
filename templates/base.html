@@ -55,8 +55,8 @@
                 Solutions
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{%url 'library' %}">Library</a></li>
-                <li><a class="dropdown-item" href="{%url 'service' %}">Service</a></li>
+                <li><a class="dropdown-item" href="{% url 'blog:list' %}">Blog</a></li>
+                <li><a class="dropdown-item" href="#">Service</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
               </ul>
@@ -67,7 +67,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="{%url 'blog' %}">Blogs</a></li>
+                <li><a class="dropdown-item" href="{% url 'blog:list' %}">Blogs</a></li>
                 <li><a class="dropdown-item" href="{%url 'faq'%}">FAQ</a></li>
               </ul>
             </li>
@@ -124,5 +124,6 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"
       ></script>
+      <script src="{%static 'js/slugify.js' %}"> </script>
 </body>
 </html>

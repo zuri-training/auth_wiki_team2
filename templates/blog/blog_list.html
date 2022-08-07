@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Blogs</title>
+{% endblock %}
+
+{% block content %}
+    <h1>Blogs List</h1>
+    {% if user.is_admin %}
+        <div style="margin-left: auto; margin-right:auto">
+            <a class="btn btn-sm btn-outline-primary mb-4 mr-3 " href="{% url 'blog:create' %}">
+                Create Blog Post
+            </a>
+        </div>
+    {% endif %}
+    <div class="blogs">
+        {% for blog in blogs %}
+        <div class="blog">
+            <img src="{{ blog.thumb.url }}" alt=""/>
+            <h2><a href="{% url 'blog:detail' slug=blog.slug %}">{{ blog.title }}</a></h2>
+            <p>{{ blog.snippet }}</p>
+            
+            <p class="author"> {{ blog.author.username }}</p>
+            <p>{{ blog.date }}</p>
+        </div>
+        {% endfor %}
+        
+    </div>
+{% endblock %}

@@ -158,3 +158,9 @@ library/migrations/*
 library/migrations/__pycache__/*
 library/__pycache__/*
 >>>>>>> Stashed changes
+
+blog/migrations/*
+!blog/migrations/__pycache__
+!blog/migrations/__init__.py
+blog/migrations/__pycache__/*
+blog/__pycache__/*
