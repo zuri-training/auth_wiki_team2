@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h3>
+        Post
+    </h3>
+   <article>
+        <div>
+            <div>
+               <div>
+                   <img src="{{ post.author.userprofile.image.url }}" width="20px">
+                   {% comment %} <a class="mr-2 white-important" href="{% url 'user-posts' post.author %}"> {% endcomment %}
+                       {{ post.author }}
+                   </a>
+               </div>
+               <div>
+                   {% if post.author == user %}
+                        <a href="{% url 'post-delete' post.id %}">clear</a></a>
+                        <a href="{% url 'post-update' post.id %}">update</a></a>
+                    {%  endif %}
+               </div>
+           </div>
+            <div></div>
+            <a>
+                <p>
+                    {{ post.title }}
+                </p>
+                <p>
+                    {{ post.description }}
+                </p>
+                <p>
+                    Code Snippet
+                    {{ post.code_snippet }}
+                </p>
+                
+                <p>
+                    <a href="{{ post.github }}">Github</a>
+                    
+                </p>
+                <p>
+                    <a href="{{ post.download }}">Download</a>
+                </p>
+                <p>
+                    
+                    {{ post.images }}
+                </p>
+                <p>
+                       
+                    {{ post.date_posted | date:"H:i l, d.m.y" }}
+
+                </p>
+                <i>Number of Downloads</i> {{post.downloadnumber}}
+
+                    <div>
+                        <div>
+                            <small>
+
+                                <!-- Like Buttons Here -->
+                                <a href="#" onClick="document.getElementById('likebutton').submit()"><i class="fas fa-thumbs-up">Like</i></a> {{post.likes}}   |   <a href="#" onClick="document.getElementById('dislikebutton').submit()"><i class="fas fa-thumbs-down">dislike</i></a> {{post.dislikes}}
+
+
+                                <form id="likebutton" method="POST" action="{% url 'library:postpreference' post.id 1 %}">
+                                {% csrf_token %}
+                                <input type="hidden">
+                                </form>
+
+                                <form id="dislikebutton" method="POST" action="{% url 'library:postpreference' post.id 2 %}">
+                                {% csrf_token %}
+                                <input type="hidden">
+                                </form>
+
+
+                            </small>
+                       </div>
+                        
+                    </div>
+
+                
+                
+            
+
+                <small>
+                    {{ post.date_posted | date:"H:i l, d.m.y" }}
+                </small>
+            </a>
+        </div>
+   </article>
+    <div>
+        <div>
+         <h3>
+             Comments
+         </h3>
+        {% for comment in comments %}
+            <article>
+                <div>
+                <div>
+                   <div>
+                       <img src="{{ comment.author.profile.image.url }}" width="20px">
+                       {% comment %} <a href="{% url 'user-posts' comment.author.username %}"> {% endcomment %}
+                           {{ comment.author }}
+                       </a>
+                   </div>
+               </div>
+                <div></div>
+                <a>
+                    <p>
+                        {{ comment.content }}
+                    </p>
+
+                    <small>
+                        {{ comment.date_posted | date:"H:i l, d.m.y" }}
+                    </small>
+                </a>
+            </div>
+            </article>
+        {% endfor %}
+        </div>
+        {% if user is not None %}
+            <div>
+                <h3>
+                    Add a comment
+                </h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        {{ form }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button type="submit">Submit comment</button>
+                    </div>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+  </div>
+{% endblock content %}

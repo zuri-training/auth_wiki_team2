@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+            Do you really want to delete
+        </fieldset>
+        <p>
+           {{ post.content }}
+        </p>
+        <div class="form-group">
+            <button type="submit">Yes</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
