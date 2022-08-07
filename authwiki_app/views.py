@@ -18,3 +18,6 @@ def blog(request):
 
 def library(request):
     return render(request, 'authwiki_app/library.html')
+
+def about(request):
+    return render(request, 'authwiki_app/about.html')

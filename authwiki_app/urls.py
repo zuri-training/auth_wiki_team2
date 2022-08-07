@@ -8,6 +8,7 @@ urlpatterns = [
     path('library/', views.library, name="library"),
     path('faq/', views.Faq, name='faq'),
     path('blog/', views.blog, name='blog'),
+    path('about/', views.about, name='about'),
 ]
 
 
