@@ -45,7 +45,7 @@ a {
 }
 
 .nav-link {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #151515;
   transition: all 0.2s;
 }
@@ -89,7 +89,7 @@ a {
   background-color: #0198c6;
   color: #ffffff;
   border: 1px solid #0198c6;
-}
+} 
 
 .hamburger div {
   width: 3rem;
@@ -161,7 +161,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 1.2rem 11rem;
-  margin-top: -6rem;
+  margin-top: 1rem;
 }
 
 .header-cta1 {
@@ -742,7 +742,7 @@ a {
   }
 
   .nav-link {
-    color: #fff;
+    color: black;
   }
 
   .nav-logo {
