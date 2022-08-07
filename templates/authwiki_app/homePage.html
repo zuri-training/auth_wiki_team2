@@ -1,9 +1,6 @@
+{% extends 'base.html' %}
 {%load static%}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {%block content %}
     <link
       href="https://api.fontshare.com/v2/css?f[]=panchang@800&display=swap"
       rel="stylesheet"
@@ -23,38 +20,9 @@
     />
     <link rel="stylesheet" href="{%static 'css/homePage.css' %}" />
     <title>auth_wiki</title>
-  </head>
 
-  <body>
-    {% comment %} <header class="header">
-      <nav class="nav">
-        <div class="nav-logo">
-          <img
-            class="nav-logo-style"
-            src="../static/images/logo.svg"
-            alt="logo"
-          />
-        </div>
-        <div class="hamburger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Devs and Docs </a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Company</a></li>
-          <li class="nav-item">
-            <a class="nav-btn nav-btn1" href="#">Sign up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-btn nav-btn2" href="#">Sign in</a>
-          </li>
-        </ul>
-      </nav>
+   <header class="header">
+ 
       <div class="header-primary">
         <div class="header-primary-text">
           <h1 class="header-primary-main">
@@ -71,7 +39,7 @@
         <div class="header-primary-image">
           <img
             class="header-primary-image-style"
-            src="../static/images/hero-image.png"
+            src="{%static 'images/hero-image.png' %}"
             alt="hero"
           />
         </div>
@@ -90,7 +58,7 @@
           />
         </div>
       </div>
-    </header> {% endcomment %}
+    </header> 
     <main>
       <section class="section1">
         <h2 class="section1-header">
@@ -305,6 +273,6 @@
         </div>
       </section>
     </main>
+    {% include 'footer.html'%}
     <script src="{%static 'js/homePage.js' %}"></script>
-  </body>
-</html>
+  {% endblock %}

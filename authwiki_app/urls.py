@@ -5,9 +5,10 @@ from authwiki_app import views
 urlpatterns = [
     path('', views.index, name="index"), 
     path('service/', views.service, name="service"),
-    path('social_proof/', views.social_proof, name="social_proof"),
     path('library/', views.library, name="library"),
-    path('faq/', views.Faq, name='faq')
+    path('faq/', views.Faq, name='faq'),
+    path('blog/', views.blog, name='blog'),
+    path('about/', views.about, name='about'),
 ]
 
 
