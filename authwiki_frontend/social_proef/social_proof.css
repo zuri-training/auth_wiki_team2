@@ -41,22 +41,8 @@ ul{
     background: #0198C6;
 }
 
-<<<<<<< HEAD:static/css/social_proof.css
 .btn-1{
     color: #0198C6;
-=======
-.card-text > h3{
-    color: #017A9F
-}
-.card-text > p{
-    color: #3F3F3F;
-}
-.card-text{
-    width: 300px;
-}
-.card-text-2{
-    width: 500px;
->>>>>>> osomhe_br-fe:authwiki_frontend/services/service.css
 }
 
 .auth{
@@ -82,7 +68,6 @@ border-radius: 8px;
     background: #003D4F;
     margin: 0;
 }
-<<<<<<< HEAD:static/css/social_proof.css
 
 .sub{
     color: #0199C6;
@@ -91,5 +76,3 @@ border-radius: 8px;
 .login-btn{
     background: #0199c6;
 }
-=======
->>>>>>> osomhe_br-fe:authwiki_frontend/services/service.css
