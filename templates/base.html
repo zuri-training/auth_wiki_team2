@@ -50,35 +50,35 @@
             <li class="nav-item mx-auto">
               <a class="nav-link active" aria-current="page" href="{%url 'index'%}">Home</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item mx-auto dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Solutions
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{%url 'library' %}">Library</a></li>
-                <li><a class="dropdown-item" href="{%url 'service' %}">Service</a></li>
+                <li><a class="dropdown-item text1" href="{%url 'library' %}">Library</a></li>
+                <li><a class="dropdown-item text1" href="{%url 'service' %}">Service</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item text1" href="#">Another action</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item mx-auto dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Devs and Docs
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="{%url 'blog' %}">Blogs</a></li>
-                <li><a class="dropdown-item" href="{%url 'faq'%}">FAQ</a></li>
+                <li><a class="dropdown-item text1" href="#">Action</a></li> 
+                <li><a class="dropdown-item text1" href="{%url 'blog' %}">Blogs</a></li>
+                <li><a class="dropdown-item text1" href="{%url 'faq'%}">FAQ</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item mx-auto dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Company
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Our Customers</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item text1" href="{%url 'about' %}">About Us</a></li>
+                <li><a class="dropdown-item text1" href="#">Our Customers</a></li>
+                <li><a class="dropdown-item text1" href="#">Something else here</a></li>
               </ul>
             </li>
             <li class="nav-item mx-auto">
@@ -97,7 +97,7 @@
               </div>
             </div>
             {% else %}
-            <div class="d-flex gap-5 mt-n5 p-4">
+            <div class="d-flex gap-5 mt-n5">
               <div class="mx-auto">
                 <button class="btn mt-n5 btn-1 text-white" type="submit">
                   <a href="{%url 'accounts:signup'%}">Sign Up</a>

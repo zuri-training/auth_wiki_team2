@@ -15,3 +15,9 @@ def Faq(request):
 
 def blog(request):
     return render(request, 'authwiki_app/blog.html')
+
+def library(request):
+    return render(request, 'authwiki_app/library.html')
+
+def about(request):
+    return render(request, 'authwiki_app/about.html')
