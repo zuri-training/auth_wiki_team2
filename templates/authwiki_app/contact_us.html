@@ -1,3 +1,4 @@
+ {% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
 
         <script src="https://cdn.tailwindcss.com"></script>
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./contact_us.css">
+        <link rel="stylesheet" href="{%static 'css/contact_us.css' %}">
         
 
     <title>Contact_Us</title>
@@ -33,7 +34,7 @@
       <div class="flex">
             <div class="order-2 lg:my-5">
                 <a href="#" class=" ">
-                    <img src="./img/Auth Wiki Logo.png" class="" alt="Authwiki Logo">
+                    <img src="{% static 'images/Auth Wiki Logo.png' %}" class="" alt="Authwiki Logo">
                 </a>
             </div>    
     
@@ -50,42 +51,7 @@
                                 Home <i class="fa fa-chevron-down" aria-hidden="true"></i>
                             </a>
                     </li>
-                   
-                    <li class="nav-item mx-auto">
-                            <a class="nav-link font-semibold md:text-2xl " href="#">
-                                Solutions  <i class="fa fa-chevron-down" aria-hidden="true"></i>
-
-                            </a>
-                    </li>
-                    <li class="nav-item mx-auto">
-                            <a class="nav-link font-semibold md:text-2xl" href="#" aria-expanded="false">
-                            Devs and Docs  <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                   
-
-                    <li class="nav-item mx-auto">
-                            <a class="nav-link font-semibold md:text-2xl" href="#">
-                                Company <i class="fa fa-chevron-down" aria-hidden="true"></i>
-
-                            </a> 
-                            
-                    </li>
                 </ul>
-
-                    <!-- buttons -->
-                <div class="d-flex gap-5 p-4">
-                    <div class="mx-auto">
-                        <button class="btn btn-1 text-white  bg-[#01B7EE] px-5 py-3 " type="submit">
-                        Sign up
-                        </button>
-                    </div>
-                    <div class="mx-auto">
-                        <button class="btn btn-2 text=[#01B7EE] login-btn  px-5 py-3 " type="submit">
-                        Login
-                        </button>
-                    </div>
-                </div>
          </div>
   </div>
 <!-- end of list div -->
@@ -95,11 +61,17 @@
     </header>
     
     <main>
+      {% for message in messages %}
+        <div class="alert alert-primary" role="alert">
+          {{message}}
+        </div>
+      {% endfor %}
+
 
         <div class="py-5">
            <div class="container text-center">
                 <h1 class="font-semibold text-[#0198C6] text-5xl ">Contact</h1>
-            <p class=" font-semibold text-[#151515] text-2xl m-auto w-[450px] ">Let’s start something great together. 
+            <p class=" font-semibold text-[#151515] text-2xl m-auto w-[450px] ">Let's start something great together. 
                 Get in touch with one of the team today!
             </p>
            </div>
@@ -109,27 +81,15 @@
         <section class="section pb-10">
            <div class="container flex justify-content-around m-auto">
                 <div class="">
-                <img src="./img/Image.png" alt="">
+                <img src="{%static 'images/Image.png' %}" alt="">
             </div>
             <!-- second img -->
             <div class="">
-                <img src="./img/Image (1).png" alt="">
+                <img src="{%static 'images/Image (1).png' %}" alt="">
             </div>
         </section>
 
-        <!-- form section -->
-        <section>
 
-           
-            </form>
-
-            </div>
-
-            <div class="">
-                <img src="" alt="">
-            </div>
-           </div>
-        </section>
 
 
         <!-- new form -->
@@ -142,7 +102,8 @@
     >
       
       <div class="xl:ml-20 xl:w-11/12 lg:w-9/12 md:w-8/12 mb-12 md:mb-0 block p-6 rounded-lg shadow-2xl bg-white max-w-lg">
-        <form>
+        <form method='POST' action=''>
+          {% csrf_token %}
           <div class=" items-center justify-center lg:justify-start ">
                    <h1 class="text-[#01B7EE] font-semibold text-3xl py-3 ">Get In Touch</h1>
                  <p class="font-semibold text-xl py-3 ">Fill up the form and our Team will get back to 
@@ -158,6 +119,7 @@
               type="text"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               id="FormControlInput2"
+              name='name'
             />
           </div>
 
@@ -169,6 +131,7 @@
               type="email"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               id="FormControlInput2"
+              name='email'
             />
           </div>
 
@@ -199,6 +162,7 @@
       id="FormControlTextarea1"
       rows="3"
       placeholder="Your message"
+      name='message'
     ></textarea>
   </div>
 <!-- </div> -->
@@ -207,7 +171,7 @@
 
           <div class=" lg:text-left">
             <button
-              type="button"
+              type="submit"
               class="inline-block px-7 py-3 
               bg-[#01B7EE] text-white font-medium text-sm 
               leading-snug  rounded shadow-md hover:bg-blue-700 
@@ -232,7 +196,7 @@
       <!-- images  -->
       <div class="bg-[#01B7EE] rounded">
         <img
-          src="./img/amico.png"
+          src="{%static 'images/amico.png' %}"
           class=" m-auto h-[360px] xl:w-11/12 lg:w-9/12 md:w-8/12  "
           alt="Sample image"
           
