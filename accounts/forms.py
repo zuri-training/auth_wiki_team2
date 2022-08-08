@@ -1,12 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.contrib.auth import authenticate
-from django.contrib.auth import get_user_model
 from accounts.models import MyUser
 
-# User = get_user_model()
 
 class UserRegisterForm(UserCreationForm):
     class Meta:
@@ -50,7 +47,7 @@ class UserAuthenticationForm(forms.ModelForm):
     password  = forms.CharField(label= 'Password', widget=forms.PasswordInput)
 
     class Meta:
-        model  =  User
+        model  =  MyUser
         fields =  ('email', 'password')
         widgets = {
                    'email':forms.TextInput(attrs={'class':'form-control'}),
@@ -70,31 +67,3 @@ class UserAuthenticationForm(forms.ModelForm):
             if not authenticate(email=email, password=password):
                 raise forms.ValidationError('Invalid Login')
         return email
-
-
-class UserUpdateForm(forms.ModelForm):
-    #form for updating User Info
-    class Meta:
-        model  = User
-        fields = ('email', 'username', 'password')
-        widgets = {
-                   'email':forms.TextInput(attrs={'class':'form-control'}),
-                   'username':forms.TextInput(attrs={'class':'form-control'}),
-                   'password':forms.TextInput(attrs={'class':'form-control'}),
-        }
-
-    def __init__(self, *args, **kwargs):
-
-        super(UserUpdateForm, self).__init__(*args, **kwargs)
-        for field in (self.fields['email'],self.fields['username'],self.fields['password']):
-            field.widget.attrs.update({'class': 'form-control '})
-
-    def clean_email(self):
-        #check that email isn't already registered
-        if self.is_valid():
-            email = self.cleaned_data['email']
-            try:
-                user = User.objects.exclude(pk = self.instance.pk).get(email=email)
-            except User.DoesNotExist:
-                return email
-            raise forms.ValidationError("Email is already in use")
