@@ -1,13 +1,12 @@
-
+from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm
 from django.shortcuts import render, redirect
 from .forms import UserRegisterForm, UserAuthenticationForm
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, logout, authenticate, update_session_auth_hash
 from .models import Profile, MyUser
 import random, time
 from django.core.mail import send_mail
 from django.contrib import messages
-from django.http import HttpResponseRedirect
-
+from django.http import HttpResponseRedirect, HttpResponse
 # Create your views here.
 
 def signup_view(request):
@@ -57,14 +56,14 @@ def login_view(request):
         if user:
             login(request, user)
             return redirect('/')
-        messages.info(request, 'Invalid information. please try again')        
+        messages.info(request, 'Invalid Information. Please Try Again')        
         return render(request, 'accounts/sign_in.html')
     else:
         form = UserAuthenticationForm()
         return render(request, 'accounts/sign_in.html')
 
 def send_otp(email, otp):
-    sub = '<p> Welcome to authwiki, we are thrilled to have you, to make sure your account is protected, please use the attached otp to verify your account. <p>Thank you</p></p>' + otp
+    sub = '<p> Welcome to Authwiki. We are thrilled to have you, to make sure your account is protected, please use the attached otp to verify your account. <p>Thank you</p></p>' + otp
     msg = 'Account verification'
     send_mail(
         subject= msg,
@@ -82,10 +81,26 @@ def otp(request):
         otp = request.POST.get('otp')
         profile = Profile.objects.filter(email = email).first()
         if otp == profile.otp:
-            Profile.objects.filter(email = email).delete()
             return redirect('/accounts/login')
         else:
-            print('oops')
-            messages.error(request, 'incorrect otp')
+            Profile.objects.filter(email = email).delete()
+            print('Oops')
+            messages.error(request, 'Incorrect Otp')
             return HttpResponseRedirect(request.path_info)
     return render(request, 'accounts/otp.html', context)
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('change_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'accounts/change_password.html', {
+        'form': form
+    })
