@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+       <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
         <script src="https://cdn.tailwindcss.com"></script>
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="{%static 'css/doc.css' %}">
     <title>Document</title>
-</head>
-<body>
-
     <main>
         <div class=" text-[#01B7EE] font-bold text-center my-10 text-4xl ">
             <h1 >Documentation</h1>
@@ -93,7 +86,7 @@
                 <div class="bg-[#F8F8F5] p-3">
                     <div class="flex gap-6 justify-center">
                         <div class="bg-[#CDE0E5] rounded-full m-3 ">
-                            <img  class="m-2 p-1 " src="./img/Start.png" alt="">
+                            <img  class="m-2 p-1 " src="{%static 'images/Start.png' %}" alt="">
                         </div>
                         
                         <h1 class="text-center my-auto font-bold text-2xl " >Tutorials</h1>
@@ -108,7 +101,7 @@
                 <div class=" bg-[#F8F8F5] p-3 ">
                     <div class=" flex gap-6 justify-center ">
                         <div class=" bg-[#CDE0E5] rounded-full m-3  ">
-                            <img class="m-2 p-1 "  src="./img/Private Lock.png" alt="">
+                            <img class="m-2 p-1 "  src="{%static 'images/Private Lock.png' %}" alt="">
                         </div>
                         
                         <h1 class="text-center my-auto font-bold text-2xl ">Authentication</h1>
@@ -122,7 +115,7 @@
                 <div class="bg-[#F8F8F5] p-3">
                     <div class=" flex gap-6 justify-center ">
                         <div class=" bg-[#CDE0E5] rounded-full m-3  ">
-                             <img  class="m-2 p-1 "  src="./img/Downloads.png" alt="">
+                             <img  class="m-2 p-1 "  src="{%static 'images/Downloads.png' %}" alt="">
                         </div>
                        
                         <h1 class="text-center my-auto font-bold text-2xl " >Code Download</h1>
@@ -138,7 +131,7 @@
                 <div class=" bg-[#F8F8F5] p-3">
                     <div class=" flex gap-6 justify-center ">
                        <div class=" bg-[#CDE0E5] rounded-full m-3  ">
-                            <img class="m-2 p-1 "   src="./img/Collaboration.png" alt="">
+                            <img class="m-2 p-1 "   src="{%static 'images/Collaboration.png' %}" alt="">
                        </div>
                         <h1 class="text-center my-auto font-bold text-2xl " >Interaction</h1>
                     </div>
@@ -151,7 +144,7 @@
                 <div class=" bg-[#F8F8F5] p-3 ">
                     <div class=" flex gap-6 justify-center ">
                         <div class=" bg-[#CDE0E5] rounded-full m-3  ">
-                            <img class="m-2 p-1 "   src="./img/Web Shield.png" alt="">
+                            <img class="m-2 p-1 "   src="{%static 'images/Web Shield.png' %}" alt="">
                         </div>
                         <h1 class="text-center my-auto font-bold text-2xl " >Identity Management</h1>
                     </div>
@@ -164,9 +157,7 @@
         </section>
         <!-- end -->
 
-
+        {% include 'footer.html'%}
     <!-- end of main -->
     </main>
-    
-</body>
-</html>
+{% endblock %}
