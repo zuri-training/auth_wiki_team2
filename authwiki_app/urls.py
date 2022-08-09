@@ -11,7 +11,10 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('doc/', views.doc, name='doc'),
-    path('text/', views.text, name='text')
+    path('text/', views.text, name='text'), 
+    path('terms/', views.terms, name="terms"),
+    path('disclamer/', views.disclamer, name="disclamer"),
+    path('policy/',  views.policy, name='policy')
 ]
 
 
