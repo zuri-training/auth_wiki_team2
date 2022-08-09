@@ -33,3 +33,19 @@ def contact(request):
         return render(request, 'authwiki_app/contact_us.html')
     else:
         return render(request, 'authwiki_app/contact_us.html')
+
+
+def doc(request):
+    return render(request, 'authwiki_app/doc.html')
+
+def text(request):
+    return render(request, 'authwiki_app/text.html')
+
+def terms(request):
+    return render(request, 'authwiki_app/terms_of_use.html')
+
+def disclamer(request):
+    return render(request, 'authwiki_app/disclamer.html')
+
+def policy(request):
+    return render(request, 'authwiki_app/policy.html')
