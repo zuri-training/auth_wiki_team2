@@ -85,10 +85,12 @@
             </button> </a
           >
           <br />
+          <a href="{% provider_login_url 'github' method = 'oauth2' %}">
           <button class="applesignUP">
             <img src="{%static 'images/github.svg' %}" alt="Apple logo" /> Sign
             in using GitHub
-          </button>
+          </button> 
+        </a>
         </div>
         <a href="#" class="m-login"
           >Don't have an account yet ? <i class="fa fa-arrow-right"></i>
