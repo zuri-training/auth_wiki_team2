@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
     'library',
     "crispy_forms",
     "crispy_bootstrap5",
@@ -54,6 +55,10 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 
 SITE_ID = 1
 
@@ -159,6 +164,14 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '################'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '#############'
 
 
+ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+LOGIN_REDIRECT_URL = '/'
+SOCIALACCOUNT_QUERY_EMAIL = True
+
+
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
 
@@ -167,5 +180,18 @@ SOCIALACCOUNT_PROVIDERS = {
             'secret': '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',
             'key': ''
         }
+    },
+    'github': {
+        'APP': {
+            'client_id': '49c3c99aaed5886bb489',
+            'secret': '88ec53d2d2975ba863a3a445aef3a22e5d0cf76e',
+            'key': '',
+        },
+
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
     }
 }

@@ -1,5 +1,4 @@
-{% load static %}
-{% load socialaccount %}
+{% load static %} {% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -130,13 +129,15 @@
                 Sign Up using Google
               </button> </a
             ><br />
-            <button class="applesignUP">
-              <img
-                src="{%static 'images/icons8-github.svg' %}"
-                alt="Apple logo"
-              />
-              Sign Up using GitHub
-            </button>
+            <a href="{% provider_login_url 'github' method = 'oauth2' %}">
+              <button class="applesignUP">
+                <img
+                  src="{%static 'images/icons8-github.svg' %}"
+                  alt="Apple logo"
+                />
+                Sign Up using GitHub
+              </button>
+            </a>
           </div>
         </div>
       </main>
