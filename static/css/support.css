@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*  1rem == 10px */
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+.support__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12.6rem;
+}
+
+.support__header {
+  font-size: 4rem;
+  color: #01b7ee;
+  margin-bottom: 1rem;
+}
+
+.support__text {
+  font-size: 1.6rem;
+}
+
+.support__form--form {
+  position: relative;
+}
+
+.support__form--form-input {
+  margin-top: 4rem;
+  width: 90.4rem;
+  text-indent: 4rem;
+  padding-block: 1.8rem;
+  border: 2px solid #017a9f;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  color: #b3b3b3;
+}
+
+.fa-search {
+  color: #b3b3b3;
+  font-size: 3.2rem;
+}
+
+.support__form--form-submit {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 55%;
+  left: 90%;
+  cursor: pointer;
+}
+
+.support__cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.support__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f5;
+  margin-right: 2rem;
+  border-radius: 1.4rem;
+  flex: 0 0 33rem;
+  padding: 2.6rem 5.2rem;
+}
+
+.support__card-sub-header {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  margin-bottom: 6.2rem;
+  margin-top: 1.4rem;
+}
+
+.support__card-details {
+  text-align: center;
+  color: #003d4f;
+}
+
+.support__card-text:not(:last-child) {
+  border-bottom: 0.86px solid #b3b3b3;
+  padding-bottom: 0.6rem;
+}
+
+.support__more {
+  margin-top: 4.8rem;
+  display: flex;
+  padding-block: 3.2rem;
+  justify-content: center;
+  background-color: #f8f8f5;
+  margin-bottom: 10.4rem;
+}
+
+.support__more--image-box {
+  width: 22rem;
+  height: 20rem;
+  margin-right: 18.2rem;
+}
+
+.support__more-text--header {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.support__more-image {
+  width: 100%;
+}
+
+.support__more-text {
+  margin-right: 8.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.support__more-text--paragraph {
+  color: #151515;
+  font-size: 1.6rem;
+  margin-bottom: 7rem;
+}
+
+.support__more--button2 {
+  align-self: flex-end;
+  padding: 1.6rem 4.8rem;
+  font-size: 2.8rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  background-color: #01b7ee;
+  color: #fff;
+}
+
+.support__more-text--button {
+  justify-self: flex-end;
+  margin-top: 2rem;
+  border-radius: 0.8rem;
+  color: #01b7ee;
+  border: 1px solid #01b7ee;
+  padding: 1.6rem 4.8rem;
+  align-self: center;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.support__more-btn {
+  text-decoration: none;
+}
+
+/* media query */
+
+@media screen and (max-width: 1000px) {
+  .support__header {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .support__text {
+    font-size: 1.4rem;
+  }
+
+  .support__form--form-input {
+    margin-top: 3rem;
+    width: 70.4rem;
+    text-indent: 3rem;
+    padding-block: 1.4rem;
+    font-size: 1.4rem;
+  }
+
+  .fa-search {
+    font-size: 2.2rem;
+  }
+
+  .support__form--form-submit {
+    top: 55%;
+    left: 90%;
+  }
+
+  .support__cards {
+    flex-wrap: wrap;
+  }
+
+  .support__card {
+    margin-top: 4rem;
+    margin-right: 2rem;
+    flex: 0 0 20rem;
+    padding: 2.6rem 4rem;
+  }
+
+  .support__more--image-box {
+    width: 18rem;
+    margin-right: 15rem;
+  }
+
+  .support__more-text--header {
+    font-size: 1.8rem;
+  }
+
+  .support__more-text {
+    margin-right: 6.5rem;
+  }
+
+  .support__more-text--paragraph {
+    font-size: 1.4rem;
+  }
+
+  .support__more--button2 {
+    padding: 1.4rem 3rem;
+    font-size: 2.8rem;
+  }
+
+  .support__more-text--button {
+    padding: 1.4rem 3rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 796px) {
+  .support__form {
+    margin-bottom: -3rem;
+  }
+  .support__header {
+    font-size: 2rem;
+  }
+
+  .support__more-text {
+    margin-right: 0rem;
+  }
+  .support__text {
+    font-size: 1.2rem;
+  }
+
+  .support__form--form-input {
+    width: 50.4rem;
+    text-indent: 4rem;
+    padding-block: 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  .fa-search {
+    font-size: 1.8rem;
+  }
+
+  .support__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+  }
+
+  .support__card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    width: 30rem;
+    padding: 2.6rem 4rem;
+  }
+
+  .support__more {
+    padding-block: 4rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5rem auto;
+    text-align: center;
+  }
+
+  .support__more--image-box {
+    width: 22rem;
+    height: 20rem;
+    margin-right: 0;
+  }
+
+  .support__more-text--header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .support__more-text {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .support__more-text--paragraph {
+    color: #151515;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+  }
+
+  .support__more--button2 {
+    align-self: center;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.8rem;
+    width: 30rem;
+    justify-self: center;
+  }
+
+  .support__more-text--button {
+    justify-self: center;
+    width: 30rem;
+    align-self: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.8rem;
+    align-items: center;
+  }
+
+  .support__more-btn {
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .support__header {
+    font-size: 2rem;
+  }
+
+  .support__text {
+    font-size: 1rem;
+  }
+
+  .support__form--form-input {
+    width: 35rem;
+    text-indent: 2rem;
+    padding-block: 1.6rem;
+    font-size: 1rem;
+  }
+
+  .fa-search {
+    font-size: 1.6rem;
+  }
+
+  .support__cards {
+    margin-top: 6rem;
+  }
+
+  .support__card {
+    margin-right: 2rem;
+    width: 25rem;
+    padding: 2.6rem 4rem;
+  }
+
+  .support__more {
+    padding-block: 4rem;
+    width: 35rem;
+    margin: 5rem auto;
+  }
+
+  .support__more--image-box {
+    width: 22rem;
+    height: 20rem;
+    margin-right: 0;
+  }
+
+  .support__more-text--header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .support__more--button2 {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    width: 25rem;
+  }
+
+  .support__more-text--button {
+    width: 25rem;
+    padding: 1.2rem 2.5rem;
+  }
+}

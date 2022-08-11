@@ -1,0 +1,163 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+       <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="{%static 'css/doc.css' %}">
+    <title>Document</title>
+    <main>
+        <div class=" text-[#01B7EE] font-bold text-center my-10 text-4xl ">
+            <h1 >Documentation</h1>
+        </div>
+
+        <section>
+            <div class="container m-auto">
+                <div class="w-[70%] m-auto ">
+                    
+                    <div class=" relative ">
+                    <div class="flex absolute inset-y-0 right-3 items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                        <span class="sr-only">Search icon</span>
+                    </div>
+                    <input type="text" id="search-navbar" class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Docs">
+                    </div>
+                    <!-- <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+                    <span class="sr-only">Open menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    </button> -->
+                </div>
+            </div>
+        </section>
+
+        <div class="container font-bold text-3xl lg:text-5xl text-center m-auto my-10 ">
+            <h1>Swift user Authentication with us</h1>
+        </div>
+
+
+        <!-- start -->
+        <div class=" container flex flex-wrap md:grid md:grid-cols-2 m-auto w-[80%] gap-6 mb-12 pb-4 ">
+            <div class="bg-[#F8F8F5] p-3">
+                <p class="font-semibold text-2xl m-3 p-3 ">In case you have a couple of questions to ask, 
+                    as regards how to get started and how to get the
+                     most out of our resources, Our <span class="text-[#01B7EE] ">FAQ</span> section is 
+                     available to give you answers!
+                </p>
+            </div>
+            <div class="bg-[#F8F8F5] p-3">
+                <p class="font-semibold text-2xl m-3 p-3 "><span class="text-[#01B7EE] ">Auth Wiki</span> is here to help provide different 
+                    authentication codes in several lanuages for
+                     developers and businesses looking for quick,
+                      easy and authentic ways to Authenticate users
+                </p>
+            </div>
+        </div>
+
+        <!-- end -->
+
+        <!-- start -->
+        <div class=" text-center font-semibold w-[70%] m-auto my-10 ">
+            <p>The Documentations below will serve as a navigator 
+                and help you understand 
+                Auth Wiki in order to utilize our services fully.
+            </p>
+        </div>
+        <!-- End -->
+
+        <!-- start -->
+        <section>
+            <div class="container flex flex-wrap md:grid md:grid-cols-2 m-auto w-[80%] gap-6 mb-12 pb-4 ">
+                <!-- first box -->
+                <div class="bg-[#F8F8F5] p-3">
+                    <div class="flex gap-6 justify-center">
+                        <div class="bg-[#CDE0E5] rounded-full m-3 ">
+                            <img src="./img/Classroom.png" class="m-2 p-1 " alt="">
+                        </div>
+                        
+                        <h1 class="text-center my-auto font-bold text-2xl ">Get Started</h1>
+                    </div>
+                    <p class="font-semibold text-2xl m-3 p-3 ">Get clear explanatory lessons on the basics
+                         and find answers to your authentication
+                          problems. 
+                    </p>
+                </div>
+
+                <!-- second box -->
+                <div class="bg-[#F8F8F5] p-3">
+                    <div class="flex gap-6 justify-center">
+                        <div class="bg-[#CDE0E5] rounded-full m-3 ">
+                            <img  class="m-2 p-1 " src="{%static 'images/Start.png' %}" alt="">
+                        </div>
+                        
+                        <h1 class="text-center my-auto font-bold text-2xl " >Tutorials</h1>
+                    </div>
+                    <p class="font-semibold text-2xl m-3 p-3 " >Enjoy Sample Video documentation are provided 
+                        to make learning more 
+                        effective.
+                    </p>
+                </div>
+
+                <!-- box 3 -->
+                <div class=" bg-[#F8F8F5] p-3 ">
+                    <div class=" flex gap-6 justify-center ">
+                        <div class=" bg-[#CDE0E5] rounded-full m-3  ">
+                            <img class="m-2 p-1 "  src="{%static 'images/Private Lock.png' %}" alt="">
+                        </div>
+                        
+                        <h1 class="text-center my-auto font-bold text-2xl ">Authentication</h1>
+                    </div>
+                    <p class="font-semibold text-2xl m-3 p-3 " >Choose how your Applications and types API”S 
+                        determine the identity and safety of a user.
+                    </p>
+                </div>
+
+                <!-- box 4 -->
+                <div class="bg-[#F8F8F5] p-3">
+                    <div class=" flex gap-6 justify-center ">
+                        <div class=" bg-[#CDE0E5] rounded-full m-3  ">
+                             <img  class="m-2 p-1 "  src="{%static 'images/Downloads.png' %}" alt="">
+                        </div>
+                       
+                        <h1 class="text-center my-auto font-bold text-2xl " >Code Download</h1>
+                    </div>
+                    <p class="font-semibold text-2xl m-3 p-3 " >Reduce time and resources to write many lines 
+                        of code by getting secure codes in different 
+                        languages.
+                     </p>
+                </div>
+
+
+                <!-- box 5 -->
+                <div class=" bg-[#F8F8F5] p-3">
+                    <div class=" flex gap-6 justify-center ">
+                       <div class=" bg-[#CDE0E5] rounded-full m-3  ">
+                            <img class="m-2 p-1 "   src="{%static 'images/Collaboration.png' %}" alt="">
+                       </div>
+                        <h1 class="text-center my-auto font-bold text-2xl " >Interaction</h1>
+                    </div>
+                    <p class="font-semibold text-2xl m-3 p-3 " >Give feedback on our Auth Codes, interact and 
+                        have conversatuions with other members.
+                    </p>
+                </div>
+
+                <!-- box 6 -->
+                <div class=" bg-[#F8F8F5] p-3 ">
+                    <div class=" flex gap-6 justify-center ">
+                        <div class=" bg-[#CDE0E5] rounded-full m-3  ">
+                            <img class="m-2 p-1 "   src="{%static 'images/Web Shield.png' %}" alt="">
+                        </div>
+                        <h1 class="text-center my-auto font-bold text-2xl " >Identity Management</h1>
+                    </div>
+                    <p class="font-semibold text-2xl m-3 p-3 " >Save and Manage information about your users.</p>
+                </div>
+
+
+
+            </div>
+        </section>
+        <!-- end -->
+
+        {% include 'footer.html'%}
+    <!-- end of main -->
+    </main>
+{% endblock %}
