@@ -5,14 +5,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-html {
-    font-size: 62.5%; /* 1rem ==10px */
-}
+/* html {
+    font-size: 62.5%; /* 1rem ==10px 
+} 
   
 body {
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
-}
+} */
 
 .blog-section{
     width: 100%;

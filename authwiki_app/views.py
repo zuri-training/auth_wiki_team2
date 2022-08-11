@@ -49,3 +49,7 @@ def disclamer(request):
 
 def policy(request):
     return render(request, 'authwiki_app/policy.html')
+
+
+def support(request):
+    return render(request, 'authwiki_app/support.html')

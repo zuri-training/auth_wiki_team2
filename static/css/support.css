@@ -3,15 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 
 html {
-  font-size: 62.5%; /*  1rem == 10px */
+  font-size: 62.5%; /*  1rem == 10px 
 }
 
 body {
   font-family: "poppins", sans-serif;
   font-size: 1.6rem;
-}
+} */
 
 .support__form {
   display: flex;
