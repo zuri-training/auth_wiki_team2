@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% block content %}
+    <form>
+        {{form }}
+        <div>
+        <input type="submit" value="go">
+        or 
+        <a href="{% provider_login_url 'google' method = 'oauth2' %}">
+            <button class="googlesignUp">
+              <img
+                src="{%static 'images/icons8-google.svg' %}"
+                alt="Google logo"
+              />
+              Sign Up using Google
+            </button> </a
+          >
+          <a href="{% provider_login_url 'github' method = 'oauth2' %}">
+            <button class="googlesignUp">
+              <img
+                src="{%static 'images/icons8-github.svg' %}"
+                alt="Google logo"
+              />
+              Sign Up using Github
+            </button> </a
+          >
+        </div>
+    </form>
+{% endblock %}

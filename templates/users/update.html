@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Profile Info</legend>
+            {{ u_form }}
+            {{ p_form }}
+        </fieldset>
+        <div>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+  </div>
+{% endblock content %}

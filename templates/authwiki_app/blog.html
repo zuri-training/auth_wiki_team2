@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="../static/css/blog.css">
+
+    <!-- nav goes here -->
+    <section class="blog-section">
+
+        <div class="blog-latest-post">
+            <h2 class="blog-latest-post-heading">Latest post</h2>
+            <div class="blog-latest-post-img">
+                <img src="../static/images/blog-post-0.png" alt="announcment image">
+            </div>
+            <div class="blog-latest-post-detail">
+                <h2 class="blog-latest-post-title">Announcing Auth wiki  Open Source documentation Grained Authorization System</h2>
+                <div class="blog-latest-post-time-author">
+                    <p class="blog-latest-post-author">Auth wiki</p>
+                    <p class="blog-latest-post-time">8 August 2022</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- all blog post -->
+        <div class="blog-post-all">
+            <!-- blog post row -->
+            <div class="blog-post-row">
+                <!-- single post -->
+                <div class="blog-post">
+                    <div class="blog-post-img">
+                        <img src="../static/images/blog-post-1.png" alt="">
+                    </div>
+                    <div class="blog-post-detail">
+                        <div class="blog-post-title">
+                            <p class="blog-post-text">Microsoft moves to new Windows development cycle with major release every three years, feature drops in between.</p>
+                            <a href="#">Read more</a>
+                        </div>
+                        <div class="blog-post-time-author">
+                            <p class="blog-post-author">By Zac Bowden</p>
+                            <p class="blog-post-time">8 August 2022</p>
+                        </div>  
+                    </div>
+                </div>
+    
+                <div class="blog-post">
+                    <!-- post image -->
+                    <div class="blog-post-img">
+                        <img src="../static/images/blog-post-2.png" alt="">
+                    </div>
+                    <!-- post detailes -->
+                    <div class="blog-post-detail">
+                        <div class="blog-post-title">
+                            <p class="blog-post-text">How to run program files and implement it in a programming enviroment with real life samples and codes.</p>
+                            <a href="#">Read more</a>
+                        </div>
+                        <div class="blog-post-time-author">
+                            <p class="blog-post-author">By Nic Hollen</p>
+                            <p class="blog-post-time">8 August 2022</p>
+                        </div>  
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="blog-post-row">
+                <!-- single post -->
+                <div class="blog-post">
+                    <div class="blog-post-img">
+                        <img src="../static/images/blog-post-3.png" alt="">
+                    </div>
+                    <div class="blog-post-detail">
+                        <div class="blog-post-title">
+                            <p class="blog-post-text">Android 13 All you need to know about Google next big release its functionalities and operating system.</p>
+                            <a href="#">Read more</a>
+                        </div>
+                        <div class="blog-post-time-author">
+                            <p class="blog-post-author">By Nic Hollen</p>
+                            <p class="blog-post-time">8 August 2022</p>
+                        </div>  
+                    </div>
+                </div>
+    
+                <div class="blog-post">
+                    <!-- post image -->
+                    <div class="blog-post-img">
+                        <img src="../static/images/blog-post-4.png" alt="">
+                    </div>
+                    <!-- post detailes -->
+                    <div class="blog-post-detail">
+                        <div class="blog-post-title">
+                            <p class="blog-post-text">Android 13 All you need to know about Google next big release its functionalities and operating system.</p>
+                            <a href="#">Read more</a>
+                        </div>
+                        <div class="blog-post-time-author">
+                            <p class="blog-post-author">By Nic Hollen</p>
+                            <p class="blog-post-time">8 August 2022</p>
+                        </div>  
+                    </div>
+                </div>
+    
+            </div>
+         </div>
+
+    </section>
+{% include 'footer.html' %}
+{% endblock %}
