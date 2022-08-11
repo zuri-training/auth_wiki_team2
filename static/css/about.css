@@ -3,15 +3,6 @@
     margin: 0; 
     font-family: 'poppins';
 }
-html {
-    font-size: 62.5%; /* 1rem ==10px */
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.6rem;
-}  
-
 .body{
     padding: 3rem;
 }

@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.lib-header {
+  height: 55%;
+  background-color: rgb(222, 222, 250);
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.header-main {
+  background: linear-gradient(
+    180deg,
+    rgba(65, 210, 253, 0.35) 0%,
+    rgba(40, 44, 93, 0.27) 100%
+  );
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-main-img1 {
+  width: 350px;
+  height: 100%;
+}
+
+.header-main-img2 {
+  width: 200px;
+  height: 300px;
+}
+
+.header-tab1 {
+  background-color: #002530;
+  width: 100%;
+  height: 30px;
+}
+
+.header-tab2 {
+  background-color: #002530;
+  width: 100%;
+  padding: 0px 100px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-main > h2 {
+  width: 250px;
+  text-align: center;
+  line-height: 0.9;
+  margin-right: 20px;
+  margin-left: -50px;
+}
+
+.header-browse {
+  font-size: 66px;
+  font-weight: 800;
+}
+
+.header-through {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.header-code {
+  font-size: 100px;
+  font-weight: 800;
+}
+
+.header-lib {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.header-icons {
+  margin-right: 60px;
+  margin-bottom: 50px;
+  width: 150px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.header-tab2-div1 {
+  display: flex;
+  align-items: center;
+}
+
+.header-tab2-div1 p {
+  color: #01b7ee;
+  margin-right: 20px;
+}
+
+.header-tab2-div1 button {
+  background-color: transparent;
+  padding: 8px;
+  margin: 0px 5px;
+}
+
+.header-tab2-button1 {
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+}
+
+.header-tab2-button1:hover {
+  color: #01b7ee;
+  border: 1px solid #01b7ee;
+  cursor: pointer;
+}
+
+.header-tab2-button2 {
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+}
+
+.header-tab2-button2:hover {
+  color: #01b7ee;
+  border: 1px solid #01b7ee;
+  cursor: pointer;
+}
+
+.header-tab2-div2 {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 60px;
+  /* background-color: lightblue; */
+  align-items: center;
+}
+
+.python-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/Pythonbg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.javascript-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/javascriptbg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.php-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/Phpbg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.cplus-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/c++bg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.java-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/javabg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.ruby-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/rubybg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.swift-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/swiftbg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.rust-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/rustbg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.scala-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/scalabg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.perl-section {
+  height: 200px;
+  width: 900px;
+  border-radius: 10px;
+  background-image: url("./images/header-icons/perlbg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 25px auto;
+}
+
+.div-hover:hover {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.3);
+  transform: scale(1.01);
+
+}

@@ -14,7 +14,8 @@ urlpatterns = [
     path('text/', views.text, name='text'), 
     path('terms/', views.terms, name="terms"),
     path('disclamer/', views.disclamer, name="disclamer"),
-    path('policy/',  views.policy, name='policy')
+    path('policy/',  views.policy, name='policy'),
+    path('support/', views.support, name='support'),
 ]
 
 
