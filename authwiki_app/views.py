@@ -53,3 +53,6 @@ def support(request):
 
 def what_we(request):
     return render(request, 'authwiki_app/what_we_do.html')
+
+def teams(request):
+    return render(request, 'authwiki_app/teams-landing-page.html')

@@ -17,7 +17,7 @@ PAGINATION_COUNT = 3
 # Create your views here.
 class PostListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = 'library/home.html'
+    template_name = 'library/library.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = PAGINATION_COUNT
@@ -45,7 +45,7 @@ class PostListView(LoginRequiredMixin, ListView):
 
 class PostDetailView(DetailView):
     model = Post
-    template_name = 'library/post_detail.html'
+    template_name = 'library/library_detail.html'
     context_object_name = 'post'
 
     def get_context_data(self, **kwargs):

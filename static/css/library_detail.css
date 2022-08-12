@@ -1,0 +1,27 @@
+.image1{
+    width: 90%;
+    height: 15rem;
+    margin-top: 4rem;
+    border-radius: 2rem;
+}
+.text{
+    font-size: 19px;
+}
+.code_snippet{
+    background-color: rgb(230, 227, 227);
+    border-radius: 10px;
+}
+.comment_section{
+    width: 100%;
+}
+.whole{
+    background-color: rgb(250, 248, 245);
+}
+.icon-img{
+    width: 25px;
+    height: 20px;
+}
+.icons{
+    justify-content: space-between;
+    padding: 0px 3rem;
+}

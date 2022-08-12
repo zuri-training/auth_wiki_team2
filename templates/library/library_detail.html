@@ -1,0 +1,58 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/library_detail.css' %}">
+    <div class="container whole">
+        <div>
+            <img class="image-fluid image1" src="{{post.images.url}}" />
+
+            <h2 class="text-center p-3">{{post.title}}</h2>
+
+            <pre>
+            <span class="text">{{post.description}}</span>
+            </pre>
+            <div class="code_snippet">
+                <pre>
+                    <code>
+                        {{post.code_snippet}}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <hr>
+        {% if user.is_authenticated%}
+            <div class="row icons">
+                <a class="col-3" href="{{post.github}}"><img class="icon-img" src="{%static 'images/github.png'%}"></a>
+                <a class="col-3" href="{{post.download}}"><img class="icon-img" src="{%static 'images/web.png'%}"></a>
+                <a  class="col-3" href="{{post.likes}}"><img class="icon-img" src="{%static 'images/thumbsup.png'%}"></a>
+                <a  class="col-3"href="{{post.dislikes}}"><img class="icon-img" src="{%static 'images/thumbsdown.png'%}"></a>
+            </div>
+            <hr>
+            <form action="" method='POST' class="comment_section">
+                {%csrf_token%}
+                <div class="form-group">
+                    <input type="text" name="content" class="form-control" id="formGroupExampleInput" placeholder="Comment..">
+                </div>
+                <button class="btn btn-primary mt-3" type="submit"> Comment</button>
+            </form>
+            <hr>
+            {% if comments %}
+                {% for com in comments %}
+                    <p>{{com.content}}</P>
+                    <small>{{com.author}}</small>
+                    <hr>
+                {% endfor %}
+            {% else %}
+            <div class="alert alert-secondary" role="alert">
+                No comment yet add one ..
+            </div>
+            {% endif %}
+        {% else %}
+        <div class="alert alert-secondary" role="alert">
+            <a href="{'accounts:signup}">Signup</a> for more information
+        </div>
+        {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% endblock %}
