@@ -1,0 +1,26 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.image_icon{
+    Width: 24px;
+    Height: 31.43px;
+}
+.btn_1{
+    background-color: #01B7EE;
+    color: white;
+    border: 1px solid #01B7EE;
+    border-radius: 3px;
+    Width: 200px;
+    Height : 40px;
+    Left: 450px;
+    border-radius: 8px;
+    Padding: 8px, 32px, 8px, 32px;
+    Gap : 16px;
+}
+.header_link :hover{
+    color: #01B7EE !important;
+}
+.anchor-text{
+    color:white;
+    text-decoration: none;
+}

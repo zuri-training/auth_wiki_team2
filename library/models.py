@@ -20,7 +20,7 @@ class Post(models.Model):
 
     
     def __str__(self):
-        return self.description
+        return self.title
 
     @property
     def number_of_comments(self):
@@ -32,6 +32,9 @@ class Comment(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(MyUser, on_delete=models.CASCADE)
     post_connected = models.ForeignKey(Post, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.post_connected.title
 
 
 class Preference(models.Model):
