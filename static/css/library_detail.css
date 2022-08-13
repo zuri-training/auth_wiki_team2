@@ -25,3 +25,7 @@
     justify-content: space-between;
     padding: 0px 3rem;
 }
+
+.icon-img.color {
+    color: black;
+}
