@@ -1,15 +1,21 @@
+from distutils.command.upload import upload
 from django.db import models
 from django.utils import timezone
 from accounts.models import MyUser
 from django.urls import reverse
 
-
+class category(models.Model):
+    category_name = models.CharField(max_length=100, null=True)
+    images = models.ImageField(upload_to='category_images', blank=True, null=True)
+    def __str__(self):
+        return self.category_name
 
 class Post(models.Model):
     title = models.TextField(max_length=1000)
     description = models.TextField(max_length=1000)
     code_snippet = models.TextField(max_length=1000)
     date_posted = models.DateTimeField(default=timezone.now)
+    category_name = models.ForeignKey(category, on_delete=models.CASCADE, null=True)
     author = models.ForeignKey(MyUser, on_delete=models.CASCADE)
     likes= models.IntegerField(default=0)
     dislikes= models.IntegerField(default=0)

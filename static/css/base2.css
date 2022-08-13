@@ -5,6 +5,12 @@ body{
     Width: 24px;
     Height: 31.43px;
 }
+.nav-link {
+    margin-right: 1em !important;  
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
 .btn_1{
     background-color: #01B7EE;
     color: white;
@@ -23,4 +29,8 @@ body{
 .anchor-text{
     color:white;
     text-decoration: none;
+}
+.text-center{
+    content: "";
+    margin-left: calc(100% -75%);
 }

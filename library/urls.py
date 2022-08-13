@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import (
+    CategoryListView,
     PostListView,
     PostDetailView,
     PostCreateView,
@@ -15,7 +16,8 @@ from .import views
 app_name = 'library'
 
 urlpatterns = [
-    path('', PostListView.as_view(), name='home'),
+    path('', CategoryListView.as_view(), name='home'),
+    path('post_list/<str:pk>/', PostListView.as_view(), name='post_list'),
     path('library/new/', PostCreateView.as_view(), name='post-create'),
     path('library/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     # path('user/<str:username>', UserPostListView.as_view(), name='user-library'),

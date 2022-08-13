@@ -5,6 +5,7 @@ body{
 .nav-image{
     width: 17rem;
 }
+
 .link-1{
     color: white;
 }
@@ -27,5 +28,8 @@ a{
 /* .nav-item :hover{
     /* border-bottom: 5px solid #01B7EE ; 
 } */
+.drop{
+    display: flex;
+}
     
 

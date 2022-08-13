@@ -8,6 +8,9 @@
 html {
   font-size: 62.5%; /* 1rem ==10px */
 }
+.edited{
+  Font: Panchang
+}
 
 body {
   font-family: "Poppins", sans-serif;
