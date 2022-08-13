@@ -6,16 +6,10 @@
 
 .box {
     background-image: url('./img/Group\ 2243.png');
-                      /* url('./img/Group\ 2245.png'); */
-    /* background-repeat: no-repeat, no-repeat;
-    background-position: 0 top,
-                         900px top; */
     background-size: 40%, 40%;
     background-repeat: space;
-    /* background-color: #d7fdd4; */
     background-color: rgba(55, 153, 46, 0.2);
     border-radius: 20px;
-    /* height: 150px; */
 }
 
 
