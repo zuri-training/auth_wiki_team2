@@ -1,6 +1,16 @@
 .dropdown select {
   display: none !important;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
 }
+/* .drop{
+
+
+} */
 
 .dropdown:focus-within select {
   display: block !important;
@@ -8,11 +18,11 @@
 
 .vl {
   border-left: 6px solid #B3B3B3;
-  height: 250px;
+  height: 200px;
   position: absolute;
   left: 50%;
   margin-left: -80px;
-  top: 40px;
+  top: 0px;
 }
 .v2 {
   border-left: 6px solid #B3B3B3;
@@ -20,5 +30,5 @@
   position: absolute;
   left: 50%;
   margin-left: -10px;
-  top: 60px;
+  top: 50px;
 }

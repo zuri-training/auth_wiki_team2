@@ -101,6 +101,6 @@ def change_password(request):
             messages.error(request, 'Please correct the error below.')
     else:
         form = PasswordChangeForm(request.user)
-    return render(request, 'accounts/change_password.html', {
+    return render(request, 'accounts/password/password-resets.html', {
         'form': form
     })
