@@ -50,9 +50,9 @@ a {
   transition: all 0.2s;
 }
 
-.nav-link:hover {
+/* .nav-link:hover {
   border-bottom: 5px solid #0198c6;
-}
+} */
 
 .nav-link:active,
 .nav-link:focus {
@@ -72,11 +72,11 @@ a {
   border: 1px solid transparent;
 }
 
-.nav-btn1:hover {
+/* .nav-btn1:hover {
   background-color: transparent;
   color: #0198c6;
   border: 1px solid #0198c6;
-}
+} */
 
 .nav-btn2 {
   background-color: #ffffff;
@@ -84,12 +84,12 @@ a {
   border-radius: 0.8rem;
   border: 1px solid #0198c6;
 }
-
+/* 
 .nav-btn2:hover {
   background-color: #0198c6;
   color: #ffffff;
   border: 1px solid #0198c6;
-} 
+}  */
 
 .hamburger div {
   width: 3rem;
