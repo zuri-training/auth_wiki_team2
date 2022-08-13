@@ -15,8 +15,8 @@
                </div>
                <div>
                    {% if post.author == user %}
-                        <a href="{% url 'post-delete' post.id %}">clear</a></a>
-                        <a href="{% url 'post-update' post.id %}">update</a></a>
+                        <a href="{% url 'library:post-delete' post.id %}">clear</a></a>
+                        <a href="{% url 'library:post-update' post.id %}">update</a></a>
                     {%  endif %}
                </div>
            </div>

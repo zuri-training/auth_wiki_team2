@@ -1,0 +1,45 @@
+{% extends 'base2.html'%}
+{%load static %}
+{% block content %}
+    <link rel="stylesheet" href="{%static 'css/library.css' %}" />
+    <title>Library</title>
+  </head>
+  <body> 
+
+    
+    <div class="container">
+      <header class="lib-header">
+        <div class="header-tab1"></div>
+
+        <div class="header-main">
+         <img class="image-top" src="{%static 'images/library_image.png'%}">
+        </div>
+
+        <div class="header-tab2">
+          <div class="header-tab2-div1">
+            <p>Sort By</p>
+            <button class="header-tab2-button1">Most Popular</button>
+            <button class="header-tab2-button2">Alphabetical Order</button>
+          </div>
+          <div class="header-tab2-div2">
+            <p>icons</p>
+            <p>icons</p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        {%for post in posts %}
+          <a href="{%url 'library:post-detail' post.id%}">
+            <section class="python-section div-hover row">
+             <img class="images col-6" src="{{post.images.url}}">
+             <div class="col-6 pt-4 ">
+              <h2 class="text-dark text_check ">{{post.title}}</h2>
+              <p class="text_check">{{post.description|truncatewords:20}}</p>
+             </div>
+            </section>
+          </a>
+        {% endfor %}
+      </main>
+    </div>
+{% endblock %}

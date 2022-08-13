@@ -1,20 +1,6 @@
- {% load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
-
-
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
         <script src="https://cdn.tailwindcss.com"></script>
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{%static 'css/contact_us.css' %}">
@@ -22,42 +8,7 @@
 
     <title>Contact_Us</title>
 </head>
-<body>
-
-    
-   <header>
-      
-
-<nav class="bg-white  px-2  p-2.5  ">
-    <!-- <div class="container"> -->
-  <div class="container grid lg:flex justify-center">
-      <div class="flex">
-            <div class="order-2 lg:my-5">
-                <a href="#" class=" ">
-                    <img src="{% static 'images/Auth Wiki Logo.png' %}" class="" alt="Authwiki Logo">
-                </a>
-            </div>    
-    
-            <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-            </button>
-        </div>
-         <div class="hidden  justify-between items-center w-full lg:flex   " id="navbar-search">
-      
-                <ul class="flex  gap-3    bg-white mx-auto mb-2 mb-lg-0  ">
-                  
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{%url 'index' %}">Home</a>
-                  </li>
-                </ul>
-         </div>
-  </div>
-<!-- end of list div -->
-  </div>
-</nav> 
-
-    </header>
-    
+<body>   
     <main>
       {% for message in messages %}
         <div class="alert alert-primary" role="alert">
@@ -241,9 +192,5 @@
         </section>
 
     </main>
-
-
-
          <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-</body>
-</html>
+{% endblock %}
