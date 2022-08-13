@@ -18,6 +18,9 @@ body{
 .one{
     color: #01B7EE;
 }
+a{
+    text-decoration: none !important;
+}
 .btn1{   
     width: 13rem;
     height: 4rem;
@@ -27,16 +30,16 @@ body{
     margin-left: 2rem;
 }
 .btn2{   
-    width: 20rem;
-    height: 4rem;
     border: 1px solid white;
     border-radius: 10px;
     color: white;
-    margin-left: 2rem;
+}
+.btn2:hover{
+    color: black !important;
 }
 .text{
     font-family: 'Poppins';
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 800;
     line-height: 240px;
     letter-spacing: 0em;

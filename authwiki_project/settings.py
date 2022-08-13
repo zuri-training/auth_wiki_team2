@@ -155,8 +155,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.MyUser'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'authwiki29@gmail.com'
-EMAIL_HOST_PASSWORD = 'ibwmbsaboyhbnstx'
+EMAIL_HOST_USER = 'authwiki5@gmail.com'
+EMAIL_HOST_PASSWORD = 'wzevgrahoreisobg'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 
