@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    background-image: url('./img/Group\ 2243.png');
+                      /* url('./img/Group\ 2245.png'); */
+    /* background-repeat: no-repeat, no-repeat;
+    background-position: 0 top,
+                         900px top; */
+    background-size: 40%, 40%;
+    background-repeat: space;
+    /* background-color: #d7fdd4; */
+    background-color: rgba(55, 153, 46, 0.2);
+    border-radius: 20px;
+    /* height: 150px; */
+}
+
+
+.div {
+  border-left: 6px solid #B3B3B3;
+  height: 60px;
+  position: absolute;
+  left: 60%;
+  margin-left: -80px;
+  top: auto;
+}
+
+#angular{
+  background-color: rgba(174, 60, 60, 0.2);
+}
+
+#Vue{
+ background-color: rgba(8, 80, 19, 0.2);
+}
+
+#backbone{
+ background-color: rgba(19, 39, 110, 0.2);
+}
+
+#sevelte{
+ background-color:  rgba(158, 59, 27, 0.2);
+}
+
+#ember{
+ background-color: rgba(255, 255, 255, 0.2);
+}
+
+#preact{
+ background-color:  rgba(67, 20, 143, 0.2);
+}
+
+#jest{
+ background-color: rgba(115, 16, 16, 0.2);
+}
+
+#meteat{
+  background-color: rgba(194, 13, 13, 0.2);
+}
+
+#gatsby{
+  background-color: rgba(157, 54, 205, 0.2);
+}
+
+#next{
+ background-color: rgba(255, 255, 255, 0.2);
+}
+
+#polymer{
+  background-color: rgba(91, 38, 132, 0.2);
+}
+
+#express{
+background-color: rgba(161, 140, 28, 0.2);
+}
+
+#nuxt{
+  background-color: rgba(8, 106, 35, 0.2);
+}
