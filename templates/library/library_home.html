@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{%static 'css/library_home.css' %}"/>
+    <div class="container">
+        <div class="top">
+            <img class='top_image img img-fluid' src="{%static 'images/library_image.png'%}"/>
+            <div class="lower">
+                <span class="one">Sort by: </span>
+                <button class="btn1">Most Popular</button>
+                <button class="btn2">Alphabetical Order</button>
+            </div>
+        </div>
+        <div class="container mt-5">
+            {% for cat in cate%}
+                <div class="m-auto container div-hover cont" >
+                    <a href="{%url 'library:post_list' cat.id %}" class="row">
+                        <div class="col-md-6 ">
+                            <img class="m-auto images" src="{{cat.images.url}}">
+                        </div>  
+                        <h2 class="m-auto col-md-6 text">{{cat.category_name}}</h2>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
