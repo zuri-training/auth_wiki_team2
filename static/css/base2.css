@@ -1,5 +1,5 @@
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 .image_icon{
     Width: 24px;
@@ -11,6 +11,7 @@ body{
 .navbar-collapse{
     justify-content: flex-end;
 }
+
 .btn_1{
     background-color: #01B7EE;
     color: white;
@@ -23,6 +24,10 @@ body{
     Padding: 8px, 32px, 8px, 32px;
     Gap : 16px;
 }
+.btn_1:hover{
+    background-color: white;
+    color: #01B7EE !important;
+}
 .header_link :hover{
     color: #01B7EE !important;
 }
@@ -33,4 +38,9 @@ body{
 .text-center{
     content: "";
     margin-left: calc(100% -75%);
+}
+.image{
+    border-radius: 50%;
+    width: 30px !important;
+    height: 30px !important;
 }

@@ -1,19 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap'); */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-html {
-    font-size: 62.5%; /* 1rem ==10px */
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.6rem;
-}
-
 .faq-section{
     /* background-color: red; */
     padding: 30px;
