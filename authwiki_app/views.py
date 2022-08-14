@@ -18,9 +18,6 @@ def Faq(request):
 def blog(request):
     return render(request, 'authwiki_app/blog.html')
 
-def library(request):
-    return render(request, 'authwiki_app/library.html')
-
 def about(request):
     return render(request, 'authwiki_app/about.html')
 
@@ -39,7 +36,7 @@ def doc(request):
     return render(request, 'authwiki_app/doc.html')
 
 def text(request):
-    return render(request, 'authwiki_app/text.html')
+    return render(request, 'text.html')
 
 def terms(request):
     return render(request, 'authwiki_app/terms_of_use.html')
@@ -49,3 +46,13 @@ def disclamer(request):
 
 def policy(request):
     return render(request, 'authwiki_app/policy.html')
+
+
+def support(request):
+    return render(request, 'authwiki_app/support.html')
+
+def what_we(request):
+    return render(request, 'authwiki_app/what_we_do.html')
+
+def teams(request):
+    return render(request, 'authwiki_app/teams-landing-page.html')

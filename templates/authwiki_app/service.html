@@ -6,23 +6,13 @@
   rel="stylesheet"/>
   <link
   href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
-  rel="stylesheet"
-  />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-  <link rel='stylesheet' href="{%static 'css/homepage.css'%}"/>
-    <link rel="stylesheet" href="{%static 'css/service.css' %}" />
+  rel="stylesheet">
+  <link rel="stylesheet" href="{%static 'css/service.css' %}" />
     <title>Service</title>
     <main class="mt-4">
       <div class="text-center fm-Excon">
         <h1 class="our-service fw-bolder">Our Sevices</h1>
-        <h2 class="text-black text-opacity-25">
+        <h2 class="text-black text-opacity-25 facilitate">
           Facilities that we are committed to delivering.
         </h2>
       </div>
@@ -97,8 +87,8 @@
                 </p>
               </div>
               <div class="d-flex gap-4 btn-parent">
-                <button class="btn bg-white btn-1">Learn More</button>
-                <button class="btn btn-2 text-white ">Learn More</button>
+                <button class="btn bg-white buttons-1 btn-1"><a href="">Learn More</a></button>
+                <button class="btn btn-2  buttons-2 text-white "><a href="">Get Started</a></button>
               </div>
             </div>
           </div>
@@ -129,8 +119,8 @@
                 </p>
               </div>
               <div class="d-flex gap-4 btn-parent">
-                <button class="btn bg-white btn-1">Learn More</button>
-                <button class="btn btn-2 text-white">Learn More</button>
+                <button class="btn bg-white buttons-1 btn-1"> <a href="">Learn More</a></button>
+                <button class="btn btn-2 buttons-2 text-white"> <a href="">Get Started</a></button>
               </div>
             </div>
           </div>
@@ -150,8 +140,8 @@
                 </p>
               </div>
               <div class="d-flex gap-4 btn-parent">
-                <button class="btn bg-white btn-1">Learn More</button>
-                <button class="btn btn-2 text-white">Learn More</button>
+                <button class="btn bg-white buttons-1 btn-1"><a href="">Learn More</a></button>
+                <button class="btn btn-2 buttons-2 text-white"><a href="">Get Started</a></button>
               </div>
             </div>
           </div>
@@ -163,5 +153,5 @@
         </div>
       </div>
     </main>
-  {%include 'footer.html'%}
+  {% comment %} {%include 'footer.html'%} {% endcomment %}
 {% endblock %}

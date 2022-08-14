@@ -1,25 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
+.anch{
+  color: white;
 }
-
-body {
-  font-size: 62.5%;   /*1rem == 10px */
-} 
-
-
-a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.6rem;
-}
-
-li {
-  list-style: none;
-}
-
 .footer {
   background-color: #002530;
   padding: 5.6rem 0.4rem;
@@ -102,9 +83,9 @@ li {
 /* media query */
 
 @media screen and (max-width: 1000px) {
-  a {
+  /* a {
     font-size: 1.4rem;
-  }
+  } */
   .footer {
     font-size: 1.4rem;
   }
@@ -137,9 +118,9 @@ li {
 }
 
 @media screen and (max-width: 796px) {
-  a {
+  /* a {
     font-size: 1.2rem;
-  }
+  } */
 
   .footer {
     font-size: 1rem;
@@ -157,9 +138,9 @@ li {
 }
 
 @media screen and (max-width: 600px) {
-  a {
+  /* a {
     font-size: 1rem;
-  }
+  } */
   .footer {
     font-size: 1rem;
   }

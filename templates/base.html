@@ -5,72 +5,278 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Authwiki_team2</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- tailwind -->
+    <link
       rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel='stylesheet' href="{%static 'css/homepage.css'%}"/>
-    <link rel="stylesheet" href="{% static 'css/header.css' %}"/ >
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="{%static 'css/header.css' %}" / >
+    <link rel="stylesheet" href="{%static 'css/style.css' %}" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-            <img class="nav-image" src="{%static 'images/logo.png' %}">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse  navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav pt-3 nav-fill w-100  mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link " href="{%url 'index'%}">Home</a>
+    <nav class="navbar navbar-light navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href=""><img class="nav-image" src="{%static 'images/logo.png' %}" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav pt-2 w-90 nav-me-fill ml-auto mb-2 mb-lg-0 ">
+            <li class="nav-item pr-4">
+              <a class="nav-link" href="{%url 'index' %}">Home</a>
             </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{%url 'library'%}">Library</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Devs and Docs
-                    </a>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{%url 'blog'%}">Blog</a></li>
-                    <li><a class="dropdown-item" href="{%url 'doc'%}">Documentation</a></li>
-                    <li><a class="dropdown-item" href="#">Get Support</a></li>
-                    <li><a class="dropdown-item" href="{%url 'faq'%}">FAQs</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Company
-                    </a>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{%url 'about'%}">About Us</a></li>
-                    <li><a class="dropdown-item" href="#">Teams</a></li>
-                    <li><a class="dropdown-item" href="{%url 'service'%}">Our services</a></li>
-                    <li><a class="dropdown-item" href="{%url 'contact'%}">Contact Us</a></li>
-                    </ul>
-                </li>
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                  <a href="{%url 'accounts:logout'%}" class="btn button-2 btn-lg ml-3 pt-3 " tabindex="-1" role="button" >Logout</a>
-                 </li>
-                {% else %}
-                <li class="nav-item">
-                  <a href="{%url 'accounts:signup'%}" class="btn button-1 pt-3  btn-primary btn-lg" tabindex="-1" role="button" >Sign Up</a>
-                </li>
-                <li class="nav-item">
-                  <a href="{%url 'accounts:login'%}" class="btn button-2 btn-lg ml-3 pt-3 " tabindex="-1" role="button" >Sign In</a>
-                </li>
-               {% endif %}
-              </ul>
-          </div>
-            
+            <li class="nav-item pr-4 ">
+              <a class="nav-link" href="{%url 'library:home' %}">Library</a>
+            </li>
+           <li class="nav-item">
+              <!--devs and docs  dropdown -->
+              <button
+                id="dropdownNavbarLink1"
+                data-dropdown-toggle="dropdownNavbar1"
+                class="flex dropdown justify-between  items-center   w-full font-medium text-gray-700  "
+              >
+                <span class="nav-link pr-4">Devs and Docs</span>
+                <svg
+                  class="ml-1 w-5 h-5"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
 
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar1"
+                class="z-10 w-50 hidden bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 block text-2xl"
+                style="
+                  position: absolute;
+                  inset: 0px auto auto 0px;
+                  margin: 0px;
+                  transform: translate(381px, 66px);
+                "
+                data-popper-reference-hidden=""
+                data-popper-escaped=""
+                data-popper-placement="bottom"
+              >
+                <div class="grid lg:grid-cols-2 w-76">
+                  <div class="mx-5 lg:m-5 pt-5">
+                    <ul
+                      class="py-1 m-6 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownLargeButton"
+                    >
+                      <li class="flex py-4 drop-text">
+                        <div class="">
+                          <img src="{%static 'images/Blog.png' %}" alt="" />
+                        </div>
+
+                        <a
+                          href="{%url 'blog'%}"
+                          class="block font-bold drop_text text-[#000] text-2xl px-4"
+                          >Blog</a
+                        >
+                      </li>
+                      <li class="flex py-4">
+                        <div class="">
+                          <img src="{%static 'images/Document.png' %}" alt="" />
+                        </div>
+
+                        <a
+                          href="{%url 'service' %}"
+                          class="block font-bold drop_text text-[#000] text-md px-4 "
+                          >Our Servies</a
+                        >
+                      </li>
+                      <li class="flex py-4">
+                        <div class="">
+                          <img src="{%static 'images/Technical Support.png' %}" alt="" />
+                        </div>
+
+                        <a
+                          href="{%url 'support' %}"
+                          class="block drop_text font-bold text-[#000] text-md px-4 "
+                          >Get Support</a
+                        >
+                      </li>
+                      <li class="flex py-3">
+                        <div class="">
+                          <img src="{%static 'images/FAQ.png' %}" alt="" />
+                        </div>
+                        <a
+                          href="{%url 'faq'%}"
+                          class="block drop_text font-bold text-[#000] text-md px-4"
+                          >FAQs</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="hidden lg:grid vl"></div>
+                  <!-- img -->
+                  <div class="py-0 latest_text px-md-4  lg:my-5 w text-md-left text-sm-center">
+                    <a
+                      href=""
+                      class="block py-4  font-semibold text-md-xl text-[#151515] dark:hover:bg-gray-600  dark:hover:text-black"
+                      >Latest from our Blog</a
+                    >
+                    <img src="{%static 'images/Rectangle 1130.png' %}">
+                    <p class="text-[#002530]  py-4">
+                      Microsoft moves to new Windows development cycle with
+                      major release every three years, feature drops in between.
+                      <span class="text-red-500">Read more</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>     
+            <!-- company dropdown -->
+            <li class="nav-item pr-4 ">
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex dropdown justify-between items-center w-full "
+              >
+                <span class="nav-link">Company</span>
+                <svg
+                  class="ml-1 w-5 h-5"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 w-50 hidden bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 block"
+                style="
+                  position: absolute;
+                  inset: 0px auto auto 0px;
+                  margin: 0px;
+                  transform: translate(381px, 66px);
+                "
+                data-popper-reference-hidden=""
+                data-popper-escaped=""
+                data-popper-placement="bottom"
+              >
+                <div class="grid lg:grid-cols-2 w-76">
+                  <div class="m-5 image_about py-0  lg:my-5 w">
+                    <img src="  {%static 'images/Frame 2414.png' %}" alt="" />
+                  </div>
+                  <!-- <hr> -->
+                  <div class="hidden lg:grid v2"></div>
+                  <!-- img -->
+                  <div class="order-last mx-5 lg:m-5 p-">
+                    <ul
+                      class="py-1 m-6 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownLargeButton"
+                    >
+                      <li class="flex py-4">
+                        <div class="">
+                          <img src="{%static 'images/logo-svgrepo-com 1.png' %}" alt="" />
+                        </div>
+                        <a
+                          href="{%url 'about'%}"
+                          class="block font-bold text-[#000] text-md px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >About Us</a
+                        >
+                      </li>
+                      <li class="flex py-4">
+                        <div class="">
+                          <img src="{%static 'images/Management.png' %}" alt="" />
+                        </div>
+
+                        <a
+                          href="{%url 'teams'%}"
+                          class="block font-bold text-[#000] text-md px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Teams</a
+                        >
+                      </li>
+                      <li class="flex py-4">
+                        <div class="">
+                          <img src="{%static 'images/Services.png' %}" alt="" />
+                        </div>
+
+                        <a
+                          href=""
+                          class="block font-bold text-[#000] text-md px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Our Servies</a
+                        >
+                      </li>
+                      <li class="flex py-4">
+                        <div class="">
+                          <img src="{%static 'images/Laugh.png' %}" alt="" />
+                        </div>
+                        <a
+                          href=""
+                          class="block font-bold text-[#000] text-md px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Customers</a
+                        >
+                      </li>
+                      <li class="flex py-3">
+                        <div class=""><img src="{%static 'images/Goal.png' %}" alt="" /></div>
+                        <a
+                          href="{%url 'contact'%}"
+                          class="block font-bold text-[#000] text-md px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item pr-4">
+              <a
+                href=""
+                class="btn button-2"
+                tabindex="-1"
+                role="button"
+                >Logout</a
+              >
+            </li>
+            <li class="nav-item pr-4">
+              <a
+                href=""
+                class="btn  button-1"
+                tabindex="-1"
+                role="button"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
-      {% block content %}
-      {% endblock%}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      </div>
+    </nav>
+    {%block content %}
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>

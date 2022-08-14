@@ -1,0 +1,159 @@
+body{
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+}
+.image_1{
+    height: 347.20001220703125px;
+    width: 359.7494201660156px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+}
+.first{
+    padding:3rem 0px 1rem 0px;
+    width: 100%;
+}
+.text{
+    font-size: 160px;
+    font-weight: 800;
+    line-height: 278px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 7rem;
+}
+.text_2{
+    margin-top: -3rem;
+    font-family: Poppins;
+    background: #FDD83C;
+    width: 19rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+/* .down{
+    
+} */
+.short_t{
+    padding-left: 15px;
+}
+.sort{
+    color: #01B7EE; 
+}
+a{
+    text-decoration: none;
+    font-size: 12px;
+}
+.button-1{
+    background-color: black;
+    border:1px solid #01B7EE;
+    border-radius: 4px;
+    padding: 5px;
+    width: 8rem;
+    color: #01B7EE;
+    margin-left: 20px;
+}
+.button-2{
+    border: 1px solid white;
+    color: #B3B3B3;
+    background-color: black;
+    border-radius: 4px;
+    padding: 5px;
+    width: 8rem;
+    margin-left: 20px;
+}
+.image-row{
+    display: flex;
+    justify-content: space-around;
+    width: 6rem;
+    height: 2rem;
+    margin-right: auto;
+}
+.general{
+    margin: 10px auto;
+    padding: 10px 7rem;
+}
+.node{
+    background: #37992E33;
+}
+.node_img{
+    width: 293.97px;
+    height: 180px;
+}
+.auth{
+    margin-left: 6rem;
+    width: 24rem;
+    border-left: 1px solid black;
+    padding-left: 3rem;
+}
+.images-icon{
+    display: flex;
+    justify-content: space-between;
+    left: 100px;
+    margin: 0.5rem auto;
+} 
+.img-icon{
+    Width: 28.57px;
+    Height: 29.43px;
+}
+.angular_img{
+    width: 167.56px;
+    height: 180px;
+}
+.angular{
+background: #AE3C3C33;
+}
+.vue_img{
+    width: 180px;
+    height: 180px;
+}
+.vue{
+    background: #08501333;
+}
+.backbone_img{
+    width: 180px;
+    height: 180px;
+}
+.backbone{
+    background: #13276E33;
+}
+.svelte{
+    background: #9E3B1B33;
+}
+.svelte_img{
+    width: 180px;
+    height: 180px;
+}
+@media screen and (max-width: 1230px) {
+    .text{
+        font-size: 100px;
+    }
+}
+@media screen and (max-width: 920px) {
+    .text{
+        font-size: 80px;
+    }
+    .auth{
+        margin-left: 0px;
+        border-left: none;
+    }
+    .images-icon{
+        left: 10px;
+    }
+    .general{
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .text{
+        font-size: 100px;
+    }
+}
+@media screen and (max-width: 790px) {
+    .text{
+        font-size: 70px;
+    }
+}
+@media screen and (max-width: 690px) {
+    .first{
+        padding:3rem 5rem 1rem 5rem;
+    }
+}

@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from library.models import Post, Comment, Preference
+from library.models import Post, Comment, Preference, category
 from users.models import UserProfile
 from accounts.models import MyUser
-import sys
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Count
@@ -15,37 +14,50 @@ def is_users(post_user, logged_user):
 PAGINATION_COUNT = 3
 
 # Create your views here.
+class CategoryListView(ListView):
+        def get(self, request):
+                cate = category.objects.all()
+                context = {'cate': cate}
+                return render(request, 'library/library_home.html', context)
+
+
+
 class PostListView(LoginRequiredMixin, ListView):
-    model = Post
-    template_name = 'library/home.html'
-    context_object_name = 'posts'
-    ordering = ['-date_posted']
-    paginate_by = PAGINATION_COUNT
 
-    def get_context_data(self, **kwargs):
-        data = super().get_context_data(**kwargs)
+        def get(self, request, pk):
+                post_list = Post.objects.all().filter(category_name=pk)
+                context = {'post_list':post_list, 'category':category}
+                return render(request, 'library/library.html', context)
+#     model = Post
+#     template_name = 'library/library.html'
+#     context_object_name = 'posts'
+#     ordering = ['-date_posted']
+#     paginate_by = PAGINATION_COUNT
 
-        all_users = []
-        data_counter = Post.objects.values('author')\
-            .annotate(author_count=Count('author'))\
-            .order_by('-author_count')[:6]
+#     def get_context_data(self, **kwargs):
+#         data = super().get_context_data(**kwargs)
 
-        for aux in data_counter:
-            all_users.append(MyUser.objects.filter(pk=aux['author']).first())
-        # if Preference.objects.get(user = self.request.user):
-        #     data['preference'] = True
-        # else:
-        #     data['preference'] = False
-        data['preference'] = Preference.objects.all()
-        # print(Preference.objects.get(user= self.request.user))
-        data['all_users'] = all_users
-        print(all_users, file=sys.stderr)
-        return data
+#         all_users = []
+#         data_counter = Post.objects.values('author')\
+#             .annotate(author_count=Count('author'))\
+#             .order_by('-author_count')[:6]
+
+#         for aux in data_counter:
+#             all_users.append(MyUser.objects.filter(pk=aux['author']).first())
+#         # if Preference.objects.get(user = self.request.user):
+#         #     data['preference'] = True
+#         # else:
+#         #     data['preference'] = False
+#         data['preference'] = Preference.objects.all()
+#         # print(Preference.objects.get(user= self.request.user))
+#         data['all_users'] = all_users
+#         print(all_users, file=sys.stderr)
+#         return data
 
 
 class PostDetailView(DetailView):
     model = Post
-    template_name = 'library/post_detail.html'
+    template_name = 'library/library_detail.html'
     context_object_name = 'post'
 
     def get_context_data(self, **kwargs):
