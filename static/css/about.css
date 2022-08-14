@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0; 
+    font-family: 'poppins';
+}
+.body{
+    padding: 3rem;
+}
+.image-row{
+    display: flex;
+    justify-content: space-evenly;
+}
+.list img{
+    width: 5rem;
+    height: 3rem;
+}
+.row{
+    margin-bottom: 1rem;
+}
+#trust{
+    font-weight: 1500;
+}
+.last img{
+    width: 4rem;
+}
+@media screen and (max-width: 900px){
+    .body{
+        padding: 1rem;
+    }
+}

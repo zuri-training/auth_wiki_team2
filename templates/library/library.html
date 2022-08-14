@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="library.css" />
+    <title>Library</title>
+  </head>
+  <body>
+
+
+
+
+    {% extends 'base.html' %}
+    <div class="container">
+      <header class="lib-header">
+        <div class="header-tab1"></div>
+
+        <div class="header-main">
+          <img
+            class="header-main-img1"
+            src="./images/header-image1.png"
+            alt="image1"
+          />
+          <h2>
+            <span class="header-browse">Browse</span>
+            <span class="header-through">through our</span>
+            <span class="header-code">Code</span>
+            <span class="header-lib">Library</span>
+          </h2>
+          <div class="header-icons">
+            <img src="./images/header-icons/JavaScript.png" alt="javascript" />
+            <img src="./images/header-icons/Python.png" alt="python" />
+            <img src="./images/header-icons/C++.png" alt="C++" />
+            <img src="./images/header-icons/PHP.png" alt="PHP" />
+            <img src="./images/header-icons/Java.png" alt="Java" />
+            <img src="./images/header-icons/CSharp.png" alt="header icons" />
+          </div>
+          <img
+            class="header-main-img2"
+            src="./images/header-image2.png"
+            alt="image2"
+          />
+        </div>
+
+        <div class="header-tab2">
+          <div class="header-tab2-div1">
+            <p>Sort By</p>
+            <button class="header-tab2-button1">Most Popular</button>
+            <button class="header-tab2-button2">Alphabetical Order</button>
+          </div>
+          <div class="header-tab2-div2">
+            <p>icons</p>
+            <p>icons</p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <a href="#"><section class="python-section div-hover"></section></a>
+        <a href="#"><section class="javascript-section div-hover"></section></a>
+        <a href="#"><section class="php-section div-hover"></section> </a>
+        <a href="#"><section class="cplus-section div-hover"></section> </a>
+        <a href="#"><section class="java-section div-hover"></section> </a>
+        <a href="#"><section class="ruby-section div-hover"></section> </a>
+        <a href="#"><section class="swift-section div-hover"></section> </a>
+        <a href="#"><section class="rust-section div-hover"></section> </a>
+        <a href="#"><section class="scala-section div-hover"></section> </a>
+        <a href="#"><section class="perl-section div-hover"></section> </a>
+      </main>
+    </div>
+  </body>
+</html>

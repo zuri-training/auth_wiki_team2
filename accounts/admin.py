@@ -1,32 +1,27 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .forms import UserRegisterForm, UserAuthenticationForm, UserUpdateForm
-from .models import User
-
+from .forms import UserRegisterForm, UserAuthenticationForm
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from .models import MyUser, Profile
+    
 # Register your models here.
-
-class UserAdmin(UserAdmin):
-	form = UserUpdateForm
-	add_form = UserRegisterForm
-
-	# define fields to be used in displaying the User model.
-
-	list_display = ('email', 'username','is_admin')
-	list_filter = ('email', 'username','is_admin')
-	fieldsets = (
-	   (None, {'fields': ('email', 'username', 'password')}),
-	   ('Permissions', {'fields': ('is_admin',)}),
-	)
-	add_fieldsets = (
-	   (None, {
-	       'classes': ('wide',),
-	       'fields': ('email', 'username', 'password1', 'password2'),
-	   }),
-	)
-	ordering = ('email',)
+class MyUserAdmin(BaseUserAdmin):
+	list_display = ('email', 'username', 'date_joined', 'is_admin', 'is_active')
+	search_fields = ('email', 'username')
+	readonly_fields = ('date_joined', 'last_login')
 	filter_horizontal = ()
+	list_filter = ('last_login',)
+	fieldsets = ()
 
- 
-#I'm registering the new UserAdmin
-admin.site.register(User, UserAdmin)
+	add_fieldsets = (
+		(None, {
+			'classes': ('wide'),
+			'fields': ('email', 'username', 'password1', 'password2'),
+		}),
+	)
+
+	ordering = ('email',)
+
+admin.site.register(MyUser, MyUserAdmin)
+admin.site.register(Profile)
  

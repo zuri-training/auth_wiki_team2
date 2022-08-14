@@ -1,0 +1,51 @@
+     {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <script src="https://use.fontawesome.com/45ba5e599a.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="#"><img class="logoimg" src="{% static 'images/IMG_1543.jpg' %}" alt="logo icon"></a>
+            <a href=""><img class="lang" src="{% static 'images/icons8-geography-50.png' %}" alt="language icon"></a>
+            <div>
+                <a href="">Otp Verification</a>
+            </div>
+        </header>
+        <main>
+            <div>
+                <form action=" {% url 'accounts:otp' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="h2div">
+                        <h2>Verify your account</h2>
+                    </div>
+                    {% for message in messages %}
+
+                    <div class="alert alert-success">
+                        <a class="close" href="#" data-dismiss="alert">×</a> {{ message }}
+                    </div>
+
+                    {% endfor %}
+                    <div class="usernamediv">
+                        <p class="namep">OTP</p>
+                        <input type="number" name="otp" id="" placeholder="Enter your OTP">
+                    </div>
+                    <div>
+                        <button type="submit" class="getbutton">verify</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="{%static 'js/script.js' %}"></script>
+</body>
+
+</html>

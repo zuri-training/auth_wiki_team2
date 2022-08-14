@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+    <link rel="stylesheet" href="{%static 'css/about.css' %}">
+    <div class="body">
+        <section class="first">
+            <h1 class="text-center">About Us</h1>
+            <p>Our aim is to allow developers write code that they can download, install as a module, 
+                and use. We serve to solve the problem of finding a reliable, well-crafted software that 
+                can be used across projects.
+            </p>
+        </section>
+        <section class="second">
+            <p class="bold">Why Auth Wiki?</p>
+            <div class="list">
+                <div class=" row list_item one">
+                    <img class="col-6" src="{%static 'images/realibility.png' %}" alt=" realiable image">
+                    <div class="col-6">
+                        <h4>Reliability & Security</h4>
+                        <p>Creating tools that are reliable and secure.</p>
+                    </div>
+
+                </div>
+                <div class="row list_item Two">
+                    <img class="col-6 " src="{%static 'images/scalibility.png' %}" alt="scalible image">
+                    <div class="col-6">
+                        <h4 class="bold">Scalibility</h4>
+                        <p>AuthWIKI can be used across platforms</p>
+                    </div>
+                </div>
+                <div class=" row list_item three">
+                    <img class="col-6" src="{%static 'images/simplicity.png' %}" alt="simplicity image">
+                    <div class="col-6">
+                        <h4 class="bold">Simplicity & Speed</h4>
+                        <p>We are designed to help developers launch projects as quickly as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="third">
+            <h5 id="trust">Trusted By</h5>
+            <div class="row last sm:flex grid justify-around ">
+                <div class="col-md-1 col-sm-4 col-3"><img src="{%static 'images/Untitled1.png'%}" alt="" class=""></div>
+                <div class="col-md-2 col-sm-4 col-3"><img src="{%static 'images/18496001.png'%}" alt="" class=""></div>
+                <div class="col-md-2 col-sm-4 col-3"><img src="{%static 'images/TOP DAWG inc.png' %}" alt="" class=""></div>
+                <div class="col-md-2 col-sm-4 col-3"><img  src="{%static 'images/Williams SaaS Logo 1.png' %}"alt="" class=""></div>
+                <div class="col-md-1 col-sm-4 col-4"><img  src="{%static 'images/image 21.png' %}"alt="" class=""></div>
+                <div class="col-md-2 col-sm-4 col-4"><img src= "{%static 'images/Layer.png' %}"alt="" class=""></div>
+                <div class="col-md-2 col-sm-4 col-4"><img  src="{%static 'images/HAVEN NFT.png' %}" alt="" class=""></div>
+              </div>
+        </section>
+
+    </div>
+ {% include 'footer.html'%}
+{% endblock %}
