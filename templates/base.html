@@ -40,7 +40,7 @@
               <a class="nav-link" href="{%url 'index' %}">Home</a>
             </li>
             <li class="nav-item pr-4 ">
-              <a class="nav-link" href="{%url 'library:post_list' %}">Library</a>
+              <a class="nav-link" href="{%url 'library:home' %}">Library</a>
             </li>
            <li class="nav-item">
               <!--devs and docs  dropdown -->
@@ -94,7 +94,7 @@
                           href="{%url 'blog'%}"
                           class="block font-bold drop_text text-[#000] text-2xl px-4"
                           >Blog</a
-                        >
+                        />
                       </li>
                       <li class="flex py-4">
                         <div class="">
@@ -221,17 +221,6 @@
                       </li>
                       <li class="flex py-4">
                         <div class="">
-                          <img src="{%static 'images/Services.png' %}" alt="" />
-                        </div>
-
-                        <a
-                          href=""
-                          class="block font-bold text-[#000] text-md px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Our Servies</a
-                        >
-                      </li>
-                      <li class="flex py-4">
-                        <div class="">
                           <img src="{%static 'images/Laugh.png' %}" alt="" />
                         </div>
                         <a
@@ -253,24 +242,36 @@
                 </div>
               </div>
             </li>
+            {% if user.is_authenticated%}
             <li class="nav-item pr-4">
               <a
-                href=""
+                href="{%url 'accounts:logout'%}"
                 class="btn button-2"
                 tabindex="-1"
                 role="button"
                 >Logout</a
               >
             </li>
+            {% else %}
             <li class="nav-item pr-4">
               <a
-                href=""
+                href="{%url 'accounts:login' %}"
+                class="btn button-2"
+                tabindex="-1"
+                role="button"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item pr-4">
+              <a
+                href="{%url 'accounts:signup'%}"
                 class="btn  button-1"
                 tabindex="-1"
                 role="button"
                 >Sign Up</a
               >
             </li>
+            {% endif %}
           </ul>
         </div>
       </div>

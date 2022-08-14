@@ -28,27 +28,14 @@ class LibraryView(LoginRequiredMixin, ListView):
 
 class PostListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = 'library/library.html'
+    template_name = 'library/index.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = PAGINATION_COUNT
-
-<<<<<<< HEAD
-        def get(self, request):
-                return render(request, 'library/index.html')
-#     model = Post
-#     template_name = 'library/library.html'
-#     context_object_name = 'posts'
-#     ordering = ['-date_posted']
-#     paginate_by = PAGINATION_COUNT
-=======
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
         data['preference'] = Preference.objects.all()
         return data
->>>>>>> 872627bd4bf8a95a75a48198aedf16a55caefc1d
-
-
     def get_queryset(self):
         category = get_object_or_404(PostCategory, name=self.kwargs.get('name'))
         return Post.objects.filter(category=category)
