@@ -3,33 +3,41 @@ body{
     overflow-x: hidden;
 }
 .nav-image{
+    height: 48px;
+    width: 252px;
+    left: 0px;
+    top: 16px;
+    border-radius: 0px;
+
+}
+/* .nav-image{
     width: 17rem;
 }
 
 .link-1{
     color: white;
 }
-.button-1, .button-2{
+/* .button-1, .button-2{
     width: 13rem;
-}
-.button-2{
+} */
+/*.button-2{
     border: 2px solid #01B7EE;
     color: #01B7EE;
     margin-left: 2rem;
-}
-.nav-item{
+} */
+/* .nav-item{
     color: black;
     font-weight: bolder;
     font-size: 16px;
-}
-a{
+} */
+/* a{
     font-size: 16px;
-}
+} */
 /* .nav-item :hover{
     /* border-bottom: 5px solid #01B7EE ; 
 } */
-.drop{
+/* .drop{
     display: flex;
-}
+} */
     
 
