@@ -20,14 +20,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-4">
-            <li class="text-center pt-3">
-              <a class="nav-link header_link" aria-current="page" href="{%url 'index'%}">Home</a>
+            <li class="text-center pt-2">
+              <a class="nav-link header_link links" aria-current="page" href="{%url 'index'%}">Home</a>
             </li>
-            <li class="text-center pt-3">
-              <a class="nav-link header_link " href="{%url 'library:home'%}">Library</a>
+            <li class="text-center pt-2">
+              <a class="nav-link header_link links " href="{%url 'library:home'%}">Library</a>
             </li>
-            <li class="dropdown pl-5 text-center pt-3">
-              <a class="nav-link dropdown-toggle header_link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="dropdown pl-5 text-center pt-2">
+              <a class="nav-link dropdown-toggle header_link links" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Devs and Docs 
               </a>
               <ul class="dropdown-menu pl-sm-5 6" aria-labelledby="navbarDropdown">
@@ -38,11 +38,16 @@
               </ul>
             </li>
             <li class="nav-link text-center"> <button class="btn_1 header_link"><a class="anchor-text" href="">Go to community</a> </button></li>
-          </ul>      
-          <li class=""> <img class="image_icon header_link" src="{%static 'images/search.png' %}"></li>
-          <li class=""><img class="image_icon header_link" src="{%static 'images/notification.png' %}"></li>    
+          </ul>
         </div>
-      </div>
+        <div class="d-flex gap-3 m-sm-auto nav-link">    
+          <div class=""> <img class="image_icon header_link" src="{%static 'images/search.png' %}"></div>
+          <div class=""><img class="image_icon header_link" src="{%static 'images/notification.png' %}"></div> 
+          <div class="profile_img">
+            <img class="image_icon rounded-circle " src="{%static 'images/person3.png'%}" alt="profile image">
+          </div>     
+        </div>
+
     </nav>
   </div> 
   {% block content %}
