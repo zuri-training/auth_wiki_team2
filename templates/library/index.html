@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base2.html' %}
+{% load static %}
+{%block extra_css %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- tailwind -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/library_style.css' %}">
 </head>
+{% endblock%}
 <body>
+{% block body_class %}
 
+
+    <title>Document</title>
     <main>
         <div class="">
 
@@ -27,7 +25,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-60px] lg:w-[300px]  ">
-                            <img src="./img/Node JS.png" alt="">
+                            <img src="{%static 'images/Node JS.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -117,7 +115,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Vue JS.png" alt="">
+                            <img src="{%static 'images/Vue JS.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -162,7 +160,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Backbone.png" alt="">
+                            <img src="{%static 'images/Backbone.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -207,7 +205,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Svelte.png" alt="">
+                            <img src="{%static 'images/Svelte.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -252,7 +250,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Ember.png" alt="">
+                            <img src="{%static 'img/Ember.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -297,7 +295,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Preact.png" alt="">
+                            <img src="{%static 'images/Preact.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -342,7 +340,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Jest JS.png" alt="">
+                            <img src="{%static 'images/Jest JS.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -387,7 +385,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Metor JS.png" alt="">
+                            <img src="{%static 'images/Metor JS.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -432,7 +430,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Gatsby.png" alt="">
+                            <img src="{%static 'images/Gatsby.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -477,7 +475,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Next JS.png" alt="">
+                            <img src="{%static 'images/Next JS.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -522,7 +520,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Polymer.png" alt="">
+                            <img src="{%static 'images/Polymer.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -567,7 +565,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Express JS.png" alt="">
+                            <img src="{%static 'images/Express JS.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -612,7 +610,7 @@
                     <!-- top -->
                     <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
                         <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
-                            <img src="./img/Nuxt JS.png" alt="">
+                            <img src="{%static 'images/Nuxt JS.png' %}" alt="">
                         </div>
                         <div class="div hidden lg:flex mt-auto "></div>
                         <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
@@ -652,6 +650,5 @@
             <!-- end of nuxt section -->
         </div>
     </main>
-    
+{% endblock %}
 </body>
-</html>

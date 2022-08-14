@@ -24,10 +24,8 @@ class CategoryListView(ListView):
 
 class PostListView(LoginRequiredMixin, ListView):
 
-        def get(self, request, pk):
-                post_list = Post.objects.all().filter(category_name=pk)
-                context = {'post_list':post_list, 'category':category}
-                return render(request, 'library/library.html', context)
+        def get(self, request):
+                return render(request, 'library/index.html')
 #     model = Post
 #     template_name = 'library/library.html'
 #     context_object_name = 'posts'
