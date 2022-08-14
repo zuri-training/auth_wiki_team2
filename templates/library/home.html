@@ -1,122 +1,30 @@
-{% extends "base.html" %}
-{% block content %} 
+{% extends 'base2.html'%}
+{% load static %}
+{% block content %}
 
-    <div class="col-12 col-md-6 scrollable" >
-        <div class="full-width row">
-            <div class="col-6">
-                <h3 class="mb-3">
-                    Library
-                </h3>
+<link rel="stylesheet" href="{%static 'css/library_home.css' %}"/>
+    <div class="container">
+        <div class="top">
+            <img class=' img img-fluid' src="{%static 'images/library_image.png'%}"/>
+            <div class="lower ">
+                <span class="one">Sort by: </span>
+                <button class="btn text-primary btn-outline-info">Most Popular</button>
+                <button class="btn text-light btn-outline-light ml-4">Alphabetical Order</button>
             </div>
-            {% comment %} <div class="col-6 no-padding">
-                <h6>
-                    {{ page_obj.start_index }} - {{ page_obj.end_index }} of
-                    {{ paginator.count }}
-                </h6>
-            </div> {% endcomment %}
         </div>
-        {% if user.is_admin %}
-            <div style="margin-left: auto; margin-right:auto">
-                <a class="btn btn-sm btn-outline-primary mb-4 mr-3 " href="{% url 'library:post-create' %}">
-                    Create Post
-                </a>
-            </div>
-        {% endif %}
+        <div class="container mt-5">
 
-
-        {% for post in posts %}
-                    <article>
-                    <div>
-
-                        <div>
-                        <div>
-                            <img src="{{ post.author.userprofile.image.url }}" width="20px">
-                            {% comment %} <a href="{% url 'user-posts' post.author %}"> {% endcomment %}
-                                {{ post.author }}
-                            </a>
-                        </div>
-                        <div>
-                            {% if post.author == user %}
-                                    <a href="{% url 'library:post-delete' post.id %}">clear</a>
-                                    <a href="{% url 'library:post-update' post.id %}">update</a>
-                                {%  endif %}
-                        </div>
-                    </div>
-                        
-                        <a
-                            href="{% url 'library:post-detail' post.id %}">
-                            <p>
-                                {{ post.title }}
-                                
-
-                            </p>
-                        </a>
-                        <p>
-                        
-                            {{ post.date_posted | date:"H:i l, d.m.y" }}
-
-                        </p>
-                        <i>Number of Downloads</i> {{post.downloadnumber}}
-
-                            <div>
-                                <div>
-                                    <small>
-
-                                        <!-- Like Buttons Here -->
-                                        <a href="#" onClick="document.getElementById('likebutton').submit()"><i class="fas fa-thumbs-up">Like</i></a> {{post.likes}}   |   <a href="#" onClick="document.getElementById('dislikebutton').submit()"><i class="fas fa-thumbs-down">dislike</i></a> {{post.dislikes}}
-
-
-                                        <form id="likebutton" method="POST" action="{% url 'library:postpreference' post.id 1 %}">
-                                        {% csrf_token %}
-                                        <input type="hidden">
-                                        </form>
-
-                                        <form id="dislikebutton" method="POST" action="{% url 'library:postpreference' post.id 2 %}">
-                                        {% csrf_token %}
-                                        <input type="hidden">
-                                        </form>
-
-
-                                    </small>
-                                    <small>
-                                        <a href="/library/post/{{post.id}}/">
-                                            <i class="far fa-comment"></i> {{ post.number_of_comments }} comment(s)
-                                        </a>
-
-                                    </small>
-                                </div>
-                                <div class="col-6">
-                                    <small>
-                                        {{ post.date_posted | date:"H:i l, d.m.y" }}
-                                    </small>
-                                </div>
-                            </div>
-
-                    </div>
-                    </article>
+        {% for category in post_categories %}
+        <div class="m-auto container div-hover " >
+            <a href="{% url 'library:library-category' category.name %}" class="row">
+                <div class="col-md-6 ">
+                    <img class="m-auto images" src="{{ category.images.url }}">
+                </div> 
+                <h1 class="m-auto col-md-6 text">{{ category.name }}</h1>                    
+            </a>
                 {% endfor %}
 
                 <div>
-                    {% if is_paginated %}
-                        {% if page_obj.has_previous %}
-                            <a href="?page=1">First</a>
-                            <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
-                        {% endif %}
-
-                        {% for num in page_obj.paginator.page_range %}
-                            {% if page_obj.number == num %}
-                                <a class="btn btn-sm btn-info mb-4 mr-2"
-                                    href="?page={{ num }}">{{ num }}</a>
-                            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-                                <a href="?page={{ num }}">{{ num }}</a>
-                            {% endif %}
-                        {% endfor %}
-
-                        {% if page_obj.has_next %}
-                            <a href="?page={{ page_obj.next_page_number }}">Next</a>
-                            <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-                        {% endif %}
-                    {% endif %}
                 </div>
-            </div>
-{% endblock content %} 
+        
+{% endblock %}

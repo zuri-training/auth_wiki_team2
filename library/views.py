@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from library.models import Post, Comment, Preference, category
+from library.models import Post, Comment, Preference, PostCategory
 from users.models import UserProfile
+from django.http import HttpResponseRedirect
 from accounts.models import MyUser
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -14,16 +15,25 @@ def is_users(post_user, logged_user):
 PAGINATION_COUNT = 3
 
 # Create your views here.
-class CategoryListView(ListView):
-        def get(self, request):
-                cate = category.objects.all()
-                context = {'cate': cate}
-                return render(request, 'library/library_home.html', context)
-
+class LibraryView(LoginRequiredMixin, ListView):
+    model = PostCategory
+    template_name = "library/home.html"
+    context_object_name = 'post_categories'
+#     categories = PostCategory.objects.filter(parent__isnull=True)
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        data['categories'] = PostCategory.objects.all()
+        return data
 
 
 class PostListView(LoginRequiredMixin, ListView):
+    model = Post
+    template_name = 'library/library.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+    paginate_by = PAGINATION_COUNT
 
+<<<<<<< HEAD
         def get(self, request):
                 return render(request, 'library/index.html')
 #     model = Post
@@ -31,26 +41,19 @@ class PostListView(LoginRequiredMixin, ListView):
 #     context_object_name = 'posts'
 #     ordering = ['-date_posted']
 #     paginate_by = PAGINATION_COUNT
+=======
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        data['preference'] = Preference.objects.all()
+        return data
+>>>>>>> 872627bd4bf8a95a75a48198aedf16a55caefc1d
 
-#     def get_context_data(self, **kwargs):
-#         data = super().get_context_data(**kwargs)
 
-#         all_users = []
-#         data_counter = Post.objects.values('author')\
-#             .annotate(author_count=Count('author'))\
-#             .order_by('-author_count')[:6]
+    def get_queryset(self):
+        category = get_object_or_404(PostCategory, name=self.kwargs.get('name'))
+        return Post.objects.filter(category=category)
 
-#         for aux in data_counter:
-#             all_users.append(MyUser.objects.filter(pk=aux['author']).first())
-#         # if Preference.objects.get(user = self.request.user):
-#         #     data['preference'] = True
-#         # else:
-#         #     data['preference'] = False
-#         data['preference'] = Preference.objects.all()
-#         # print(Preference.objects.get(user= self.request.user))
-#         data['all_users'] = all_users
-#         print(all_users, file=sys.stderr)
-#         return data
+
 
 
 class PostDetailView(DetailView):
@@ -167,7 +170,7 @@ def postpreference(request, postid, userpreference):
                                 context= {'eachpost': eachpost,
                                   'postid': postid}
 
-                                return redirect('library:home')
+                                return HttpResponseRedirect(request.META.get('HTTP_REFERER',  '/'))
 
                         elif valueobj == userpreference:
                                 obj.delete()
@@ -182,7 +185,7 @@ def postpreference(request, postid, userpreference):
                                 context= {'eachpost': eachpost,
                                   'postid': postid}
 
-                                return redirect('library:home')
+                                return HttpResponseRedirect(request.META.get('HTTP_REFERER',  '/'))
                                 
                         
         
@@ -211,7 +214,7 @@ def postpreference(request, postid, userpreference):
                         context= {'eachpost': eachpost,
                           'postid': postid}
 
-                        return redirect('library:home')
+                        return HttpResponseRedirect(request.META.get('HTTP_REFERER',  '/'))
 
 
         else:
@@ -219,8 +222,4 @@ def postpreference(request, postid, userpreference):
                 context= {'eachpost': eachpost,
                           'postid': postid}
 
-                return redirect('library:home')
-
-
-
-
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER',  '/'))

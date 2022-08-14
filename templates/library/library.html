@@ -1,139 +1,45 @@
-{% load static %}
-<head>
-    <link rel="stylesheet" href="{%static 'css/library.css' %}"/>
-</head>
-    <div class="box_1">
-        <div class="first bg-dark">
-            <div class="row  pt-5">
-                <img class="col-6 image_1" src="{{post_list.category_name.images.url}}" alt="image of javascript"> 
-                <div class="col-6">
-                    <h1 class="text">Javascript</h1>
-                    <p class="text_2">Browse Javascript Frameworks</p>
-                </div>
+{% extends 'base2.html'%}
+{%load static %}
+{% block content %}
+    <link rel="stylesheet" href="{%static 'css/library.css' %}" />
+    <title>Library</title>
+  </head>
+  <body> 
 
-            </div>
-            <div class="row p-4">
-                <div class="short_t col-6">
-                    <span class="sort">sort by</span>
-                    <button class=" button-1 "><a href=''>Most Popular</a></button>
-                    <button class=" button-2"><a href="">Alphabetical Order</a></button>
-                </div>
-                <div class="col-6 image-row">
-                    <img src="{%static 'images/icon1.png' %}" alt="icon">
-                    <div class="">
-                        <img src="{%static 'images/icon2.png' %}" alt="icon"> <br>   
-                    </div>
-                </div>
-            </div>
+    
+    <div class="container">
+      <header class="lib-header">
+        <div class="header-tab1"></div>
+
+        <div class="header-main">
+         <img class="image-top" src="{%static 'images/library_image.png'%}">
         </div>
-        <div class="container">
-          {% if post_list %}
-            {% for pos in post_list %}
-              <div class="node general mt-5">
-                  <div class="row">
-                      <img class="col-6 node_img" src="{{pos.images.url}}" alt="image of node js">
-                      <h3 class="col-6 pt-5 auth">{{pos.title}}</h3>
-                  </div>
-                  <div class="images-icon">
-                      <div>
-                          <a href=''><img class="img-icon" src="{%static 'images/download.png' %}" alt="download"> </a>13404
-                      </div>
-                      <div>
-                          <a href=''><img class="img-icon" src="{%static 'images/reply.png' %}" alt="message"></a> 231
-                      </div>
-                      <div>
-                          <a href=''><img class="img-icon" src="{%static 'images/thumbsup.png' %}" alt="thumbsup"></a> 3690
-                      </div>
-                      <div>
-                          <a href=''><img class="img-icon" src="{%static 'images/thumbsdown.png' %}" alt="thumbsdown"></a> 23
-                      </div>
-                </div>
-              </div>
-            {% endfor %}
-          {% else %}
-            <h2>No post for this category</h2>
-          {% endif %}
-            
 
-           {% comment %}  <div class="general angular mt-5">
-                <div class="row">
-                    <img class="col-6 angular_img" src="images/Angular.png" alt="image of angular">
-                    <h3 class="col-6 auth pt-5">Authentication For Angular Framework</h3>
-                </div>
-                <div class="images-icon row">
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/download.png' %}" alt="download"> </a>13404
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/reply.png' %}" alt="message"></a> 231
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/thumbsup.png' %}" alt="thumbsup"></a> 3690
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/thumbsdown.png' %}" alt="thumbsdown"></a> 23
-                    </div>
-                </div>
-            </div>
-             <div class="general vue mt-5">
-                <div class=" row ">
-                    <img class="col-6 vue_img " src="{%static 'images/Vue JS.png' %}" alt="image of vue js">
-                    <h3 class=" col-6 auth pt-5">Authentication For Vue.Js</h3>
-                </div>
-                <div class="images-icon row">
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/download.png' %}" alt="download"> </a>13404
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/reply.png' %}" alt="message"></a> 231
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/thumbsup.png' %}" alt="thumbsup"></a> 3690
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/thumbsdown.png' %}" alt="thumbsdown"></a> 23
-                    </div>
-                </div>
-            </div>
-            <div class="general backbone mt-5">
-                <div class="row">
-                    <img class="col-6 backbone_img" src="images/Backbone.png" alt="image of backbone">
-                    <h3 class="col-6 auth pt-5">Authentication for BackBone</h3>
-                </div>
-                <div class="images-icon row">
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/download.png' %}" alt="download"> </a>13404
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/reply.png' %}" alt="message"></a> 231
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="{%static 'images/thumbsup.png' %}" alt="thumbsup"></a> 3690
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="images/thumbsdown.png" alt="thumbsdown"></a> 23
-                    </div>
-                </div>
-            </div>
-            <div class="general svelte mt-5">
-                <div class="row">
-                    <img class="col-6 svelte_img" src="images/Svelte.png" alt="image of svelte">
-                    <h3 class="col-6 auth pt-5">Authentication For Svelte</h3>
-                </div>
-                <div class="images-icon row">
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="images/download.png" alt="download"> </a>13404
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="images/reply.png" alt="message"></a> 231
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="images/thumbsup.png" alt="thumbsup"></a> 3690
-                    </div>
-                    <div class="col-3">
-                        <a href=''><img class="img-icon" src="images/thumbsdown.png" alt="thumbsdown"></a> 23
-                    </div>
-                </div>
-            </div> {% endcomment %}
-        </div>    
+        <div class="header-tab2">
+          <div class="header-tab2-div1">
+            <p>Sort By</p>
+            <button class="header-tab2-button1">Most Popular</button>
+            <button class="header-tab2-button2">Alphabetical Order</button>
+          </div>
+          <div class="header-tab2-div2">
+            <p>icons</p>
+            <p>icons</p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        {% for post in posts %}
+          <a href="{%url 'library:post-detail' post.id%}">
+            <section class="python-section div-hover row">
+             <img class="images col-6" src="{{post.images.url}}">
+             <div class="col-6 pt-4 ">
+              <h2 class="text-dark text_check ">{{post.title}}</h2>
+              <p class="text_check">{{post.description|truncatewords:20}}</p>
+             </div>
+            </section>
+          </a>
+        {% endfor %}
+      </main>
     </div>
+{% endblock %}
