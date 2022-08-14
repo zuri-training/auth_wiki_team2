@@ -36,7 +36,7 @@ def doc(request):
     return render(request, 'authwiki_app/doc.html')
 
 def text(request):
-    return render(request, 'authwiki_app/text.html')
+    return render(request, 'text.html')
 
 def terms(request):
     return render(request, 'authwiki_app/terms_of_use.html')
