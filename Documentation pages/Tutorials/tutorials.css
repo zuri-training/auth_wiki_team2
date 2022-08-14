@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+    .wrapper {
+        padding: 0px 35px;
+    }
+
+    .img-div {
+        display: none;
+    }
+    h4 {
+        color: #01B7EE;
+        margin-top: 40px;
+        font-size: 25px;
+    }
+
+    .first-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .links-div {
+        border: 1px solid rgb(170, 147, 147);
+        width: 600px;
+        height: 480px;
+        margin: 20px 0px 0px 10px;
+    }
+    .links-div a {
+        line-height: 100px;
+        margin: 0px 0px 0px 10px;
+        font-size: 25px;
+        color: #151515;
+    }
+    .links-div a:visited {
+        color: #01B7EE;
+    }
+    .links-div a img {
+        width: 10px;
+        float: right;
+        margin: 45px 60px 0px 0px;
+    }
+
+    .first-img-div img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .line1 {
+        height: 1px;
+        background-color: rgb(170, 147, 147);
+        margin-right: 30px;
+        margin-top: -20px;
+    }
+    .line2 {
+        height: 1px;
+        background-color: rgb(170, 147, 147);
+        margin-right: 30px;
+        margin-top: -20px;
+    }
+    .line3 {
+        height: 1px;
+        background-color: rgb(170, 147, 147);
+        margin-right: 30px;
+        margin-top: -20px;
+    }
+    .line4 {
+        height: 1px;
+        background-color: rgb(170, 147, 147);
+        margin-right: 30px;
+        margin-top: -20px;
+    }
+    .line5 {
+        height: 1px;
+        background-color: rgb(170, 147, 147);
+        margin-right: 30px;
+        margin-top: -20px;
+    }
+
+    .video-p {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 54px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .video-img-div {
+        text-align: center;
+    }
+    .video-img-div img {
+        width: 500px;
+    }
+
+    .second-container {
+        padding: 30px;
+    }
+
+    .learn {
+        font-size: 35px;
+    }
+    .learn-p {
+        font-size: 35px;
+        margin-top: 30px;
+    }
+    .learn-p2 {
+        font-size: 35px;
+        margin-top: 30px;
+    }
+    .first-ol {
+        font-size: 30px;
+        line-height: 53px;
+        margin-top: 30px;
+    }
+
+    .get-started {
+        margin-top: 40px;
+        font-size: 35px;
+    }
+    .get-started-p {
+        margin-top: 40px;
+        font-size: 35px;
+    }
+
+    .second-ol {
+        margin-top: 10px;
+        font-size: 30px;
+        line-height: 53px;
+    }
+    
+
+    footer {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    span {
+        color: #01B7EE;
+    }
+}
+
+
+/* Mobile view */
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        width: 375px;
+        margin: 0 auto;
+    }
+
+    .img-div {
+        text-align: center;
+    }
+
+    .desktop {
+        display: none;
+    }
+    span {
+        color: #01B7EE;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        padding: 10px;
+    }
+    h4 {
+        color: #017A9F;
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    
+    .first-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .links-div {
+        margin: 20px 0px 0px 0px;
+    }
+    .links-div a {
+        line-height: 40px;
+        margin: 0px 0px 0px 0px;
+        font-size: 14px;
+        color: #151515;
+    }
+    .links-div a:visited {
+        color: #01B7EE;
+    }
+    .links-div a img {
+        width: 8px;
+    }
+    .arrow1 {
+        margin: 0px 0px 0px 40px;
+    }
+    .arrow2 {
+        margin: 0px 0px 0px 20px;
+    }
+    .arrow3 {
+        margin: 0px 0px 0px 35px;
+    }
+    .arrow4 {
+        margin: 0px 0px 0px 55px;
+    }
+    .arrow5 {
+        margin: 0px 0px 0px 20px;
+    }
+    .arrow6 {
+        margin: 0px 0px 0px 10px;
+    }
+    
+    .first-img-div img {
+        margin-top: 20px;
+        width: 170px;
+        height: 200px;
+    }
+
+    .video-p {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .video-img-div {
+        text-align: center;
+    }
+    .video-img-div img {
+        width: 160px;
+    }
+
+    .second-container {
+        padding: 20px;
+    }
+
+    .learn {
+        font-size: 16px;
+    }
+    .learn-p {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .learn-p2 {
+        font-size: 12px;
+        margin-top: 30px;
+    }
+    .first-ol {
+        font-size: 12px;
+        /* line-height: 53px; */
+        margin-top: 30px;
+    }
+
+    .get-started {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .get-started-p {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .second-ol {
+        margin-top: 10px;
+        font-size: 14px;
+        /* line-height: 33px; */
+    }
+    
+    
+    
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        /* display: none; */
+    }
+    footer img {
+        width: 370px;
+    }
+    
+}
