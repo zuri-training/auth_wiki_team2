@@ -21,6 +21,10 @@ body{
 a{
     text-decoration: none !important;
 }
+.cot-div{
+    margin-top: 4rem !important;
+    height: 19rem;
+}
 .btn1{   
     width: 13rem;
     height: 4rem;
@@ -49,6 +53,10 @@ a{
 .cont{
     width: 100rem;
     margin-bottom: 30px;
+}
+.div-hover{
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
 }
 .div-hover:hover {
     cursor: pointer;

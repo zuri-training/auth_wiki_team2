@@ -1,4 +1,36 @@
-body{
-    font-family: 'Poppins' sans-serif;
-    font-size: 1.2rem;
+*{
+    font-family: 'Poppins';
+}
+ .text-con{
+    /* height: 62px;
+    width: 232px; */
+    color:  #0198C6;
+}
+.let-text{
+    width:25rem
+} 
+.text-box{
+    box-shadow: 0 5px 15px 2px rgba(194, 189, 189, 0.3);
+    transform: scale(1.01);
+}
+.cont-image{
+    background-color: #01B7EE;
+    color:white;
+}
+.image_width{
+    Width: 50rem;
+}
+.send_button{
+    height: 55px;
+    width: 200px;
+    left: 538px;
+    top: 1007px;
+    border-radius: 8px;
+    padding: 8px, 3px, 8px, 3px;
+    background-color:  #01B7EE;
+}
+.send_button:hover{
+    background-color: white;
+    border: 1px solid #01B7EE;
+    color: #01B7EE !important;
 }

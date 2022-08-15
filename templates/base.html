@@ -35,21 +35,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav pt-2 w-90 nav-me-fill ml-auto mb-2 mb-lg-0 ">
-            <li class="nav-item pr-4">
+          <ul class="navbar-nav pt-2 w-100 nav-me-fill pl-5  mb-2 mb-lg-0 ">
+            <li class="nav-item pr-4 pl-5">
               <a class="nav-link" href="{%url 'index' %}">Home</a>
             </li>
-            <li class="nav-item pr-4 ">
+            <li class="nav-item pr-4 pl-5 ">
               <a class="nav-link" href="{%url 'library:home' %}">Library</a>
             </li>
-           <li class="nav-item">
+           <li class="nav-item pl-5 pr-4">
               <!--devs and docs  dropdown -->
               <button
                 id="dropdownNavbarLink1"
                 data-dropdown-toggle="dropdownNavbar1"
                 class="flex dropdown justify-between  items-center   w-full font-medium text-gray-700  "
               >
-                <span class="nav-link pr-4">Devs and Docs</span>
+                <span class="nav-link ">Devs and Docs</span>
                 <svg
                   class="ml-1 w-5 h-5"
                   aria-hidden="true"
@@ -94,7 +94,7 @@
                           href="{%url 'blog'%}"
                           class="block font-bold drop_text text-[#000] text-2xl px-4"
                           >Blog</a
-                        >
+                        />
                       </li>
                       <li class="flex py-4">
                         <div class="">
@@ -150,7 +150,7 @@
               </div>
             </li>     
             <!-- company dropdown -->
-            <li class="nav-item pr-4 ">
+            <li class="nav-item pr-4  pl-5">
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
@@ -221,17 +221,6 @@
                       </li>
                       <li class="flex py-4">
                         <div class="">
-                          <img src="{%static 'images/Services.png' %}" alt="" />
-                        </div>
-
-                        <a
-                          href=""
-                          class="block font-bold text-[#000] text-md px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Our Servies</a
-                        >
-                      </li>
-                      <li class="flex py-4">
-                        <div class="">
                           <img src="{%static 'images/Laugh.png' %}" alt="" />
                         </div>
                         <a
@@ -253,24 +242,36 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item pr-4">
+            {% if user.is_authenticated%}
+            <li class="nav-item pr-4 pl-5">
               <a
-                href=""
+                href="{%url 'accounts:logout'%}"
                 class="btn button-2"
                 tabindex="-1"
                 role="button"
                 >Logout</a
               >
             </li>
-            <li class="nav-item pr-4">
+            {% else %}
+            <li class="nav-item pr-4 pl-5">
               <a
-                href=""
+                href="{%url 'accounts:login' %}"
+                class="btn button-2"
+                tabindex="-1"
+                role="button"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item pr-4 pl-5">
+              <a
+                href="{%url 'accounts:signup'%}"
                 class="btn  button-1"
                 tabindex="-1"
                 role="button"
                 >Sign Up</a
               >
             </li>
+            {% endif %}
           </ul>
         </div>
       </div>
@@ -278,5 +279,5 @@
     {%block content %}
     {% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+
 </html>

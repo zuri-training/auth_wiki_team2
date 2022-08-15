@@ -1,0 +1,45 @@
+{% extends 'base2.html' %}
+{% load static %}
+{%block extra_css %}
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{%static 'css/library_style.css' %}">
+</head>
+{% endblock%}
+<body>
+{% block content  %}
+
+
+     <title>Document</title>
+    <main>
+        <!-- sevelte section -->
+        <section >
+            <div id="main " class="w-[90%] m-auto p-5">
+            {% for post in posts %}
+                <div id="sevelte"  class="box  m-auto">
+                    <!-- top -->
+                    <div class="container m-auto p-10 lg:p-10 flex justify-evenly">
+                        <div class="w-[150px] lg:mt-[-20px] lg:w-[300px]  ">
+                            <img src="{{post.images.url}}" alt="">
+                        </div>
+                        <div class="div hidden lg:flex mt-auto "></div>
+                        <div>
+                           <a href="{%url 'library:post-detail' post.id%}"> 
+                                <div class="  w-[300px] sm:w-[250px] text-center  lg:text-2xl font-bold ">
+                                    <h1 class="">{{post.title}}</h1>
+                                </div>
+                            </a>
+                            <p class="pt-3">{{post.description|truncatewords:20}}</p>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+            </section>       
+    </main>
+{% endblock %}
+</body>
