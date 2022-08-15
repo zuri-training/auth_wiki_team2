@@ -35,21 +35,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav pt-2 w-90 nav-me-fill ml-auto mb-2 mb-lg-0 ">
-            <li class="nav-item pr-4">
+          <ul class="navbar-nav pt-2 w-100 nav-me-fill pl-5  mb-2 mb-lg-0 ">
+            <li class="nav-item pr-4 pl-5">
               <a class="nav-link" href="{%url 'index' %}">Home</a>
             </li>
-            <li class="nav-item pr-4 ">
+            <li class="nav-item pr-4 pl-5 ">
               <a class="nav-link" href="{%url 'library:home' %}">Library</a>
             </li>
-           <li class="nav-item">
+           <li class="nav-item pl-5 pr-4">
               <!--devs and docs  dropdown -->
               <button
                 id="dropdownNavbarLink1"
                 data-dropdown-toggle="dropdownNavbar1"
                 class="flex dropdown justify-between  items-center   w-full font-medium text-gray-700  "
               >
-                <span class="nav-link pr-4">Devs and Docs</span>
+                <span class="nav-link ">Devs and Docs</span>
                 <svg
                   class="ml-1 w-5 h-5"
                   aria-hidden="true"
@@ -150,7 +150,7 @@
               </div>
             </li>     
             <!-- company dropdown -->
-            <li class="nav-item pr-4 ">
+            <li class="nav-item pr-4  pl-5">
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
@@ -243,7 +243,7 @@
               </div>
             </li>
             {% if user.is_authenticated%}
-            <li class="nav-item pr-4">
+            <li class="nav-item pr-4 pl-5">
               <a
                 href="{%url 'accounts:logout'%}"
                 class="btn button-2"
@@ -253,7 +253,7 @@
               >
             </li>
             {% else %}
-            <li class="nav-item pr-4">
+            <li class="nav-item pr-4 pl-5">
               <a
                 href="{%url 'accounts:login' %}"
                 class="btn button-2"
@@ -262,7 +262,7 @@
                 >Login</a
               >
             </li>
-            <li class="nav-item pr-4">
+            <li class="nav-item pr-4 pl-5">
               <a
                 href="{%url 'accounts:signup'%}"
                 class="btn  button-1"

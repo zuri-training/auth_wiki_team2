@@ -2,12 +2,13 @@
 {%load static%}
   {%block content %}
     <link rel="stylesheet" href="{%static 'css/homePage.css' %}" />
+    <link href="https://api.fontshare.com/v2/css?f[]=panchang@400,600&display=swap" rel="stylesheet">
     <title>auth_wiki</title>
 
    <header class="header">
  
       <div class="header-primary">
-        <div class="header-primary-text">
+        <div class="header-primary-text mt-4">
           <h1 class="header-primary-main edit">
             <span class="text1">Securely</span><br /><span class="text2"
               >Authenticate</span
@@ -32,10 +33,10 @@
         <a class="header-button-cta header-cta2" href="{%url 'library:home'%}">Explore</a>
       </div>
       <div class="header-trust">
-        <p class="header-trust-text">trusted by</p>
+        <p class="header-trust-text">Trusted by</p>
         <div class="header-trust-img-box">
           <img
-            class="header-trust-img"
+            class="header-trust-img mx-auto"
             src="../static/images/hero-trusted.png"
             alt="organization"
           />
@@ -69,9 +70,9 @@
               alt="icon"
             />
           </div>
-          <div class="section2-col2">
+          <div class="section2-col2 ml-auto">
             <img
-              class="section2-img"
+              class="section2-img "
               src="{%static 'images/productivity.png' %}"
               alt=""
             />
@@ -124,7 +125,7 @@
           </div>
         </div>
       </section>
-      <section class="section3">
+      <section class="section3 w-100">
         <div class="section3-col section3-col1">
           <div class="section3-col-img">
             <img
@@ -170,14 +171,14 @@
           <h2 class="section4-header">
             Secure and Trusted Authentication Library
           </h2>
-          <p class="section4-text">
+          <p class="section4-text text-center w-70">
             Multiple organisations and small busineses trust Auth Wiki for their
             User authentications.
           </p>
         </div>
-        <div class="section4-row2">
+        <div class="section4-row2 ">
           <img
-            class="section4-row2-img"
+            class="section4-row2-img mx-auto"
             src=" {%static 'images/organization.png' %}"
             alt=""
           />
@@ -187,58 +188,27 @@
         <div class="section5-row section5-row1">
           <img
             class="section5-image section5-row1-image"
-            src="{%static 'images/person1.png' %}"
+            src="{%static 'images/first_person.png' %}"
             alt="person"
           />
-          <p class="section5-text section5-row1-text">
-            Previously, we had two independent databases; today, we are
-            developing a third, which will be the sole source of all consumer
-            data, centralized and connected in one location. Now that we have
-            our Logins authenticated by Auth Wiki, we can focus on further
-            identity projects and inventing around ways to make users' lives
-            easier."
-            <span class="section5-sub-text"
-              >Spalleti Di Natelle - CEO, QweekSend</span
-            >
-          </p>
         </div>
         <div class="section5-row section5-row2">
           <img
             class="section5-image section5-row2-image"
-            src="{%static 'images/person2.png' %}"
+            src="{%static 'images/second_person.png' %}"
             alt="person"
           />
-          <p class="section5-text section5-row2-text">
-            The fundamental distinction between Auth Wiki and the other
-            companies is that Auth Wiki has always built a custom solution for
-            Banco Africanna, rather than an out-of-the-box solution. They
-            inquire about our problems and work promptly to find solutions.
-            Finally, we are just one team focusing on Banco Africanna's digital
-            progress."
-            <span class="section5-sub-text"
-              >Christian Kipchoge - COO, Banco Africanna</span
-            >
-          </p>
         </div>
         <div class="section5-row section5-row3">
           <img
             class="section5-image section5-row3-image"
-            src="{%static 'images/person3.png' %}"
+            src="{%static 'images/third_person.png' %}"
             alt=""
           />
-          <p class="section5-text section5-row3-text">
-            Auth Wiki is a clear winner, not only in terms of time of marketting
-            products, but also in terms of delivering your products to the user.
-            Because, for us, authentication is an integral part of the
-            offering."
-            <span class="section5-sub-text"
-              >Badamosi Kperogi - CEO, Top Dawg inc</span
-            >
-          </p>
         </div>
       </section>
       <section class="section6">
-        <div class="section6-image">
+        <div class="section6-image ">
           <img
             class="section6-image-style"
             src="{%static 'images/GDPR.png' %}"
@@ -247,6 +217,10 @@
         </div>
         <div class="section6-text">
           <h2 class="section6-header">It's a game <br />Changer</h2>
+          <div class="mt-4">
+            <a href="" class="button2" >Signup</a>
+            <a href="ml-4" class="button3">Explore</a>
+          </div>
         </div>
       </section>
     </main>

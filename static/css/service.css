@@ -79,6 +79,9 @@ ul{
     background: #017A9F;
 }
  */
+ body{
+    font-family: 'Poppins';
+ }
 .fm-Excon{
     font-weight: 900;
 }
@@ -92,15 +95,22 @@ ul{
 }
 .fs-2 , .fs-1  {
     color: #017A9F;
+    font-size:17px;
 }
 .buttons-1{
     border: 1px solid #01B7EE;
     color:#01B7EE;
     text-align: center;
     margin-left: 2rem;
+    padding: 0.5rem 2rem;
 }
 .buttons-2{
     background-color: #01B7EE;
     color: white;
     text-align: center;
+    padding: 0.5rem 2rem;
+}
+.para-text{
+    width: 70%;
+    line-height: 30px;
 }
