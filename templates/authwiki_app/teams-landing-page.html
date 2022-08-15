@@ -7,13 +7,6 @@
       <header></header>
 
       <main>
-        <div class="logo-div">
-          <img
-            class="auth-wiki-logo"
-            src="{%static 'images/AuthWikiLogo.svg' %}"
-            alt="Auth Wiki Logo"
-          />
-        </div>
 
         <p class="first-para">OUR MISSION</p>
 
@@ -44,7 +37,7 @@
               alt=""
             />
             <span class="easy-span">
-              <h4>Easy</h4>
+              <h4 >Easy</h4>
               <p class="easy-para">
                 Building and Authenticating users should be<br
                   class="desktop"
@@ -61,7 +54,7 @@
               alt=""
             />
             <span class="easy-span">
-              <h4>Universal</h4>
+              <h4> Universal</h4>
               <p class="easy-para">
                 The process of Authenticating users should<br
                   class="desktop"
@@ -87,7 +80,7 @@
           </div>
         </div>
 
-        <h2 class="our-passionate-team">Our Passionate team</h2>
+        <h2 class="our-passionate-team text-bold">Our Passionate team</h2>
 
         <div class="first-team-div">
           <div class="person1">
@@ -233,29 +226,25 @@
           <div class="person4">
             <img id="olaiya" src="{%static 'images/Olaiya Samuel Ayobami.png' %}" alt="" />
             <p id="olaiya-p">
-              Olaiya Samuel Ayobami<span id="olaiya-span">Design</span>
+              Olaiya Samuel<span id="olaiya-span">Design</span>
             </p>
           </div>
         </div>
 
         <div class="last-team-div">
-          <div class="person-one">
+          <div class="person1">
             <img id="tomilola" src="{%static 'images/Tomilola Omiwole.png' %}" alt="" />
             <p id="tomilola-p">Tomilola Omiwole<span id="tomilola-span">Design</span></p>
           </div>
-          <div class="person-two">
-            <img id="yakubu" src="{%static 'images/Yakubu Bobai Ephraim.png' %}" alt="" />
-            <p id="yakubu-p">Yakubu Bobai Ephraim<span id="yakubu-span">Engineering</span></p>
-          </div>
-          <div class="person-three">
+          <div class="person2">
             <img id="olatunde" src="{%static 'images/Olatunde Success.png' %}" alt="" />
             <p id="olatunde-p">Olatunde Success<span id="olatunde-span">Engineering</span></p>
           </div>
-          <div class="person-four">
+          <div class="person3">
             <img id="osomhe" src="{%static 'images/Osomhe Aleogho.png' %}" alt="" />
             <p id="osomhe-p">Osomhe Aleogho<span id="osomhe-span">Engineering</span></p>
           </div>
-          <div class="person-five">
+          <div class="person4">
             <img id="taiwo" src="{%static 'images/Taiwo Lateefat.png' %}" alt="" />
             <p id="taiwo-p">Taiwo Lateefat<span id="taiwo-span">Design</span></p>
           </div>
@@ -270,9 +259,10 @@
           <img class="i4g-logo col-md-6 m-5" src="{%static 'images/i4g-logo.svg' %}" alt="" />
         </div>
       </div>
-      <footer>
+      <div class="last">
         <h2>Join us in changing how user<br />Authentication works</h2>
         <a href="#">Careers at Auth Wiki</a>
-      </footer>
+      </div>
     </div>
+  {% include 'footer.html' %}
 {% endblock %}

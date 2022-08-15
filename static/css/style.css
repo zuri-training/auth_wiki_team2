@@ -108,4 +108,7 @@
       font-size: 15px !important;
       width: fit-content !important;
     }
+    .latest_text img{
+      width: 10px;
+    }
 }

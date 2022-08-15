@@ -18,6 +18,8 @@
     margin-top: 20px;
     text-align: center;
     font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size:xx-large;
 }
 .second-para {
     margin-top: 20px;
@@ -33,20 +35,21 @@
 .meet-para {
     color: #FFFFFF;
     background-color: #01B7EE;
-    padding: 5px 10px 0px 5px;
-    width: 150px;
-    height: 30px;
+    padding: 10px 15px 0px 10px;
+    width: 160px;
+    height: 37px;
     margin: 0 15px;
     text-align: center;
     border-radius: 3px;
     font-size: 15px;
     font-family: "Poppins", sans-serif;
+    text-align: center;
 }
 .see-para {
     color: #01B7EE;
-    padding: 4px 10px 0px 5px;
-    width: 150px;
-    height: 30px;
+    padding: 10px 15px 0px 12px;
+    width: 160px;
+    height: 37px;
     text-align: center;
     border-radius: 3px;
     border: 1px solid #01B7EE;
@@ -67,10 +70,15 @@
     border-radius: 3px;
     padding: 5px;
 }
+.text-bold{
+    font-weight: 900;
+    font-size: x-large;
+}
 .easy-span {
     width: 300px;
     margin: 0 15px;
     font-family: "Poppins", sans-serif;
+    font-weight: 900;
 }
 #uni-img {
     margin-left: 90px;
@@ -119,7 +127,8 @@
 .person1 p span {
     font-size: 12px;
     /* font-weight: 500; */
-    margin: 5px 0px 0px 10px;
+    margin: 5px 0px 0px 5px;
+    width: 160px;
 }
 
 /* Michael image styling */
@@ -138,6 +147,7 @@
     font-size: 16px;
     font-weight: 600;
     margin-left: 27px;
+    width: 160px;
 }
 
 .person2 p span {
@@ -148,7 +158,7 @@
 /* Destiny image styling */
 .person3 {
     margin: 0 65px;
-    width: 150px;
+    width: 160px;
 }
 .person3 img {
     background-color: orangered;
@@ -171,7 +181,7 @@
 /* Odewumi image styling */
 .person4 {
     margin: 0 25px;
-    width: 150px;
+    width: 170px;
 }
 .person4 img {
     background-color: rgb(235, 98, 121);
@@ -526,6 +536,9 @@
     font-size: 30px;
     font-family: "Poppins", sans-serif;
 }
+.zuri-i4g-logo{
+    margin-left: 30%;
+}
 .zuri-logo {
     width: 200px;
     background-color: #FFFFFF;
@@ -544,19 +557,21 @@
     margin-left: 30rem;
 }
 
-footer {
+.last {
     display: flex;
     justify-content: center;
     justify-content: space-between;
     height: 100px;
     margin-top: 80px;
+    margin-bottom: 30px;
 }
-footer h2 {
+.last h2 {
     margin-left: 30px;
     font-size: 20px;
     font-family: "Poppins", sans-serif;
+    font-weight: 800;
 }
-footer a {
+.last a {
     text-decoration: none;
     color: #FFFFFF;
     background-color: #01B7EE;
@@ -841,32 +856,32 @@ footer a {
     
     /* Osomhe image styling */
     .person-four {
-        margin: -0px;
-        width: 120px;
+        margin: 0 5px;
+        width: 20px;
     }
     .person-four img {
         background-color: rgb(29, 25, 25);
         border-radius: 70px;
         width: 90px;
-        margin-left: 70px;
     }
     .person-four p {
         display: flex;
         flex-direction: column;
         font-size: 10px;
         font-weight: 600;
-        margin: 7px 0px 0px 76px;
-        width: 80px
+        width: 200px;
+        margin: 7px 0px 0px -7px;
     }
     
     .person-four p span {
-        font-size: 8px;
-        margin: 5px 0px 0px 14px;
+        font-size: 9px;
+        margin: 5px 0px 0px 30px;
     }
     
     /* Taiwo image styling */
     .person-five {
-        margin: 0 55px
+        margin: 0 -45px;
+        width: 90px;
     }
     .person-five img {
         background-color: rgb(206, 73, 73);
@@ -878,12 +893,13 @@ footer a {
         flex-direction: column;
         font-size: 10px;
         font-weight: 600;
+        width: 200px;
         margin: 7px 0px 0px 10px;
     }
     
     .person-five p span {
-        font-size: 9px;
-        margin: 5px 0px 0px 20px;
+        font-size: 8px;
+        margin: 5px 0px 0px 15px;
     }
     
     
@@ -1135,19 +1151,19 @@ footer a {
         margin-left: 50px;
     }
     
-    footer {
+   .last{
         display: flex;
         justify-content: center;
         justify-content: space-between;
         height: 100px;
         margin-top: 80px;
     }
-    footer h2 {
+    .last h2 {
         margin-left: 30px;
         font-size: 18px;
         font-family: "Poppins", sans-serif;
     }
-    footer a {
+    .last a {
         text-decoration: none;
         color: #FFFFFF;
         background-color: #01B7EE;
@@ -1734,13 +1750,13 @@ footer a {
         width: 120px;
         background-color: rgb(29, 25, 25);
         border-radius: 70px;
-        margin: -162px 0px 0px 130px;
+        margin: 50px 0px 0px 12px;
         float: left;
     }
     #osomhe-p {
         font-size: 16px;
         font-weight: 750;
-        margin: -37px 0px 0px 130px;
+        margin: 50px 0px 0px 0px;
         float: left;
     }
     #osomhe-span {
@@ -1753,7 +1769,7 @@ footer a {
         width: 120px;
         background-color: rgb(206, 73, 73);
         border-radius: 70px;
-        margin: -162px 0px 0px 260px;
+        margin: 45px 0px 0px 260px;
         float: left;
         
     }
@@ -1761,7 +1777,7 @@ footer a {
         float: left;
         font-size: 16px;
         font-weight: 750;
-        margin: -36px 0px 0px 270px;
+        margin: 45px 0px 0px 270px;
         width: 130px;
     }
     #taiwo-span {
@@ -1773,7 +1789,7 @@ footer a {
     /* footer starts */
 
     .investor-div {
-        margin-top: 40px;
+        margin-top: 20rem;
         background-color: #003D4F;
         height: 530px;
         width: 380px;
@@ -1808,16 +1824,16 @@ footer a {
         padding: 20px;
     }
 
-    footer {
+    .last {
         margin-top: 40px;
         height: 150px;
     }
-    footer h2 {
+    .last h2 {
         font-size: 18px;
         margin-bottom: 40px;
         font-family: "Poppins", sans-serif;
     }
-    footer a {
+    .last a {
         text-decoration: none;
         color: #FFFFFF;
         background-color: #01B7EE;
